@@ -16,9 +16,9 @@
     --popover: 30 6% 12%;
     --popover-foreground: 30 15% 90%;
 
-    /* Warm Gold - Primary accent */
-    --primary: 40 55% 78%;
-    --primary-foreground: 20 4% 14%;
+    /* Warm Gold - Primary accent (more saturated) */
+    --primary: 42 75% 58%;
+    --primary-foreground: 20 4% 10%;
 
     /* Muted Taupe */
     --secondary: 30 10% 56%;
@@ -37,12 +37,12 @@
 
     --border: 30 8% 20%;
     --input: 30 8% 18%;
-    --ring: 40 55% 78%;
+    --ring: 42 75% 58%;
 
     --radius: 0.5rem;
 
     /* Custom brand tokens */
-    --warm-gold: 40 55% 78%;
+    --warm-gold: 42 75% 58%;
     --charcoal-mid: 0 2% 26%;
     --deep-charcoal: 15 4% 14%;
     --taupe: 30 10% 56%;
@@ -50,23 +50,23 @@
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--deep-charcoal)) 0%, hsl(20 4% 10%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(40 55% 78%) 0%, hsl(35 50% 65%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 75% 58%) 0%, hsl(38 70% 48%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(30 6% 14%) 0%, hsl(30 6% 10%) 100%);
 
     /* Shadows */
     --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
-    --shadow-gold: 0 4px 30px -8px hsl(40 55% 78% / 0.3);
+    --shadow-gold: 0 4px 30px -8px hsl(42 75% 58% / 0.4);
     --shadow-elevated: 0 20px 40px -12px hsl(0 0% 0% / 0.5);
 
     /* Sidebar (keeping defaults) */
     --sidebar-background: 30 6% 10%;
     --sidebar-foreground: 30 15% 90%;
-    --sidebar-primary: 40 55% 78%;
+    --sidebar-primary: 42 75% 58%;
     --sidebar-primary-foreground: 20 4% 14%;
     --sidebar-accent: 30 8% 18%;
     --sidebar-accent-foreground: 30 15% 90%;
     --sidebar-border: 30 8% 20%;
-    --sidebar-ring: 40 55% 78%;
+    --sidebar-ring: 42 75% 58%;
   }
 
   .dark {
@@ -77,7 +77,7 @@
     --card-foreground: 30 15% 90%;
     --popover: 30 6% 12%;
     --popover-foreground: 30 15% 90%;
-    --primary: 40 55% 78%;
+    --primary: 42 75% 58%;
     --primary-foreground: 20 4% 14%;
     --secondary: 30 10% 56%;
     --secondary-foreground: 30 15% 95%;
@@ -89,7 +89,7 @@
     --destructive-foreground: 0 0% 100%;
     --border: 30 8% 20%;
     --input: 30 8% 18%;
-    --ring: 40 55% 78%;
+    --ring: 42 75% 58%;
   }
 }
 
@@ -114,7 +114,7 @@
 @layer components {
   .text-gradient-gold {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(40 55% 78%) 0%, hsl(35 50% 70%) 100%);
+    background-image: linear-gradient(135deg, hsl(42 75% 58%) 0%, hsl(38 70% 50%) 100%);
   }
 
   .bg-gradient-hero {
@@ -135,7 +135,7 @@
   }
 
   .gold-glow {
-    box-shadow: 0 0 40px -8px hsl(40 55% 78% / 0.4);
+    box-shadow: 0 0 40px -8px hsl(42 75% 58% / 0.5);
   }
 
   .section-padding {
