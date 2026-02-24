@@ -4,8 +4,9 @@ import { Menu, X, Phone } from "lucide-react";
 
 const navLinks = [
   { href: "#services", label: "Services" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "#why-us", label: "Why Us" },
+  { href: "#process", label: "How We Work" },
+  { href: "#testimonials", label: "Reviews" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -14,9 +15,7 @@ export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -33,9 +32,11 @@ export const Navigation = () => {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex flex-col">
-            <span className="font-script text-2xl text-primary">Shades of Gray</span>
-            <span className="text-xs tracking-[0.3em] text-muted-foreground uppercase -mt-1">
-              Painters LLC
+            <span className="font-heading text-2xl md:text-3xl text-primary font-bold tracking-wider">
+              F&S EXPEDITED
+            </span>
+            <span className="text-[10px] tracking-[0.3em] text-muted-foreground uppercase -mt-1 font-sans">
+              LLC
             </span>
           </a>
 
@@ -45,7 +46,7 @@ export const Navigation = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                className="text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -55,13 +56,13 @@ export const Navigation = () => {
           {/* CTA & Phone */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:3857872889"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+              href="tel:8653649011"
+              className="flex items-center gap-2 text-sm font-semibold text-primary"
             >
               <Phone className="w-4 h-4" />
-              (385) 787-2889
+              (865) 364-9011
             </a>
-            <Button variant="gold" size="sm" asChild>
+            <Button variant="default" size="sm" asChild>
               <a href="#contact">Get Quote</a>
             </Button>
           </div>
@@ -87,7 +88,7 @@ export const Navigation = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-lg font-medium text-foreground hover:text-primary transition-colors py-2"
+                className="text-lg font-heading uppercase tracking-wider text-foreground hover:text-primary transition-colors py-2"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -95,13 +96,13 @@ export const Navigation = () => {
             ))}
             <div className="pt-4 border-t border-border flex flex-col gap-3">
               <a
-                href="tel:3857872889"
-                className="flex items-center gap-2 text-muted-foreground"
+                href="tel:8653649011"
+                className="flex items-center gap-2 text-primary font-semibold"
               >
                 <Phone className="w-4 h-4" />
-                (385) 787-2889
+                (865) 364-9011
               </a>
-              <Button variant="gold" className="w-full" asChild>
+              <Button variant="default" className="w-full" asChild>
                 <a href="#contact">Get Free Quote</a>
               </Button>
             </div>

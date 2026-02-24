@@ -1,65 +1,46 @@
-import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="container px-4 py-16">
-        <div className="grid md:grid-cols-4 gap-10">
+    <footer className="bg-card border-t border-border relative">
+      {/* Diamond plate top border */}
+      <div className="absolute top-0 left-0 right-0 h-3 diamond-plate" />
+
+      <div className="container px-4 py-16 mt-3">
+        <div className="grid md:grid-cols-3 gap-10">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div>
             <a href="#" className="flex flex-col">
-              <span className="font-script text-3xl text-primary">
-                Shades of Gray
+              <span className="font-heading text-3xl text-primary font-bold tracking-wider">
+                F&S EXPEDITED
               </span>
-              <span className="text-xs tracking-[0.3em] text-muted-foreground uppercase">
-                Painters LLC
+              <span className="text-xs tracking-[0.3em] text-muted-foreground uppercase font-sans">
+                LLC
               </span>
             </a>
-            <p className="mt-4 text-muted-foreground max-w-sm">
-              Professional residential and commercial painting services in
-              Shelby, NC. We take the pain out of painting with quality
-              craftsmanship and exceptional service.
+            <p className="mt-4 text-muted-foreground font-sans max-w-sm">
+              Professional expedited hauling and dump truck services. Fast, reliable,
+              and built on hard work.
             </p>
-            {/* Social Links */}
-            <div className="flex gap-4 mt-6">
-              <a
-                href="https://www.instagram.com/shadesofgraypainters llc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif font-semibold text-foreground mb-4">
-              Quick Links
+            <h4 className="font-heading font-bold text-foreground mb-4 tracking-wider">
+              QUICK LINKS
             </h4>
             <ul className="space-y-3">
               {[
                 { href: "#services", label: "Services" },
-                { href: "#gallery", label: "Texture Gallery" },
-                { href: "#testimonials", label: "Testimonials" },
+                { href: "#why-us", label: "Why Choose Us" },
+                { href: "#process", label: "How We Work" },
+                { href: "#testimonials", label: "Reviews" },
                 { href: "#contact", label: "Get a Quote" },
               ].map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors font-sans">
                     {link.label}
                   </a>
                 </li>
@@ -69,43 +50,36 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-serif font-semibold text-foreground mb-4">
-              Contact Us
+            <h4 className="font-heading font-bold text-foreground mb-4 tracking-wider">
+              CONTACT US
             </h4>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="tel:3857872889"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-                >
+                <a href="tel:8653649011" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans">
                   <Phone className="w-4 h-4" />
-                  (385) 787-2889
+                  (865) 364-9011
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:shadesofgray21@gmail.com"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-                >
+                <a href="mailto:info@fsexpedited.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans">
                   <Mail className="w-4 h-4" />
-                  shadesofgray21@gmail.com
+                  info@fsexpedited.com
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-muted-foreground">
+              <li className="flex items-center gap-2 text-muted-foreground font-sans">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                Shelby, NC & Surrounding Areas
+                Charlotte, NC & Knoxville, TN
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} Shades of Gray Painters LLC. All rights reserved.
+          <p className="text-sm text-muted-foreground font-sans">
+            © {currentYear} F&S Expedited LLC. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground">
-            Owner: Candice Jones • Shelby, NC
+          <p className="text-sm text-muted-foreground font-sans">
+            Expedited Hauling & Dump Truck Services
           </p>
         </div>
       </div>
