@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import fsLogo from "@/assets/fs-logo.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,13 +13,8 @@ export const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <a href="#" className="flex flex-col">
-              <span className="font-heading text-3xl text-primary font-bold tracking-wider">
-                F&S EXPEDITED
-              </span>
-              <span className="text-xs tracking-[0.3em] text-muted-foreground uppercase font-sans">
-                LLC
-              </span>
+            <a href="#">
+              <img src={fsLogo} alt="F&S Expedited LLC" className="h-20 w-auto" />
             </a>
             <p className="mt-4 text-muted-foreground font-sans max-w-sm">
               Professional expedited hauling and dump truck services. Fast, reliable,

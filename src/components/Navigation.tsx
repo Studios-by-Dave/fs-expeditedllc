@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import fsLogo from "@/assets/fs-logo.png";
 
 const navLinks = [
   { href: "#services", label: "Services" },
@@ -31,13 +32,8 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex flex-col">
-            <span className="font-heading text-2xl md:text-3xl text-primary font-bold tracking-wider">
-              F&S EXPEDITED
-            </span>
-            <span className="text-[10px] tracking-[0.3em] text-muted-foreground uppercase -mt-1 font-sans">
-              LLC
-            </span>
+          <a href="#">
+            <img src={fsLogo} alt="F&S Expedited LLC" className="h-16 md:h-20 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
