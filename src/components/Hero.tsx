@@ -8,8 +8,8 @@ export const Hero = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
+        style={{ backgroundImage: `url(${heroBg})` }}>
+
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
       </div>
@@ -27,7 +27,7 @@ export const Hero = () => {
 
           {/* Headline */}
           <h1 className="opacity-0 animate-fade-up animation-delay-150">
-            <span className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider text-foreground leading-none">
+            <span className="text-5xl lg:text-8xl font-bold tracking-wider text-foreground leading-none md:text-6xl font-sans">
               FAST. RELIABLE.
             </span>
             <br />
@@ -77,6 +77,6 @@ export const Hero = () => {
 
       {/* Diamond plate bottom divider */}
       <div className="absolute bottom-0 left-0 right-0 h-4 diamond-plate" />
-    </section>
-  );
+    </section>);
+
 };
