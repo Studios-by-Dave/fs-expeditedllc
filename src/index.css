@@ -16,8 +16,8 @@
     --popover: 0 0% 11%;
     --popover-foreground: 0 0% 95%;
 
-    /* Safety Yellow - Primary */
-    --primary: 48 100% 50%;
+    /* Safety Yellow - Primary (Lighter shade matching logo) */
+    --primary: 60 100% 50%;
     --primary-foreground: 0 0% 0%;
 
     /* Dark Charcoal */
@@ -37,12 +37,12 @@
 
     --border: 0 0% 18%;
     --input: 0 0% 15%;
-    --ring: 48 100% 50%;
+    --ring: 60 100% 50%;
 
     --radius: 0.375rem;
 
     /* Brand tokens */
-    --safety-yellow: 48 100% 50%;
+    --safety-yellow: 60 100% 50%;
     --patriot-red: 350 90% 43%;
     --patriot-blue: 216 100% 20%;
     --deep-black: 0 0% 0%;
@@ -50,23 +50,23 @@
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 0% 10%) 100%);
-    --gradient-yellow: linear-gradient(135deg, hsl(48 100% 50%) 0%, hsl(42 100% 42%) 100%);
+    --gradient-yellow: linear-gradient(135deg, hsl(60 100% 50%) 0%, hsl(55 100% 45%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 13%) 0%, hsl(0 0% 9%) 100%);
 
     /* Shadows */
     --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.5);
-    --shadow-yellow: 0 4px 30px -8px hsl(48 100% 50% / 0.4);
+    --shadow-yellow: 0 4px 30px -8px hsl(60 100% 50% / 0.4);
     --shadow-elevated: 0 20px 40px -12px hsl(0 0% 0% / 0.6);
 
     /* Sidebar */
     --sidebar-background: 0 0% 9%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 48 100% 50%;
+    --sidebar-primary: 60 100% 50%;
     --sidebar-primary-foreground: 0 0% 0%;
     --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 48 100% 50%;
+    --sidebar-ring: 60 100% 50%;
   }
 
   .dark {
@@ -76,7 +76,7 @@
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 11%;
     --popover-foreground: 0 0% 95%;
-    --primary: 48 100% 50%;
+    --primary: 60 100% 50%;
     --primary-foreground: 0 0% 0%;
     --secondary: 0 0% 20%;
     --secondary-foreground: 0 0% 95%;
@@ -88,7 +88,7 @@
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 18%;
     --input: 0 0% 15%;
-    --ring: 48 100% 50%;
+    --ring: 60 100% 50%;
   }
 }
 
@@ -113,7 +113,7 @@
 @layer components {
   .text-gradient-yellow {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(48 100% 50%) 0%, hsl(42 100% 42%) 100%);
+    background-image: linear-gradient(135deg, hsl(60 100% 50%) 0%, hsl(55 100% 45%) 100%);
   }
 
   .bg-gradient-hero {
@@ -134,7 +134,7 @@
   }
 
   .yellow-glow {
-    box-shadow: 0 0 40px -8px hsl(48 100% 50% / 0.5);
+    box-shadow: 0 0 40px -8px hsl(60 100% 50% / 0.5);
   }
 
   .section-padding {
@@ -164,7 +164,7 @@
 
   /* Industrial border */
   .industrial-border {
-    border: 3px solid hsl(48 100% 50%);
+    border: 3px solid hsl(60 100% 50%);
     position: relative;
   }
 
@@ -175,7 +175,7 @@
     left: -6px;
     right: -6px;
     bottom: -6px;
-    border: 1px solid hsl(48 100% 50% / 0.3);
+    border: 1px solid hsl(60 100% 50% / 0.3);
   }
 }
 
