@@ -26,16 +26,22 @@ export const Hero = () => {
             </span>
           </div>
 
-          {/* Headline */}
-          <h1 className="opacity-0 animate-fade-up animation-delay-150">
-            <span className="text-5xl lg:text-8xl font-bold tracking-wider text-foreground leading-none md:text-6xl font-sans">
-              FAST. RELIABLE.
-            </span>
-            <br />
-            <span className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider text-primary leading-none">
-              EXPEDITED HAULING.
-            </span>
-          </h1>
+          {/* Headline with flag overlay */}
+          <div className="relative">
+            <div
+              className="absolute inset-0 -inset-x-8 -inset-y-4 bg-contain bg-center bg-no-repeat opacity-[0.08] pointer-events-none"
+              style={{ backgroundImage: `url(${flagOverlay})` }}
+            />
+            <h1 className="relative opacity-0 animate-fade-up animation-delay-150">
+              <span className="text-5xl lg:text-8xl font-bold tracking-wider text-foreground leading-none md:text-6xl font-sans">
+                FAST. RELIABLE.
+              </span>
+              <br />
+              <span className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider text-primary leading-none">
+                EXPEDITED HAULING.
+              </span>
+            </h1>
+          </div>
 
           {/* Subheadline */}
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl opacity-0 animate-fade-up animation-delay-300 font-sans">
