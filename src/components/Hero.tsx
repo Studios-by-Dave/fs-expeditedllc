@@ -28,10 +28,13 @@ export const Hero = () => {
 
           {/* Headline with flag overlay */}
           <div className="relative">
-            <img
-              src={flagOverlay}
-              alt=""
-              className="absolute -top-4 -left-8 -right-8 -bottom-4 w-[calc(100%+4rem)] h-[calc(100%+2rem)] object-cover opacity-[0.12] pointer-events-none"
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute -top-4 -left-8 -right-8 -bottom-4 w-[calc(100%+4rem)] h-[calc(100%+2rem)] object-cover opacity-[0.10] pointer-events-none"
+              src={flagVideo}
             />
             <h1 className="relative opacity-0 animate-fade-up animation-delay-150">
               <span className="text-5xl lg:text-8xl font-bold tracking-wider text-foreground leading-none md:text-6xl font-sans">
