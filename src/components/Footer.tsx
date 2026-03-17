@@ -58,6 +58,14 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="tel:7047518541" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans">
+                  <Phone className="w-4 h-4" />
+                  (704) 751-8541
+                </a>
+              </li>
+                </a>
+              </li>
+              <li>
                 <a href="mailto:info@fsexpedited.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans">
                   <Mail className="w-4 h-4" />
                   info@fsexpedited.com

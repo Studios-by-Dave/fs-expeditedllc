@@ -58,7 +58,12 @@ export const Hero = () => {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up animation-delay-450">
             <Button variant="hero" asChild>
               <a href="tel:8653649011">
-                📞 Call Now: (865) 364-9011
+                📞 (865) 364-9011
+              </a>
+            </Button>
+            <Button variant="hero" asChild>
+              <a href="tel:7047518541">
+                📞 (704) 751-8541
               </a>
             </Button>
             <Button variant="hero-outline" asChild>

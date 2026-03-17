@@ -205,6 +205,14 @@ export const Navigation = () => {
                 <Phone className="w-4 h-4" />
                 (865) 364-9011
               </a>
+              <a
+                href="tel:7047518541"
+                className="flex items-center gap-2 text-primary font-semibold"
+              >
+                <Phone className="w-4 h-4" />
+                (704) 751-8541
+              </a>
+              </a>
               <Button variant="default" className="w-full" asChild>
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                   Get Free Quote
