@@ -123,7 +123,6 @@ export const Navigation = () => {
               <Phone className="w-4 h-4" />
               (704) 751-8541
             </a>
-            </a>
             <Button variant="default" size="sm" asChild>
               <Link to="/contact">Get Quote</Link>
             </Button>
