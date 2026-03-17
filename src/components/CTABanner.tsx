@@ -30,9 +30,9 @@ export const CTABanner = () => {
               </a>
             </Button>
             <Button variant="hero" asChild>
-              <a href="tel:7047518541">
+              <a href="tel:7047518141">
                 <Phone className="w-5 h-5" />
-                (704) 751-8541
+                (704) 751-8141
               </a>
             </Button>
             <Button variant="hero-outline" asChild>
