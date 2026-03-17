@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import fsLogo from "@/assets/fs-logo.png";
 
@@ -6,16 +7,15 @@ export const Footer = () => {
 
   return (
     <footer className="bg-card border-t border-border relative">
-      {/* Diamond plate top border */}
       <div className="absolute top-0 left-0 right-0 h-3 diamond-plate" />
 
       <div className="container px-4 py-16 mt-3">
         <div className="grid md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <a href="#">
+            <Link to="/">
               <img src={fsLogo} alt="F&S Expedited LLC" className="h-20 w-auto" />
-            </a>
+            </Link>
             <p className="mt-4 text-muted-foreground font-sans max-w-sm">
               Professional expedited hauling and dump truck services. Fast, reliable,
               and built on hard work.
@@ -29,16 +29,17 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-3">
               {[
-                { href: "#services", label: "Services" },
-                { href: "#why-us", label: "Why Choose Us" },
-                { href: "#process", label: "How We Work" },
-                { href: "#testimonials", label: "Reviews" },
-                { href: "#contact", label: "Get a Quote" },
+                { href: "/services", label: "Services" },
+                { href: "/why-us", label: "Why Choose Us" },
+                { href: "/process", label: "How We Work" },
+                { href: "/reviews", label: "Reviews" },
+                { href: "/contact", label: "Get a Quote" },
+                { href: "/service-area", label: "Service Area" },
               ].map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors font-sans">
+                  <Link to={link.href} className="text-muted-foreground hover:text-primary transition-colors font-sans">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

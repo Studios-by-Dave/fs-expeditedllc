@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Truck, Clock } from "lucide-react";
 import heroBg from "@/assets/hero-truck.jpg";
@@ -61,10 +62,10 @@ export const Hero = () => {
               </a>
             </Button>
             <Button variant="hero-outline" asChild>
-              <a href="#contact">
+              <Link to="/contact">
                 Request a Quote
                 <ArrowRight className="w-5 h-5" />
-              </a>
+              </Link>
             </Button>
           </div>
 

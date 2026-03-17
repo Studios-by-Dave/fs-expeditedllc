@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
 
 const areas = [
@@ -40,7 +41,7 @@ export const ServiceArea = () => {
         </div>
 
         <p className="text-center text-muted-foreground text-sm mt-8 font-sans">
-          Don't see your area? <a href="#contact" className="text-primary hover:underline font-semibold">Contact us</a> — we travel for the right job.
+          Don't see your area? <Link to="/contact" className="text-primary hover:underline font-semibold">Contact us</Link> — we travel for the right job.
         </p>
       </div>
     </section>
