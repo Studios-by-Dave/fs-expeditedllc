@@ -133,13 +133,13 @@ export const Navigation = () => {
           }`}
         >
           <div className="container mx-auto px-4 py-2 flex items-center justify-center gap-4">
-            <Button variant="hero" size="lg" className="text-base px-8 py-5 [&_svg]:size-5" asChild>
+            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 [&_svg]:size-5" asChild>
               <a href="tel:8653649011">
                 <Phone className="w-5 h-5" />
                 (865) 364-9011
               </a>
             </Button>
-            <Button variant="hero" size="lg" className="text-base px-8 py-5 [&_svg]:size-5" asChild>
+            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 [&_svg]:size-5" asChild>
               <a href="tel:7047518141">
                 <Phone className="w-5 h-5" />
                 (704) 751-8141
