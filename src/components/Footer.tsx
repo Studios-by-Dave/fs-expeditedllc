@@ -6,7 +6,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-border relative">
+    <footer className="bg-card border-t border-border relative" role="contentinfo">
       <div className="absolute top-0 left-0 right-0 h-3 diamond-plate" />
 
       <div className="container px-4 py-16 mt-3">

@@ -35,11 +35,6 @@ export const CTABanner = () => {
                 (704) 751-8141
               </a>
             </Button>
-            <Button variant="hero-outline" asChild>
-              <a href="tel:8653649011">
-                Request a Quote — Call Now
-              </a>
-            </Button>
           </div>
         </div>
       </div>
