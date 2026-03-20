@@ -34,12 +34,12 @@ export const Contact = () => {
 
           {/* Info row */}
           <div className="mt-12 grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            <a href="mailto:info@fsexpedited.com" className="flex flex-col items-center gap-2 group">
+            <a href="mailto:stormicpalmer@gmail.com" className="flex flex-col items-center gap-2 group">
               <div className="w-12 h-12 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <Mail className="w-5 h-5 text-primary" />
               </div>
               <p className="text-sm text-muted-foreground font-sans">Email Us</p>
-              <p className="text-foreground font-bold text-sm">info@fsexpedited.com</p>
+              <p className="text-foreground font-bold text-sm">stormicpalmer@gmail.com</p>
             </a>
 
             <div className="flex flex-col items-center gap-2">
