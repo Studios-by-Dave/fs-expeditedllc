@@ -37,92 +37,116 @@ export const Navigation = () => {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-4">
-        <nav className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/">
-            <img src={fsLogo} alt="F&S Expedited LLC" className="h-16 md:h-20 w-auto" />
-          </Link>
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto px-4">
+          <nav className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link to="/">
+              <img src={fsLogo} alt="F&S Expedited LLC" className="h-16 md:h-20 w-auto" />
+            </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {/* Services Dropdown */}
-            <div ref={dropdownRef} className="relative">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center gap-1 text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
-              >
-                Services
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${
-                    servicesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {/* Dropdown Menu */}
-              <div
-                className={`absolute top-full left-0 mt-2 w-64 bg-card border border-border shadow-xl transition-all duration-200 ${
-                  servicesOpen
-                    ? "opacity-100 translate-y-0 pointer-events-auto"
-                    : "opacity-0 -translate-y-2 pointer-events-none"
-                }`}
-              >
-                <Link
-                  to="/services"
-                  onClick={() => setServicesOpen(false)}
-                  className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:bg-primary/10 transition-colors border-b border-border"
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-8">
+              {/* Services Dropdown */}
+              <div ref={dropdownRef} className="relative">
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center gap-1 text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
                 >
-                  All Services
-                </Link>
-                {services.map((service) => (
+                  Services
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      servicesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {/* Dropdown Menu */}
+                <div
+                  className={`absolute top-full left-0 mt-2 w-64 bg-card border border-border shadow-xl transition-all duration-200 ${
+                    servicesOpen
+                      ? "opacity-100 translate-y-0 pointer-events-auto"
+                      : "opacity-0 -translate-y-2 pointer-events-none"
+                  }`}
+                >
                   <Link
-                    key={service.slug}
-                    to={`/services/${service.slug}`}
+                    to="/services"
                     onClick={() => setServicesOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border last:border-b-0"
+                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:bg-primary/10 transition-colors border-b border-border"
                   >
-                    <service.icon className="w-4 h-4 text-primary shrink-0" />
-                    {service.title}
+                    All Services
                   </Link>
-                ))}
+                  {services.map((service) => (
+                    <Link
+                      key={service.slug}
+                      to={`/services/${service.slug}`}
+                      onClick={() => setServicesOpen(false)}
+                      className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border last:border-b-0"
+                    >
+                      <service.icon className="w-4 h-4 text-primary shrink-0" />
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
               </div>
+
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
 
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className="text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+            {/* CTA */}
+            <div className="hidden md:flex items-center">
+              <Button variant="default" size="sm" asChild>
+                <Link to="/contact">Get Quote</Link>
+              </Button>
+            </div>
 
-          {/* CTA */}
-          <div className="hidden md:flex items-center">
-            <Button variant="default" size="sm" asChild>
-              <Link to="/contact">Get Quote</Link>
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </nav>
+        </div>
+
+        {/* Phone CTA Sub-bar */}
+        <div
+          className={`hidden md:block border-t border-border/50 transition-all duration-300 ${
+            isScrolled ? "bg-background/90 backdrop-blur-md" : "bg-background/60 backdrop-blur-sm"
+          }`}
+        >
+          <div className="container mx-auto px-4 py-2 flex items-center justify-center gap-4">
+            <Button variant="hero" size="lg" className="text-base px-8 py-5 [&_svg]:size-5" asChild>
+              <a href="tel:8653649011">
+                <Phone className="w-5 h-5" />
+                (865) 364-9011
+              </a>
+            </Button>
+            <Button variant="hero" size="lg" className="text-base px-8 py-5 [&_svg]:size-5" asChild>
+              <a href="tel:7047518141">
+                <Phone className="w-5 h-5" />
+                (704) 751-8141
+              </a>
             </Button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-foreground"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </nav>
+        </div>
 
         {/* Mobile Menu */}
         <div
@@ -183,29 +207,22 @@ export const Navigation = () => {
             ))}
 
             <div className="pt-4 border-t border-border flex flex-col gap-3">
-              <a
-                href="tel:8653649011"
-                className="flex items-center gap-2 text-primary font-semibold"
-              >
-                <Phone className="w-4 h-4" />
-                (865) 364-9011
-              </a>
-              <a
-                href="tel:7047518141"
-                className="flex items-center gap-2 text-primary font-semibold"
-              >
-                <Phone className="w-4 h-4" />
-                (704) 751-8141
-              </a>
-              <Button variant="default" className="w-full" asChild>
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  Get Free Quote
-                </Link>
+              <Button variant="hero" className="w-full text-lg py-6 [&_svg]:size-5" asChild>
+                <a href="tel:8653649011">
+                  <Phone className="w-5 h-5" />
+                  (865) 364-9011
+                </a>
+              </Button>
+              <Button variant="hero" className="w-full text-lg py-6 [&_svg]:size-5" asChild>
+                <a href="tel:7047518141">
+                  <Phone className="w-5 h-5" />
+                  (704) 751-8141
+                </a>
               </Button>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
