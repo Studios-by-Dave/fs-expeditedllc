@@ -55,20 +55,17 @@ export const Hero = () => {
           </p>
 
           {/* CTAs */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up animation-delay-450">
-            <Button variant="hero" asChild>
+          <div className="mt-10 flex flex-col sm:flex-row gap-5 opacity-0 animate-fade-up animation-delay-450">
+            <Button variant="hero" size="xl" className="text-xl px-12 py-8 [&_svg]:size-6" asChild>
               <a href="tel:8653649011">
-                📞 (865) 364-9011
+                <Phone className="w-6 h-6" />
+                (865) 364-9011
               </a>
             </Button>
-            <Button variant="hero" asChild>
+            <Button variant="hero" size="xl" className="text-xl px-12 py-8 [&_svg]:size-6" asChild>
               <a href="tel:7047518141">
-                📞 (704) 751-8141
-              </a>
-            </Button>
-            <Button variant="hero-outline" asChild>
-              <a href="tel:8653649011">
-                Request a Quote — Call Now
+                <Phone className="w-6 h-6" />
+                (704) 751-8141
               </a>
             </Button>
           </div>

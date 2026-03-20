@@ -107,22 +107,8 @@ export const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA & Phone */}
-          <div className="hidden md:flex items-center gap-4">
-            <a
-              href="tel:8653649011"
-              className="flex items-center gap-2 font-semibold text-primary text-base"
-            >
-              <Phone className="w-4 h-4" />
-              (865) 364-9011
-            </a>
-            <a
-              href="tel:7047518141"
-              className="flex items-center gap-2 font-semibold text-primary text-base"
-            >
-              <Phone className="w-4 h-4" />
-              (704) 751-8141
-            </a>
+          {/* CTA */}
+          <div className="hidden md:flex items-center">
             <Button variant="default" size="sm" asChild>
               <Link to="/contact">Get Quote</Link>
             </Button>
