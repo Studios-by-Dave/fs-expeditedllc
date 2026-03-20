@@ -67,10 +67,9 @@ export const Hero = () => {
               </a>
             </Button>
             <Button variant="hero-outline" asChild>
-              <Link to="/contact">
-                Request a Quote
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              <a href="tel:8653649011">
+                Request a Quote — Call Now
+              </a>
             </Button>
           </div>
 
