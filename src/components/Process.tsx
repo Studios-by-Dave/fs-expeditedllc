@@ -5,7 +5,7 @@ const steps = [
     icon: ClipboardCheck,
     step: "01",
     title: "Request a Quote",
-    description: "Call us or fill out our form. We'll assess your hauling needs and provide a transparent estimate.",
+    description: "Give us a call. We'll assess your hauling needs and provide a transparent, no-obligation estimate.",
   },
   {
     icon: Truck,
