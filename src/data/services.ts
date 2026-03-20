@@ -17,7 +17,7 @@ export const services: ServiceData[] = [
     title: "Dump Truck Hauling",
     description: "Heavy-duty dump truck services for construction sites, commercial projects, and residential needs. On-time, every time.",
     features: ["Bulk Material Transport", "Site-to-Site Hauling", "Flexible Scheduling"],
-    longDescription: "Our dump truck hauling service is the backbone of F&S Expedited. Whether you're moving dirt, gravel, sand, or demolition debris, our fleet of heavy-duty dump trucks is equipped to handle loads of all sizes. We serve construction companies, contractors, landscapers, and homeowners throughout the Knoxville, TN and Charlotte, NC regions.",
+    longDescription: "Our dump truck hauling service is the backbone of F&S Expedited. Whether you're moving dirt, gravel, sand, or demolition debris, our fleet of heavy-duty dump trucks is equipped to handle loads of all sizes. We serve construction companies, contractors, landscapers, and homeowners within a 100-mile radius of Shelby, North Carolina.",
     benefits: [
       "Modern, well-maintained fleet of dump trucks",
       "Experienced and licensed operators",
