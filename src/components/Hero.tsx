@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Truck, Clock } from "lucide-react";
+import { ArrowRight, Shield, Truck, Clock, Phone } from "lucide-react";
 import heroBg from "@/assets/hero-truck.jpg";
 import flagVideo from "@/assets/flag-waving.mp4";
 
