@@ -71,7 +71,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-muted-foreground font-sans">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                Charlotte, NC & Knoxville, TN
+                100-Mile Radius of Shelby, NC
               </li>
             </ul>
           </div>

@@ -69,7 +69,7 @@ export const services: ServiceData[] = [
     benefits: [
       "Large-capacity hauling for big projects",
       "Reliable scheduling for ongoing contracts",
-      "Regional coverage across TN and NC",
+      "100-mile service radius from Shelby, NC",
       "Coordination with quarries and suppliers",
       "DOT-compliant transport",
       "Dedicated project management support",

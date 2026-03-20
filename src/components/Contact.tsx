@@ -90,7 +90,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground font-sans">Service Area</p>
-                  <p className="text-foreground font-bold">Charlotte, NC & Knoxville, TN</p>
+                  <p className="text-foreground font-bold">100-Mile Radius of Shelby, NC</p>
                 </div>
               </div>
             </div>

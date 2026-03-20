@@ -50,7 +50,7 @@ export const Hero = () => {
 
           {/* Subheadline */}
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl opacity-0 animate-fade-up animation-delay-300 font-sans">
-            Professional dump truck & expedited hauling services serving the Knoxville, TN and surrounding areas. Competitive rates & fast turnaround.
+            Professional dump truck & expedited hauling services within a 100-mile radius of Shelby, NC. Competitive rates & fast turnaround.
           
           </p>
 
