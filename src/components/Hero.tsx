@@ -10,8 +10,10 @@ export const Hero = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}>
-
+        style={{ backgroundImage: `url(${heroBg})` }}
+        role="img"
+        aria-label="F&S Expedited LLC dump truck for professional hauling services"
+      >
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
       </div>
@@ -36,6 +38,7 @@ export const Hero = () => {
               playsInline
               className="absolute -top-4 -left-8 -right-8 -bottom-4 w-[calc(100%+4rem)] h-[calc(100%+2rem)] object-cover opacity-[0.10] pointer-events-none"
               src={flagVideo}
+              style={{ playbackRate: 0.5 }}
             />
             <h1 className="relative opacity-0 animate-fade-up animation-delay-150">
               <span className="text-5xl lg:text-8xl font-bold tracking-wider text-foreground leading-none md:text-6xl font-sans">

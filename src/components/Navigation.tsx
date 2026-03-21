@@ -6,9 +6,9 @@ import { services } from "@/data/services";
 import fsLogo from "@/assets/fs-logo.png";
 
 const navLinks = [
+  { href: "/", label: "Home" },
   { href: "/why-us", label: "Why Us" },
   { href: "/process", label: "How We Work" },
-  { href: "/reviews", label: "Reviews" },
   { href: "/service-area", label: "Service Area" },
   { href: "/contact", label: "Contact" },
 ];
@@ -49,7 +49,11 @@ export const Navigation = () => {
           <nav className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/">
-              <img src={fsLogo} alt="F&S Expedited LLC" className="h-16 md:h-20 w-auto" />
+              <img 
+                src={fsLogo} 
+                alt="F&S Expedited LLC Logo - Professional Dump Truck Hauling Services" 
+                className="h-16 md:h-20 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -129,19 +133,19 @@ export const Navigation = () => {
         {/* Phone CTA Sub-bar */}
         <div
           className={`hidden md:block border-t border-border/50 transition-all duration-300 ${
-            isScrolled ? "bg-background/90 backdrop-blur-md" : "bg-background/60 backdrop-blur-sm"
+            isScrolled ? "bg-background/90 backdrop-blur-md -translate-y-full" : "bg-background/60 backdrop-blur-sm translate-y-0"
           }`}
         >
           <div className="container mx-auto px-4 py-2 flex items-center justify-center gap-4">
-            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 [&_svg]:size-5" asChild>
+            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect" asChild>
               <a href="tel:8653649011">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5 text-green-500" />
                 (865) 364-9011
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 [&_svg]:size-5" asChild>
+            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect" asChild>
               <a href="tel:7047518141">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5 text-green-500" />
                 (704) 751-8141
               </a>
             </Button>
@@ -206,16 +210,16 @@ export const Navigation = () => {
               </Link>
             ))}
 
-            <div className="pt-4 border-t border-border flex flex-col gap-3">
-              <Button variant="hero" className="w-full text-lg py-6 [&_svg]:size-5" asChild>
+            <div className="pt-4 border-t border-border flex justify-between gap-3">
+              <Button variant="hero" className="text-base px-6 py-4 [&_svg]:size-4 flex-1 max-w-[48%]" asChild>
                 <a href="tel:8653649011">
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-4 h-4" />
                   (865) 364-9011
                 </a>
               </Button>
-              <Button variant="hero" className="w-full text-lg py-6 [&_svg]:size-5" asChild>
+              <Button variant="hero" className="text-base px-6 py-4 [&_svg]:size-4 flex-1 max-w-[48%]" asChild>
                 <a href="tel:7047518141">
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-4 h-4" />
                   (704) 751-8141
                 </a>
               </Button>

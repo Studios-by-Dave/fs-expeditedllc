@@ -1,4 +1,5 @@
 import { Truck, Mountain, Trash2, Package, Zap, HardHat, type LucideIcon } from "lucide-react";
+import heroTruck from "@/assets/hero-truck.jpg";
 
 export interface ServiceData {
   slug: string;
@@ -8,6 +9,7 @@ export interface ServiceData {
   features: string[];
   longDescription: string;
   benefits: string[];
+  backgroundImage?: string;
 }
 
 export const services: ServiceData[] = [
@@ -26,6 +28,7 @@ export const services: ServiceData[] = [
       "Same-day dispatch available",
       "Fully licensed and insured",
     ],
+    backgroundImage: heroTruck,
   },
   {
     slug: "gravel-sand-delivery",
@@ -42,6 +45,7 @@ export const services: ServiceData[] = [
       "Volume discounts for repeat customers",
       "Fast turnaround on orders",
     ],
+    backgroundImage: heroTruck,
   },
   {
     slug: "debris-removal",
@@ -58,6 +62,7 @@ export const services: ServiceData[] = [
       "Flexible scheduling around your project",
       "Competitive flat-rate and per-load pricing",
     ],
+    backgroundImage: heroTruck,
   },
   {
     slug: "aggregate-transport",
@@ -74,6 +79,7 @@ export const services: ServiceData[] = [
       "DOT-compliant transport",
       "Dedicated project management support",
     ],
+    backgroundImage: heroTruck,
   },
   {
     slug: "emergency-expedited",
@@ -90,6 +96,7 @@ export const services: ServiceData[] = [
       "Direct communication with dispatch",
       "No surprise fees — transparent pricing",
     ],
+    backgroundImage: heroTruck,
   },
   {
     slug: "commercial-hauling",
@@ -106,5 +113,6 @@ export const services: ServiceData[] = [
       "Coordination with your project timeline",
       "Proven track record with commercial clients",
     ],
+    backgroundImage: heroTruck,
   },
 ];
