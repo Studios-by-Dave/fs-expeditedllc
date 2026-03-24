@@ -45,23 +45,23 @@ export const Services = () => {
                   <service.icon className="w-7 h-7 text-primary" />
                 </div>
 
-                <h3 className="text-xl font-heading font-bold text-foreground mb-3 tracking-wide">
+                <h3 className="text-2xl font-heading font-bold text-foreground mb-3 tracking-wide">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 font-sans">
+                <p className="text-muted-foreground text-base leading-relaxed mb-4 font-sans">
                   {service.description}
                 </p>
 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm text-foreground/80 font-sans">
+                    <li key={feature} className="flex items-center gap-2 text-base text-foreground/80 font-sans">
                       <span className="w-1.5 h-1.5 bg-primary" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <span className="flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider font-sans group-hover:gap-3 transition-all">
+                <span className="flex items-center gap-2 text-primary font-semibold text-base uppercase tracking-wider font-sans group-hover:gap-3 transition-all">
                   Learn More <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
