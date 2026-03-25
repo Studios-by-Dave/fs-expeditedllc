@@ -26,7 +26,7 @@ const ServiceDetailPage = () => {
       "@type": "LocalBusiness",
       "name": "F&S Expedited LLC",
       "telephone": "(865) 364-9011",
-      "email": "stormicpalmer@gmail.com",
+      "email": "Aldrich2577@gmail.com",
     },
     "areaServed": {
       "@type": "GeoCircle",

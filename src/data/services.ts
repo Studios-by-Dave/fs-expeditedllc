@@ -1,4 +1,4 @@
-import { Truck, Mountain, Trash2, Package, Zap, HardHat, type LucideIcon } from "lucide-react";
+import { Truck, Mountain, Trash2, Package, Zap, HardHat, Trees, Construction, type LucideIcon } from "lucide-react";
 import heroTruck from "@/assets/hero-truck.jpg";
 
 export interface ServiceData {
@@ -112,6 +112,40 @@ export const services: ServiceData[] = [
       "Flexible long-term scheduling",
       "Coordination with your project timeline",
       "Proven track record with commercial clients",
+    ],
+    backgroundImage: heroTruck,
+  },
+  {
+    slug: "site-prep",
+    icon: Construction,
+    title: "Site Prep",
+    description: "Professional site preparation services including grading, excavation, and ground preparation for construction projects.",
+    features: ["Land Grading", "Excavation", "Ground Preparation"],
+    longDescription: "Our site preparation services ensure your construction project starts on solid ground. We handle everything from basic land grading to complex excavation and ground preparation. Our experienced team uses modern equipment to prepare your site according to specifications, ensuring proper drainage and a stable foundation for your build.",
+    benefits: [
+      "Professional grading and excavation",
+      "Proper drainage planning",
+      "Site preparation to your specifications",
+      "Experienced operators",
+      "Modern equipment fleet",
+      "Coordination with your construction timeline",
+    ],
+    backgroundImage: heroTruck,
+  },
+  {
+    slug: "land-clearing",
+    icon: Trees,
+    title: "Land Clearing",
+    description: "Complete land clearing services including tree removal, brush clearing, and vegetation management for development projects.",
+    features: ["Tree Removal", "Brush Clearing", "Vegetation Management"],
+    longDescription: "Transform overgrown or wooded land into development-ready sites with our professional land clearing services. We handle everything from individual tree removal to large-scale brush clearing and vegetation management. Our team ensures efficient clearing while minimizing environmental impact and preparing your land for the next phase of development.",
+    benefits: [
+      "Complete land clearing solutions",
+      "Selective tree removal or full clearing",
+      "Brush and vegetation management",
+      "Environmentally responsible practices",
+      "Debris removal and cleanup included",
+      "Preparation for construction or landscaping",
     ],
     backgroundImage: heroTruck,
   },

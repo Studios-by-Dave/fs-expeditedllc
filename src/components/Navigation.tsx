@@ -140,13 +140,13 @@ export const Navigation = () => {
             <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-lg" asChild>
               <a href="tel:8653649011">
                 <Phone className="w-5 h-5 text-green-500" />
-                (865) 364-9011
+                Call Joe! (865) 364-9011
               </a>
             </Button>
             <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-lg" asChild>
               <a href="tel:7047518141">
                 <Phone className="w-5 h-5 text-green-500" />
-                (704) 751-8141
+                Call Luke! (704) 751-8141
               </a>
             </Button>
           </div>
