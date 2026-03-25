@@ -1,4 +1,4 @@
-import { Truck, Mountain, Trash2, Package, Zap, HardHat, type LucideIcon } from "lucide-react";
+import { Truck, Mountain, Trash2, Package, Zap, HardHat, Shovel, Building2, type LucideIcon } from "lucide-react";
 import heroTruck from "@/assets/hero-truck.jpg";
 
 export interface ServiceData {
@@ -112,6 +112,40 @@ export const services: ServiceData[] = [
       "Flexible long-term scheduling",
       "Coordination with your project timeline",
       "Proven track record with commercial clients",
+    ],
+    backgroundImage: heroTruck,
+  },
+  {
+    slug: "site-prep",
+    icon: Shovel,
+    title: "Site Prep",
+    description: "Professional site preparation services to get your land cleared, graded, and ready for construction.",
+    features: ["Land Clearing", "Grading & Leveling", "Erosion Control"],
+    longDescription: "Our site preparation service gets your project off to the right start. From clearing trees, brush, and debris to grading and leveling the land, we handle the heavy lifting so your construction crew can hit the ground running. We serve residential, commercial, and industrial sites within a 100-mile radius of Shelby, North Carolina.",
+    benefits: [
+      "Complete land clearing and brush removal",
+      "Precision grading and leveling",
+      "Stump removal and root clearing",
+      "Erosion and sediment control setup",
+      "Coordination with your construction timeline",
+      "Fully licensed and insured operators",
+    ],
+    backgroundImage: heroTruck,
+  },
+  {
+    slug: "demolition",
+    icon: Building2,
+    title: "Demolition",
+    description: "Safe, efficient demolition services for residential and commercial structures. We tear it down and haul it away.",
+    features: ["Structural Demolition", "Interior Demo", "Debris Hauling"],
+    longDescription: "When it's time to tear it down and start fresh, F&S Expedited delivers safe, efficient demolition services. From full structural demolition of residential and commercial buildings to selective interior demo, our experienced crew handles the job from start to finish — including hauling away all debris. We operate within a 100-mile radius of Shelby, North Carolina.",
+    benefits: [
+      "Full structural and selective demolition",
+      "Interior strip-out and gut renovations",
+      "Concrete and foundation removal",
+      "Complete debris hauling and disposal",
+      "Safety-first approach on every job",
+      "Permits coordination and compliance",
     ],
     backgroundImage: heroTruck,
   },

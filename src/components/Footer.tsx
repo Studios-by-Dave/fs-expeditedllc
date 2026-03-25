@@ -64,9 +64,9 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:stormicpalmer@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans">
+                <a href="mailto:Aldrich2577@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans">
                   <Mail className="w-4 h-4" />
-                  stormicpalmer@gmail.com
+                  Aldrich2577@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground font-sans">
