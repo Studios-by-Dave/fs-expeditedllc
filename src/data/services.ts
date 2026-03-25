@@ -1,4 +1,4 @@
-import { Truck, Mountain, Trash2, Package, Zap, HardHat, type LucideIcon } from "lucide-react";
+import { Truck, Mountain, Trash2, Package, Zap, HardHat, Shovel, Building2, type LucideIcon } from "lucide-react";
 import heroTruck from "@/assets/hero-truck.jpg";
 
 export interface ServiceData {
