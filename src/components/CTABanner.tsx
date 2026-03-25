@@ -24,15 +24,15 @@ export const CTABanner = () => {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" asChild>
-              <a href="tel:8653649011" className="flex flex-col items-center">
-                <span className="flex items-center gap-2"><Phone className="w-5 h-5" /> (865) 364-9011</span>
-                <span className="text-xs font-normal opacity-80">Call Joe!</span>
+              <a href="tel:8653649011">
+                <Phone className="w-5 h-5" />
+                (865) 364-9011
               </a>
             </Button>
             <Button variant="hero" asChild>
-              <a href="tel:7047518141" className="flex flex-col items-center">
-                <span className="flex items-center gap-2"><Phone className="w-5 h-5" /> (704) 751-8141</span>
-                <span className="text-xs font-normal opacity-80">Call Luke!</span>
+              <a href="tel:7047518141">
+                <Phone className="w-5 h-5" />
+                (704) 751-8141
               </a>
             </Button>
           </div>
