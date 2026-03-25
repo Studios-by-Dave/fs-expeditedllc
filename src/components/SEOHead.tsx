@@ -67,7 +67,7 @@ export const SEOHead = ({
       <meta name="revisit-after" content="7 days" />
 
       {/* Business Contact Info */}
-      <meta name="contact" content="stormicpalmer@gmail.com" />
+      <meta name="contact" content="Aldrich2577@gmail.com" />
       <meta name="telephone" content="+1-865-364-9011" />
       <meta name="telephone" content="+1-704-751-8141" />
 
