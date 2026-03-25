@@ -138,15 +138,15 @@ export const Navigation = () => {
         >
           <div className="container mx-auto px-4 py-2 flex items-center justify-center gap-8">
             <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-lg" asChild>
-              <a href="tel:8653649011">
-                <Phone className="w-5 h-5 text-green-500" />
-                (865) 364-9011
+              <a href="tel:8653649011" className="flex flex-col items-center">
+                <span className="flex items-center gap-2"><Phone className="w-5 h-5 text-green-500" /> (865) 364-9011</span>
+                <span className="text-xs font-normal opacity-70">Call Joe!</span>
               </a>
             </Button>
             <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-lg" asChild>
-              <a href="tel:7047518141">
-                <Phone className="w-5 h-5 text-green-500" />
-                (704) 751-8141
+              <a href="tel:7047518141" className="flex flex-col items-center">
+                <span className="flex items-center gap-2"><Phone className="w-5 h-5 text-green-500" /> (704) 751-8141</span>
+                <span className="text-xs font-normal opacity-70">Call Luke!</span>
               </a>
             </Button>
           </div>
