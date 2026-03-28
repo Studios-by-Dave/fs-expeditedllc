@@ -3,7 +3,7 @@ export const localBusinessSchema = {
   "@type": "LocalBusiness",
   "name": "F&S Expedited LLC",
   "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
-  "url": "https://fs-expeditedllc.lovable.app",
+  "url": "https://www.fs-expeditedllc.com",
   "telephone": ["+1-865-364-9011", "+1-704-751-8141"],
   "email": "Aldrich2577@gmail.com",
   "address": {
