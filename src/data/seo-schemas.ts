@@ -122,11 +122,11 @@ export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "F&S Expedited LLC",
-  "url": "https://fs-expeditedllc.lovable.app",
+  "url": "https://www.fs-expeditedllc.com",
   "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://fs-expeditedllc.lovable.app/search?q={search_term_string}",
+    "target": "https://www.fs-expeditedllc.com/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   },
   "publisher": {
