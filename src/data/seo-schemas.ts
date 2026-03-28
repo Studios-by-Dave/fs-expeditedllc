@@ -33,7 +33,7 @@ export const localBusinessSchema = {
   "currenciesAccepted": "USD",
   "sameAs": [],
   "image": "https://storage.googleapis.com/gpt-engineer-file-uploads/7yFZRN3a4zOnW6XxdC0mKKnJqbo1/social-images/social-1771915503507-ESExp.webp",
-  "logo": "https://fs-expeditedllc.lovable.app/logo.png",
+  "logo": "https://www.fs-expeditedllc.com/logo.png",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Hauling Services",
