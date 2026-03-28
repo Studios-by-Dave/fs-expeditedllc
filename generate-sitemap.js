@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs';
 import { services } from './src/data/services';
 
-const SITE_URL = 'https://fs-expeditedllc.lovable.app';
+const SITE_URL = 'https://www.fs-expeditedllc.com';
 
 const pages = [
   { url: '/', changefreq: 'weekly', priority: 1.0 },

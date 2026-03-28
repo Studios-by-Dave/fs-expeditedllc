@@ -132,7 +132,7 @@ export const websiteSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "F&S Expedited LLC",
-    "url": "https://fs-expeditedllc.lovable.app"
+    "url": "https://www.fs-expeditedllc.com"
   }
 };
 
