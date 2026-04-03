@@ -1,15 +1,3 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
 
@@ -18,6 +6,8 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /*.json$
 Disallow: /search
+Disallow: /*?*
+Disallow: /src/
 
 # Allow search engines to crawl the main content
 Allow: /services/
@@ -29,4 +19,4 @@ Allow: /reviews
 
 Crawl-delay: 1
 
-Sitemap: https://fs-expeditedllc.lovable.app/sitemap.xml
+Sitemap: https://fs-expeditedllc.vercel.app/sitemap.xml

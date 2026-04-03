@@ -5,21 +5,21 @@ import { Services } from "@/components/Services";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { ServiceArea } from "@/components/ServiceArea";
 import { Process } from "@/components/Process";
-import { CTABanner } from "@/components/CTABanner";
 import { Testimonials } from "@/components/Testimonials";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { localBusinessSchema, websiteSchema, breadcrumbSchema } from "@/data/seo-schemas";
+import { localBusinessSchema, organizationSchema, websiteSchema, breadcrumbSchema } from "@/data/seo-schemas";
 
 const Index = () => {
   const breadcrumbs = [
-    { name: "Home", url: "https://fs-expeditedllc.lovable.app/" }
+    { name: "Home", url: "https://fs-expeditedllc.vercel.app/" }
   ];
 
   const combinedSchema = {
     "@context": "https://schema.org",
     "@graph": [
       localBusinessSchema,
+      organizationSchema,
       websiteSchema,
       breadcrumbSchema(breadcrumbs)
     ]
@@ -37,10 +37,8 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
-        <WhyChooseUs />
         <Process />
-        <CTABanner />
-        <ServiceArea />
+        <WhyChooseUs />
         <Testimonials />
         <Contact />
       </main>

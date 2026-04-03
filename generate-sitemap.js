@@ -1,7 +1,10 @@
 import { writeFileSync } from 'fs';
-import { services } from './src/data/services';
+import { readFileSync } from 'fs';
 
-const SITE_URL = 'https://fs-expeditedllc.lovable.app';
+// Read services data directly
+const servicesData = JSON.parse(readFileSync('./src/data/services.json', 'utf8'));
+
+const SITE_URL = 'https://fs-expeditedllc.vercel.app';
 
 const pages = [
   { url: '/', changefreq: 'weekly', priority: 1.0 },
@@ -13,7 +16,7 @@ const pages = [
   { url: '/reviews', changefreq: 'weekly', priority: 0.8 },
 ];
 
-const servicePages = services.map(service => ({
+const servicePages = servicesData.map(service => ({
   url: `/services/${service.slug}`,
   changefreq: 'monthly',
   priority: 0.8
@@ -31,6 +34,8 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>${page.priority}</priority>
   </url>`).join('')}
 </urlset>`;
+
+writeFileSync('./public/sitemap.xml', sitemap);
 
 console.log('Sitemap generated:');
 console.log(sitemap);
