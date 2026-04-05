@@ -4,7 +4,7 @@ import { readFileSync } from 'fs';
 // Read services data directly
 const servicesData = JSON.parse(readFileSync('./src/data/services.json', 'utf8'));
 
-const SITE_URL = 'https://fs-expeditedllc.vercel.app';
+const SITE_URL = 'https://www.fs-expeditedllc.com';
 
 const pages = [
   { url: '/', changefreq: 'weekly', priority: 1.0 },

@@ -19,4 +19,4 @@ Allow: /reviews
 
 Crawl-delay: 1
 
-Sitemap: https://fs-expeditedllc.vercel.app/sitemap.xml
+Sitemap: https://www.fs-expeditedllc.com/sitemap.xml

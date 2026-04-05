@@ -12,7 +12,7 @@ import { localBusinessSchema, organizationSchema, websiteSchema, breadcrumbSchem
 
 const Index = () => {
   const breadcrumbs = [
-    { name: "Home", url: "https://fs-expeditedllc.vercel.app/" }
+    { name: "Home", url: "https://www.fs-expeditedllc.com/" }
   ];
 
   const combinedSchema = {

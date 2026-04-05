@@ -4,8 +4,8 @@ export const organizationSchema = {
   "@type": "Organization",
   "name": "F&S Expedited LLC",
   "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
-  "url": "https://fs-expeditedllc.vercel.app",
-  "logo": "https://fs-expeditedllc.vercel.app/favicon-32x32.png",
+  "url": "https://www.fs-expeditedllc.com",
+  "logo": "https://www.fs-expeditedllc.com/favicon-32x32.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+1-865-364-9011",
@@ -13,7 +13,7 @@ export const organizationSchema = {
     "availableLanguage": ["English"]
   },
   "sameAs": [
-    "https://fs-expeditedllc.vercel.app"
+    "https://www.fs-expeditedllc.com"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -46,13 +46,13 @@ export const websiteSchema = {
   "name": "F&S Expedited LLC",
   "alternateName": "F&S Expedited",
   "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
-  "url": "https://fs-expeditedllc.vercel.app",
+  "url": "https://www.fs-expeditedllc.com",
   "potentialAction": [
     {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://fs-expeditedllc.vercel.app/search?q={search_term_string}"
+        "urlTemplate": "https://www.fs-expeditedllc.com/search?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     },
@@ -60,14 +60,14 @@ export const websiteSchema = {
       "@type": "CommunicateAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://fs-expeditedllc.vercel.app/contact"
+        "urlTemplate": "https://www.fs-expeditedllc.com/contact"
       }
     }
   ],
   "publisher": {
     "@type": "Organization",
     "name": "F&S Expedited LLC",
-    "url": "https://fs-expeditedllc.vercel.app"
+    "url": "https://www.fs-expeditedllc.com"
   }
 };
 
@@ -77,7 +77,7 @@ export const localBusinessSchema = {
   "@type": "LocalBusiness",
   "name": "F&S Expedited LLC",
   "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
-"url": "https://fs-expeditedllc.vercel.app",
+"url": "https://www.fs-expeditedllc.com",
   "telephone": ["+1-865-364-9011", "+1-704-751-8141"],
   "email": "Aldrich2577@gmail.com",
   "address": {
@@ -102,7 +102,7 @@ export const localBusinessSchema = {
   "currenciesAccepted": "USD",
   "hasMap": true,
   "sameAs": [
-    "https://fs-expeditedllc.vercel.app"
+    "https://www.fs-expeditedllc.com"
   ]
 };
 

@@ -11,7 +11,7 @@ interface SEOHeadProps {
   ogImage?: string;
 }
 
-const SITE_URL = 'https://fs-expeditedllc.vercel.app';
+const SITE_URL = 'https://www.fs-expeditedllc.com';
 const OG_IMAGE = "https://storage.googleapis.com/gpt-engineer-file-uploads/7yFZRN3a4zOnW6XxdC0mKKnJqbo1/social-images/social-1771915503507-ESExp.webp";
 
 export const SEOHead = ({ 
