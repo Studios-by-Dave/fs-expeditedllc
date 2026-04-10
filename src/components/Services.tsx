@@ -31,7 +31,7 @@ export const Services = () => {
               {service.backgroundImage && (
                 <div className="absolute inset-0">
                   <Picture
-                    src={service.backgroundImage}
+                    src="/assets/optimized/hero-truck-800.jpg"
                     alt={`${service.title} background - ${service.description}`}
                     className="absolute inset-0 opacity-10 bg-cover bg-center bg-no-repeat"
                     width={800}

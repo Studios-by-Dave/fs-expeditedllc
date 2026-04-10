@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { services } from "@/data/services";
 import { Picture } from "@/components/ui/picture";
+import fsLogo from "@/assets/fs-logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -49,13 +50,19 @@ export const Navigation = () => {
           <nav className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/">
-              <Picture
-                src="/src/assets/optimized/fs-logo-400.png"
+              <img 
+                src={fsLogo}
                 alt="F&S Expedited LLC Logo - Professional Dump Truck Hauling Services"
-                width={400}
-                height={80}
                 className="h-16 md:h-20 w-auto"
-                priority={true}
+                loading="eager"
+                onError={(e) => {
+                  // Try optimized WebP first
+                  e.currentTarget.src = "/assets/optimized/fs-logo-400.webp";
+                  // If that fails, try PNG
+                  e.currentTarget.onerror = () => {
+                    e.currentTarget.src = "/assets/optimized/fs-logo-400.png";
+                  };
+                }}
               />
             </Link>
 

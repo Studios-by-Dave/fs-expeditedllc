@@ -10,7 +10,7 @@ export const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Picture
-          src="/src/assets/optimized/hero-truck-1600.jpg"
+          src="/assets/optimized/hero-truck-1600.jpg"
           alt="F&S Expedited LLC dump truck for professional hauling services"
           width={1600}
           height={900}
