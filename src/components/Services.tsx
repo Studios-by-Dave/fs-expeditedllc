@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { services } from "@/data/services";
 import { ArrowRight } from "lucide-react";
+import { Picture } from "@/components/ui/picture";
 
 export const Services = () => {
   return (
@@ -28,10 +29,17 @@ export const Services = () => {
             >
               {/* Background Image */}
               {service.backgroundImage && (
-                <div 
-                  className="absolute inset-0 opacity-10 bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: `url(${service.backgroundImage})` }}
-                />
+                <div className="absolute inset-0">
+                  <Picture
+                    src={service.backgroundImage}
+                    alt={`${service.title} background - ${service.description}`}
+                    className="absolute inset-0 opacity-10 bg-cover bg-center bg-no-repeat"
+                    width={800}
+                    height={600}
+                    priority={false}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
               )}
               
               {/* Overlay to ensure text readability */}

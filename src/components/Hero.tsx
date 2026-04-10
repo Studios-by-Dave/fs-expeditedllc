@@ -1,19 +1,23 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Truck, Clock, Phone } from "lucide-react";
-import heroBg from "@/assets/hero-truck.jpg";
+import { Picture } from "@/components/ui/picture";
 import flagVideo from "@/assets/flag-waving.mp4";
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-        role="img"
-        aria-label="F&S Expedited LLC dump truck for professional hauling services"
-      >
+      <div className="absolute inset-0">
+        <Picture
+          src="/src/assets/optimized/hero-truck-1600.jpg"
+          alt="F&S Expedited LLC dump truck for professional hauling services"
+          width={1600}
+          height={900}
+          className="absolute inset-0 w-full h-full object-cover"
+          priority={true}
+          sizes="100vw"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
       </div>

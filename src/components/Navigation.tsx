@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { services } from "@/data/services";
-import fsLogo from "@/assets/fs-logo.png";
+import { Picture } from "@/components/ui/picture";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -49,10 +49,13 @@ export const Navigation = () => {
           <nav className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/">
-              <img 
-                src={fsLogo} 
-                alt="F&S Expedited LLC Logo - Professional Dump Truck Hauling Services" 
+              <Picture
+                src="/src/assets/optimized/fs-logo-400.png"
+                alt="F&S Expedited LLC Logo - Professional Dump Truck Hauling Services"
+                width={400}
+                height={80}
                 className="h-16 md:h-20 w-auto"
+                priority={true}
               />
             </Link>
 
