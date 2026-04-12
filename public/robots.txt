@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 
 # Block common non-content paths
-Disallow: /api/
 Disallow: /admin/
 Disallow: /*.json$
 Disallow: /search
