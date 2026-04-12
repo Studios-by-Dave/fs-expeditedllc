@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Truck, Clock, Phone } from "lucide-react";
-import { Picture } from "@/components/ui/picture";
 import flagVideo from "@/assets/flag-waving.mp4";
 
 export const Hero = () => {
@@ -9,14 +8,19 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <Picture
-          src="/assets/optimized/hero-truck-1600.jpg"
+        <img 
+          src="/assets/optimized/hero-truck-1600.webp"
           alt="F&S Expedited LLC dump truck for professional hauling services"
-          width={1600}
-          height={900}
           className="absolute inset-0 w-full h-full object-cover"
-          priority={true}
-          sizes="100vw"
+          loading="eager"
+          onError={(e) => {
+            // Try JPG fallback if WebP fails
+            e.currentTarget.src = "/assets/optimized/hero-truck-1600.jpg";
+            // If that fails, try original
+            e.currentTarget.onerror = () => {
+              e.currentTarget.src = "/src/assets/hero-truck.jpg";
+            };
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { services } from "@/data/services";
 import { ArrowRight } from "lucide-react";
-import { Picture } from "@/components/ui/picture";
 
 export const Services = () => {
   return (
@@ -30,14 +29,19 @@ export const Services = () => {
               {/* Background Image */}
               {service.backgroundImage && (
                 <div className="absolute inset-0">
-                  <Picture
-                    src="/assets/optimized/hero-truck-800.jpg"
+                  <img
+                    src="/assets/optimized/hero-truck-800.webp"
                     alt={`${service.title} background - ${service.description}`}
                     className="absolute inset-0 opacity-10 bg-cover bg-center bg-no-repeat"
-                    width={800}
-                    height={600}
-                    priority={false}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
+                    onError={(e) => {
+                      // Try JPG fallback if WebP fails
+                      e.currentTarget.src = "/assets/optimized/hero-truck-800.jpg";
+                      // If that fails, try original
+                      e.currentTarget.onerror = () => {
+                        e.currentTarget.src = "/src/assets/hero-truck.jpg";
+                      };
+                    }}
                   />
                 </div>
               )}
