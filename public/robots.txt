@@ -7,7 +7,6 @@ Disallow: /admin/
 Disallow: /*.json$
 Disallow: /search
 Disallow: /*?*
-Disallow: /src/
 
 # Allow search engines to crawl the main content
 Allow: /services/
