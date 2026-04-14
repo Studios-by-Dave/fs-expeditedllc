@@ -4,8 +4,5 @@
   "installCommand": "npm install --legacy-peer-deps",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "redirects": [
-    { "source": "http://www.fs-expeditedllc.com/:path*", "destination": "https://www.fs-expeditedllc.com/:path*" }
   ]
 }
