@@ -32,39 +32,59 @@ export const ServiceArea = () => {
                   cy="190"
                   r="155"
                   fill="none"
-                  stroke="hsl(var(--primary))"
+                  stroke="url(#gradient1)"
                   strokeWidth="1"
                   strokeDasharray="6 4"
-                  opacity="0.25"
+                  opacity="0.3"
                 />
 
-                {/* Radius fill */}
+                {/* Radius fill with texture */}
+                <defs>
+                  <radialGradient id="gradient1">
+                    <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.1" />
+                    <stop offset="50%" stopColor="#10B981" stopOpacity="0.08" />
+                    <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.05" />
+                  </radialGradient>
+                  <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#3B82F6" />
+                    <stop offset="33%" stopColor="#10B981" />
+                    <stop offset="66%" stopColor="#F59E0B" />
+                    <stop offset="100%" stopColor="#EF4444" />
+                  </linearGradient>
+                  <pattern id="texture1" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <rect width="40" height="40" fill="#FEF3C7" opacity="0.1"/>
+                    <circle cx="10" cy="10" r="2" fill="#3B82F6" opacity="0.1"/>
+                    <circle cx="30" cy="30" r="1.5" fill="#10B981" opacity="0.1"/>
+                    <circle cx="5" cy="35" r="1" fill="#F59E0B" opacity="0.1"/>
+                    <circle cx="35" cy="5" r="1.5" fill="#EF4444" opacity="0.1"/>
+                  </pattern>
+                </defs>
                 <circle
                   cx="200"
                   cy="190"
                   r="140"
-                  fill="hsl(var(--primary))"
-                  opacity="0.08"
+                  fill="url(#texture1)"
+                  opacity="0.15"
                 />
 
-                {/* Radius border */}
+                {/* Radius border with gradient */}
                 <circle
                   cx="200"
                   cy="190"
                   r="140"
                   fill="none"
-                  stroke="hsl(var(--primary))"
+                  stroke="url(#gradient2)"
                   strokeWidth="2"
-                  opacity="0.4"
+                  opacity="0.5"
                 />
 
                 {/* Crosshair lines */}
-                <line x1="200" y1="46" x2="200" y2="334" stroke="hsl(var(--primary))" strokeWidth="0.5" opacity="0.15" />
-                <line x1="56" y1="190" x2="344" y2="190" stroke="hsl(var(--primary))" strokeWidth="0.5" opacity="0.15" />
+                <line x1="200" y1="46" x2="200" y2="334" stroke="#3B82F6" strokeWidth="0.5" opacity="0.2" />
+                <line x1="56" y1="190" x2="344" y2="190" stroke="#10B981" strokeWidth="0.5" opacity="0.2" />
 
-                {/* Inner rings for depth */}
-                <circle cx="200" cy="190" r="70" fill="none" stroke="hsl(var(--primary))" strokeWidth="0.5" opacity="0.12" />
-                <circle cx="200" cy="190" r="35" fill="none" stroke="hsl(var(--primary))" strokeWidth="0.5" opacity="0.1" />
+                {/* Inner rings for depth with colors */}
+                <circle cx="200" cy="190" r="70" fill="none" stroke="#F59E0B" strokeWidth="0.5" opacity="0.15" />
+                <circle cx="200" cy="190" r="35" fill="none" stroke="#EF4444" strokeWidth="0.5" opacity="0.12" />
 
                 {/* Pin shadow */}
                 <ellipse cx="200" cy="202" rx="10" ry="3" fill="hsl(var(--foreground))" opacity="0.15" />

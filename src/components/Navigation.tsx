@@ -84,7 +84,7 @@ export const Navigation = () => {
 
                 {/* Dropdown Menu */}
                 <div
-                  className={`absolute top-full left-0 mt-2 w-64 bg-card border border-border shadow-xl transition-all duration-200 ${
+                  className={`absolute top-full left-0 mt-2 w-64 bg-card border border-border shadow-xl transition-all duration-200 z-50 ${
                     servicesOpen
                       ? "opacity-100 translate-y-0 pointer-events-auto"
                       : "opacity-0 -translate-y-2 pointer-events-none"
@@ -125,7 +125,7 @@ export const Navigation = () => {
             {/* CTA */}
             <div className="hidden md:flex items-center">
               <Button variant="default" size="sm" asChild>
-                <Link to="/contact">Get Quote</Link>
+                <Link to="/contact">Get Free Quote</Link>
               </Button>
             </div>
 
