@@ -15,4 +15,16 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      external: [],
+      onwarn(warning, warn) {
+        // Suppress warnings about @tanstack/react-query
+        if (warning.code === 'MODULE_NOT_FOUND' && warning.message.includes('@tanstack/react-query')) {
+          return;
+        }
+        warn(warning);
+      },
+    },
+  },
 }));
