@@ -1,4 +1,4 @@
-import { Star, MessageSquare } from "lucide-react";
+import { SenjaLink } from "@/components/SenjaLink";
 
 export const Testimonials = () => {
   return (
@@ -12,27 +12,12 @@ export const Testimonials = () => {
             WHAT CLIENTS SAY
           </h2>
           <p className="mt-4 text-muted-foreground text-lg font-sans">
-            We're collecting feedback from our valued clients — real reviews are on the way.
+            Real reviews from our valued clients. See what they say about our dump truck hauling services.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="relative bg-card border border-border p-6 flex flex-col items-center justify-center min-h-[220px]"
-            >
-              <MessageSquare className="w-10 h-10 text-primary/20 mb-4" />
-              <div className="flex gap-0.5 mb-3">
-                {Array.from({ length: 5 }).map((_, j) => (
-                  <Star key={j} className="w-4 h-4 text-border" />
-                ))}
-              </div>
-              <p className="text-muted-foreground font-sans text-center text-sm">
-                Fresh Reviews Coming Soon
-              </p>
-            </div>
-          ))}
+        <div className="max-w-5xl mx-auto">
+          <SenjaLink />
         </div>
       </div>
     </section>

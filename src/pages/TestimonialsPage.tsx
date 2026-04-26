@@ -8,7 +8,7 @@ const TestimonialsPage = () => (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Customer Reviews — F&S Expedited LLC"
-      description="Read what clients say about F&S Expedited's dump truck hauling and delivery services near Shelby, NC. Real reviews coming soon."
+      description="Read what clients say about F&S Expedited's dump truck hauling and delivery services near Shelby, NC. Real verified reviews from our customers."
       canonical="/reviews"
     />
     <Navigation />
