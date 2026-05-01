@@ -1,20 +1,18 @@
 User-agent: *
 Allow: /
 
-# Block common non-content paths
+# Block non-content paths
 Disallow: /admin/
 Disallow: /*.json$
-Disallow: /search
-Disallow: /*?*
 
-# Allow search engines to crawl the main content
+# Allow search engines to crawl all main content
 Allow: /services/
 Allow: /contact
 Allow: /why-us
 Allow: /process
 Allow: /service-area
 Allow: /reviews
-
-Crawl-delay: 1
+Allow: /privacy-policy
+Allow: /terms-of-service
 
 Sitemap: https://www.fs-expeditedllc.com/sitemap.xml

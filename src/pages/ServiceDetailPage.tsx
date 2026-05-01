@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { services } from "@/data/services";
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 
-const SITE_URL = "https://fs-expeditedllc.lovable.app";
+const SITE_URL = "https://www.fs-expeditedllc.com";
 
 const ServiceDetailPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -56,15 +56,10 @@ const ServiceDetailPage = () => {
         title={`${service.title} — Shelby NC Hauling`}
         description={service.longDescription.slice(0, 155) + "…"}
         canonical={`/services/${service.slug}`}
-        schema={serviceSchema}
-      />
-      <SEOHead
-        title=""
-        description=""
-        schema={breadcrumbSchema}
+        schema={{ "@context": "https://schema.org", "@graph": [serviceSchema, breadcrumbSchema] }}
       />
       <Navigation />
-      <div className="pt-20">
+      <main className="pt-20">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="container px-4 pt-6">
           <ol className="flex items-center gap-2 text-sm text-muted-foreground font-sans">
@@ -157,7 +152,7 @@ const ServiceDetailPage = () => {
         </section>
 
         <CTABanner />
-      </div>
+      </main>
       <Footer />
     </div>
   );

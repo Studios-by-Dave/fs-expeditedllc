@@ -1,16 +1,24 @@
 import { Navigation } from "@/components/Navigation";
 import { SEOHead } from "@/components/SEOHead";
 import { Footer } from "@/components/Footer";
+import { breadcrumbSchema } from "@/data/seo-schemas";
 
-const TermsOfServicePage = () => (
+const TermsOfServicePage = () => {
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.fs-expeditedllc.com/" },
+    { name: "Terms of Service", url: "https://www.fs-expeditedllc.com/terms-of-service" }
+  ];
+
+  return (
   <div className="min-h-screen bg-background">
     <SEOHead
       title="Terms of Service — F&S Expedited LLC"
       description="Terms of Service for F&S Expedited LLC - Legal terms and conditions for our dump truck hauling and expedited services."
       canonical="/terms-of-service"
+      schema={breadcrumbSchema(breadcrumbs)}
     />
     <Navigation />
-    <div className="pt-20">
+    <main className="pt-20">
       <div className="container px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground tracking-wider mb-8">
@@ -133,9 +141,10 @@ const TermsOfServicePage = () => (
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default TermsOfServicePage;

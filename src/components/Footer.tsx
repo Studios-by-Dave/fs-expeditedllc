@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook } from "lucide-react";
 import fsLogo from "@/assets/fs-logo.png";
 
 export const Footer = () => {
@@ -10,11 +10,11 @@ export const Footer = () => {
       <div className="absolute top-0 left-0 right-0 h-3 diamond-plate" />
 
       <div className="container px-4 py-16 mt-3">
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
             <Link to="/">
-              <img src={fsLogo} alt="F&S Expedited LLC" className="h-20 w-auto" />
+              <img src={fsLogo} alt="F&S Expedited LLC - Professional Dump Truck Hauling" className="h-20 w-auto" loading="lazy" />
             </Link>
             <p className="mt-4 text-muted-foreground font-sans max-w-sm">
               Professional expedited hauling and dump truck services. Fast, reliable,
@@ -42,25 +42,6 @@ export const Footer = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-heading font-bold text-foreground mb-4 tracking-wider">
-              LEGAL
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors font-sans">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors font-sans">
-                  Terms of Service
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -94,6 +75,25 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-heading font-bold text-foreground mb-4 tracking-wider">
+              LEGAL
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors font-sans">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors font-sans">
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
@@ -101,43 +101,16 @@ export const Footer = () => {
             © {currentYear} F&S Expedited LLC. All rights reserved.
           </p>
           
-          {/* Social Icons */}
+          {/* Social Icons - only show active profiles */}
           <div className="flex items-center gap-4">
             <a 
               href="https://www.facebook.com/share/17MKXS5wLS/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200"
-              aria-label="Facebook"
+              aria-label="Follow F&S Expedited LLC on Facebook"
             >
               <Facebook className="w-5 h-5" />
-            </a>
-            <a 
-              href="#" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-400 text-white hover:bg-gray-500 transition-colors duration-200 opacity-60 cursor-not-allowed"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a 
-              href="#" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-400 text-white hover:bg-gray-500 transition-colors duration-200 opacity-60 cursor-not-allowed"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a 
-              href="#" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-400 text-white hover:bg-gray-500 transition-colors duration-200 opacity-60 cursor-not-allowed"
-              aria-label="X/Twitter"
-            >
-              <Twitter className="w-5 h-5" />
             </a>
           </div>
           

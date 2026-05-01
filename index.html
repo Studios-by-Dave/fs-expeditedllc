@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://vercel.live; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://vercel.live https://widget.senja.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://vercel.live https://senja.io https://widget.senja.io; frame-src 'self' https://senja.io https://widget.senja.io; frame-ancestors 'none';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -30,14 +30,17 @@
     
     <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/7yFZRN3a4zOnW6XxdC0mKKnJqbo1/social-images/social-1771915503507-ESExp.webp">
     
-    <!-- LocalBusiness Schema -->
+    <!-- LocalBusiness Schema (fallback for non-JS crawlers) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://www.fs-expeditedllc.com/#localbusiness",
       "name": "F&S Expedited LLC",
       "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
-      "telephone": "(865) 364-9011",
+      "url": "https://www.fs-expeditedllc.com",
+      "image": "https://storage.googleapis.com/gpt-engineer-file-uploads/7yFZRN3a4zOnW6XxdC0mKKnJqbo1/social-images/social-1771915503507-ESExp.webp",
+      "telephone": ["+1-865-364-9011", "+1-704-751-8141"],
       "email": "Aldrich2577@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -45,6 +48,11 @@
         "addressRegion": "NC",
         "postalCode": "28152",
         "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.2924,
+        "longitude": -81.5356
       },
       "areaServed": {
         "@type": "GeoCircle",
@@ -55,10 +63,9 @@
         },
         "geoRadius": "160934"
       },
-      "sameAs": [],
-      "url": "https://www.fs-expeditedllc.com",
+      "sameAs": ["https://www.facebook.com/share/17MKXS5wLS/"],
       "priceRange": "$$",
-      "openingHours": "Mo-Fr 07:00-18:00"
+      "openingHours": "Mo-Fr 06:00-18:00"
     }
     </script>
   
