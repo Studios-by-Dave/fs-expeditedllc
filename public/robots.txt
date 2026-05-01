@@ -4,8 +4,6 @@ Allow: /
 # Block common non-content paths
 Disallow: /admin/
 Disallow: /*.json$
-Disallow: /search
-Disallow: /*?*
 
 # Allow search engines to crawl the main content
 Allow: /services/
@@ -14,7 +12,7 @@ Allow: /why-us
 Allow: /process
 Allow: /service-area
 Allow: /reviews
-
-Crawl-delay: 1
+Allow: /privacy-policy
+Allow: /terms-of-service
 
 Sitemap: https://www.fs-expeditedllc.com/sitemap.xml

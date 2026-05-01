@@ -1,16 +1,24 @@
 import { Navigation } from "@/components/Navigation";
 import { SEOHead } from "@/components/SEOHead";
 import { Footer } from "@/components/Footer";
+import { breadcrumbSchema } from "@/data/seo-schemas";
 
-const PrivacyPolicyPage = () => (
-  <div className="min-h-screen bg-background">
-    <SEOHead
-      title="Privacy Policy — F&S Expedited LLC"
-      description="Privacy Policy for F&S Expedited LLC - How we collect, use, and protect your personal information when you request our dump truck hauling services."
-      canonical="/privacy-policy"
-    />
-    <Navigation />
-    <div className="pt-20">
+const PrivacyPolicyPage = () => {
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.fs-expeditedllc.com/" },
+    { name: "Privacy Policy", url: "https://www.fs-expeditedllc.com/privacy-policy" }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Privacy Policy — F&S Expedited LLC"
+        description="Privacy Policy for F&S Expedited LLC - How we collect, use, and protect your personal information when you request our dump truck hauling services."
+        canonical="/privacy-policy"
+        schema={breadcrumbSchema(breadcrumbs)}
+      />
+      <Navigation />
+      <main className="pt-20">
       <div className="container px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground tracking-wider mb-8">
@@ -101,9 +109,10 @@ const PrivacyPolicyPage = () => (
           </div>
         </div>
       </div>
+      </main>
+      <Footer />
     </div>
-    <Footer />
-  </div>
-);
+  );
+};
 
 export default PrivacyPolicyPage;

@@ -2,18 +2,33 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://www.fs-expeditedllc.com#organization",
   "name": "F&S Expedited LLC",
   "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
   "url": "https://www.fs-expeditedllc.com",
-  "logo": "https://www.fs-expeditedllc.com/favicon-32x32.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-865-364-9011",
-    "contactType": "Customer Service",
-    "availableLanguage": ["English"]
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.fs-expeditedllc.com/apple-touch-icon.png",
+    "width": 180,
+    "height": 180
   },
+  "image": "https://storage.googleapis.com/gpt-engineer-file-uploads/7yFZRN3a4zOnW6XxdC0mKKnJqbo1/social-images/social-1771915503507-ESExp.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+18653649011",
+      "contactType": "Customer Service",
+      "availableLanguage": ["English"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+17047518141",
+      "contactType": "Customer Service",
+      "availableLanguage": ["English"]
+    }
+  ],
   "sameAs": [
-    "https://www.fs-expeditedllc.com"
+    "https://www.facebook.com/share/17MKXS5wLS/"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -43,19 +58,12 @@ export const organizationSchema = {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://www.fs-expeditedllc.com#website",
   "name": "F&S Expedited LLC",
   "alternateName": "F&S Expedited",
   "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
   "url": "https://www.fs-expeditedllc.com",
   "potentialAction": [
-    {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://www.fs-expeditedllc.com/search?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    },
     {
       "@type": "CommunicateAction",
       "target": {
@@ -65,27 +73,32 @@ export const websiteSchema = {
     }
   ],
   "publisher": {
-    "@type": "Organization",
-    "name": "F&S Expedited LLC",
-    "url": "https://www.fs-expeditedllc.com"
+    "@id": "https://www.fs-expeditedllc.com#organization"
   }
 };
 
-// LocalBusiness Schema (Updated)
+// LocalBusiness Schema
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://www.fs-expeditedllc.com#localbusiness",
   "name": "F&S Expedited LLC",
   "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
-"url": "https://www.fs-expeditedllc.com",
-  "telephone": ["+1-865-364-9011", "+1-704-751-8141"],
+  "url": "https://www.fs-expeditedllc.com",
+  "telephone": ["+18653649011", "+17047518141"],
   "email": "Aldrich2577@gmail.com",
+  "image": "https://storage.googleapis.com/gpt-engineer-file-uploads/7yFZRN3a4zOnW6XxdC0mKKnJqbo1/social-images/social-1771915503507-ESExp.webp",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Shelby",
     "addressRegion": "NC",
     "postalCode": "28152",
     "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 35.2924,
+    "longitude": -81.5356
   },
   "areaServed": {
     "@type": "GeoCircle",
@@ -100,9 +113,8 @@ export const localBusinessSchema = {
   "priceRange": "$$",
   "paymentAccepted": ["Cash", "Check", "Credit Card"],
   "currenciesAccepted": "USD",
-  "hasMap": true,
   "sameAs": [
-    "https://www.fs-expeditedllc.com"
+    "https://www.facebook.com/share/17MKXS5wLS/"
   ]
 };
 

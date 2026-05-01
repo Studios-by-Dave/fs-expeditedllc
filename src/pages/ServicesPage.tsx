@@ -9,8 +9,8 @@ import { breadcrumbSchema } from "@/data/seo-schemas";
 
 const ServicesPage = () => {
   const breadcrumbs = [
-    { name: "Home", url: "https://fs-expeditedllc.lovable.app/" },
-    { name: "Services", url: "https://fs-expeditedllc.lovable.app/services" }
+    { name: "Home", url: "https://www.fs-expeditedllc.com/" },
+    { name: "Services", url: "https://www.fs-expeditedllc.com/services" }
   ];
 
   return (
@@ -22,7 +22,7 @@ const ServicesPage = () => {
         schema={breadcrumbSchema(breadcrumbs)}
       />
       <Navigation />
-      <div className="pt-20">
+      <main className="pt-20">
         <section className="section-padding bg-gradient-card">
           <div className="container px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -79,7 +79,7 @@ const ServicesPage = () => {
           </div>
         </section>
         <CTABanner />
-      </div>
+      </main>
       <Footer />
     </div>
   );
