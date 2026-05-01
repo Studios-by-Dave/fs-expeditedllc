@@ -30,7 +30,7 @@ export const Hero = () => {
       <div className="container relative z-10 px-4 pt-20">
         <div className="max-w-4xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 mb-8 opacity-0 animate-fade-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-xl mb-8 opacity-0 animate-fade-up">
             <Shield className="w-4 h-4 text-primary" />
             <span className="text-sm text-primary font-semibold uppercase tracking-wider">
               Licensed & Insured
@@ -67,15 +67,15 @@ export const Hero = () => {
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row gap-5 opacity-0 animate-fade-up animation-delay-450">
-            <Button variant="hero" size="xl" className="text-xl px-12 py-8 [&_svg]:size-6" asChild>
+            <Button variant="hero" size="lg" className="text-lg px-10 py-6 [&_svg]:size-5" asChild>
               <a href="tel:8653649011">
-                <Phone className="w-6 h-6" />
+                <Phone className="w-5 h-5" />
                 (865) 364-9011
               </a>
             </Button>
-            <Button variant="hero" size="xl" className="text-xl px-12 py-8 [&_svg]:size-6" asChild>
+            <Button variant="hero" size="lg" className="text-lg px-10 py-6 [&_svg]:size-5" asChild>
               <a href="tel:7047518141">
-                <Phone className="w-6 h-6" />
+                <Phone className="w-5 h-5" />
                 (704) 751-8141
               </a>
             </Button>
