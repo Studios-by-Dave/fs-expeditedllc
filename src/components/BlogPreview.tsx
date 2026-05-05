@@ -1,6 +1,7 @@
-import { ExternalLink, FileText, Clock, User } from "lucide-react";
+import { ExternalLink, FileText, Clock, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 export const BlogPreview = () => {
   const openBlogArticle = () => {
@@ -14,7 +15,7 @@ export const BlogPreview = () => {
           <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
             Featured Story
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground tracking-wider">
+          <h2 className="mt-4 text-3xl md:text-4xl lg:text-4xl font-heading font-bold text-foreground tracking-wider">
             F&S EXPEDITED SPOTLIGHT
           </h2>
           <p className="mt-4 text-muted-foreground text-lg font-sans">
@@ -29,7 +30,11 @@ export const BlogPreview = () => {
               <div className="bg-primary/10 p-6 border-b border-border">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1">
-                    <User className="w-4 h-4" />
+                    <img 
+                      src="/assets/sbd/sbd logo new_2.png" 
+                      alt="Studios by Dave" 
+                      className="w-4 h-4 object-contain rounded"
+                    />
                     <span>Studios by Dave</span>
                   </div>
                   <div className="flex items-center gap-1">
@@ -86,6 +91,34 @@ export const BlogPreview = () => {
                   <p className="text-sm text-muted-foreground">
                     Opens in a new window with the complete F&S Expedited spotlight story
                   </p>
+                </div>
+
+                {/* Related Services */}
+                <div className="mt-8 p-4 bg-card rounded-lg border border-border">
+                  <h4 className="font-semibold text-foreground mb-3">Interested in These Services?</h4>
+                  <div className="flex flex-wrap gap-3">
+                    <Link 
+                      to="/services/dump-truck-hauling" 
+                      className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-sm rounded-full hover:bg-primary/20 transition-colors"
+                    >
+                      Dump Truck Hauling
+                      <ArrowRight className="w-3 h-3" />
+                    </Link>
+                    <Link 
+                      to="/services/emergency-expedited" 
+                      className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-sm rounded-full hover:bg-primary/20 transition-colors"
+                    >
+                      Emergency Services
+                      <ArrowRight className="w-3 h-3" />
+                    </Link>
+                    <Link 
+                      to="/services/gravel-sand-delivery" 
+                      className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-sm rounded-full hover:bg-primary/20 transition-colors"
+                    >
+                      Gravel Delivery
+                      <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </CardContent>

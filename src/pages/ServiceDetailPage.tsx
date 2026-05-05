@@ -130,6 +130,25 @@ const ServiceDetailPage = () => {
                   </div>
                 ))}
               </div>
+              
+              {/* Gallery Link */}
+              <div className="mt-8 p-6 bg-card border border-border rounded-lg">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">See Our Work</h3>
+                    <p className="text-muted-foreground text-sm font-sans">
+                      Browse our project gallery to see examples of this service in action.
+                    </p>
+                  </div>
+                  <Link 
+                    to="/gallery" 
+                    className="flex items-center gap-2 text-primary font-semibold hover:text-primary/90 transition-colors"
+                  >
+                    View Gallery
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>

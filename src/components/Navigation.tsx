@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/why-us", label: "Why Us" },
   { href: "/process", label: "How We Work" },
   { href: "/service-area", label: "Service Area" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
 

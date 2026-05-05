@@ -1,4 +1,5 @@
 import { Shield, Clock, Award, MapPin, DollarSign, Truck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const reasons = [
   { icon: Shield, title: "Licensed & Insured", description: "Full coverage protects your project and our crew." },
@@ -20,11 +21,17 @@ export const WhyChooseUs = () => {
           <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
             Why F&S
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground tracking-wider">
+          <h2 className="mt-4 text-3xl md:text-4xl lg:text-4xl font-heading font-bold text-foreground tracking-wider">
             WHY CHOOSE US
           </h2>
           <p className="mt-4 text-muted-foreground text-lg font-sans">
-            Built on hard work, reliability, and a commitment to getting the job done right.
+            Built on hard work, reliability, and a commitment to getting the job done right. 
+            <Link 
+              to="/services/emergency-expedited" 
+              className="text-primary hover:underline font-semibold ml-2"
+            >
+              See our emergency services →
+            </Link>
           </p>
         </div>
 

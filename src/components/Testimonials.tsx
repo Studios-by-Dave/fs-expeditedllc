@@ -8,7 +8,7 @@ export const Testimonials = () => {
           <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
             Client Reviews
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground tracking-wider">
+          <h2 className="mt-4 text-3xl md:text-4xl lg:text-4xl font-heading font-bold text-foreground tracking-wider">
             WHAT CLIENTS SAY
           </h2>
           <p className="mt-4 text-muted-foreground text-lg font-sans">

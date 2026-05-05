@@ -15,7 +15,7 @@ export const CTABanner = () => {
 
       <div className="container px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground tracking-wider">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground tracking-wider">
             NEED MATERIAL{" "}
             <span className="text-primary">HAULED TODAY?</span>
           </h2>

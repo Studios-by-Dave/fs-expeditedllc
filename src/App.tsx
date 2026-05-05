@@ -13,6 +13,7 @@ import ProcessPage from "./pages/ProcessPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import ContactPage from "./pages/ContactPage";
 import ServiceAreaPage from "./pages/ServiceAreaPage";
+import GalleryPage from "./pages/GalleryPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
 import NotFound from "./pages/NotFound";
@@ -32,6 +33,7 @@ export const AppContent = () => (
       <Route path="/process" element={<ProcessPage />} />
       <Route path="/reviews" element={<TestimonialsPage />} />
       <Route path="/testimonials" element={<Navigate to="/reviews" replace />} />
+      <Route path="/gallery" element={<GalleryPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/service-area" element={<ServiceAreaPage />} />
       <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
