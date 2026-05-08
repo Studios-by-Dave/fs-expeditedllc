@@ -10,7 +10,101 @@ export interface ServiceData {
   longDescription: string;
   benefits: string[];
   backgroundImage?: string;
+  category?: string;
 }
+
+export interface ServiceCategory {
+  slug: string;
+  title: string;
+  description: string;
+  services: string[];
+  subcategories?: Array<{
+    title: string;
+    description: string;
+    features: string[];
+  }>;
+  backgroundImage?: string;
+}
+
+export const serviceCategories = [
+  {
+    slug: "material-delivery",
+    title: "Material Delivery",
+    description: "Quality materials delivered directly to your job site",
+    services: ["gravel-sand-delivery", "aggregate-transport"],
+    subcategories: [
+      {
+        title: "Gravel Delivery",
+        description: "Premium gravel for driveways, foundations, drainage, and landscaping projects",
+        features: ["Crushed Stone", "Road Base", "Decorative Gravel", "Fill Gravel"]
+      },
+      {
+        title: "Sand Delivery", 
+        description: "High-quality sand for construction, landscaping, and specialized applications",
+        features: ["Fill Sand", "Masonry Sand", "Play Sand", "Concrete Sand"]
+      },
+      {
+        title: "Soil Delivery",
+        description: "Topsoil and fill dirt for landscaping, gardening, and construction projects",
+        features: ["Topsoil", "Fill Dirt", "Garden Soil", "Compost Mix"]
+      }
+    ],
+    backgroundImage: "/assets/material-delivery.png"
+  },
+  {
+    slug: "site-services", 
+    title: "Site Services",
+    description: "Professional site preparation and land management",
+    services: ["site-prep", "land-clearing", "debris-removal"],
+    subcategories: [
+      {
+        title: "Aggregate Transport",
+        description: "Large-scale aggregate transport for construction and infrastructure projects across the region",
+        features: ["Limestone Transport", "Recycled Concrete", "Base Materials", "DOT-Compliant Hauling"]
+      },
+      {
+        title: "Site Prep", 
+        description: "Professional site preparation including grading, excavation, and ground preparation for construction",
+        features: ["Land Grading", "Excavation", "Ground Preparation", "Drainage Planning"]
+      },
+      {
+        title: "Land Clearing",
+        description: "Complete land clearing services including tree removal, brush clearing, and vegetation management",
+        features: ["Tree Removal", "Brush Clearing", "Vegetation Management", "Environmentally Responsible"]
+      },
+      {
+        title: "Debris Removal",
+        description: "Construction debris removal and site cleanup services to keep your project safe and on schedule",
+        features: ["Construction Waste", "Demolition Debris", "Yard Waste", "Site Cleanup"]
+      }
+    ],
+    backgroundImage: "/assets/site-services.png"
+  },
+  {
+    slug: "emergency-expedited",
+    title: "Emergency Expedited", 
+    description: "Fast response hauling and emergency services",
+    services: ["emergency-expedited", "commercial-hauling", "dump-truck-hauling"],
+    subcategories: [
+      {
+        title: "Emergency Expedited",
+        description: "Same-day and next-day hauling services for urgent material needs and project emergencies",
+        features: ["Same-Day Service", "Priority Dispatch", "24/7 Available", "Rapid Response"]
+      },
+      {
+        title: "Commercial Hauling", 
+        description: "Full-scale hauling solutions for contractors, developers, and commercial construction projects",
+        features: ["Contract Rates", "Fleet Availability", "Project Management", "Dedicated Support"]
+      },
+      {
+        title: "Dump Truck Hauling",
+        description: "Heavy-duty dump truck services for construction sites, commercial projects, and residential needs",
+        features: ["Bulk Material Transport", "Site-to-Site Hauling", "Flexible Scheduling", "On-Time Delivery"]
+      }
+    ],
+    backgroundImage: "/assets/emergency-services.png"
+  }
+];
 
 export const services: ServiceData[] = [
   {
@@ -29,6 +123,7 @@ export const services: ServiceData[] = [
       "Fully licensed and insured",
     ],
     backgroundImage: heroTruck,
+    category: "emergency-expedited",
   },
   {
     slug: "gravel-sand-delivery",
@@ -46,6 +141,7 @@ export const services: ServiceData[] = [
       "Fast turnaround on orders",
     ],
     backgroundImage: heroTruck,
+    category: "material-delivery",
   },
   {
     slug: "debris-removal",
@@ -63,6 +159,7 @@ export const services: ServiceData[] = [
       "Competitive flat-rate and per-load pricing",
     ],
     backgroundImage: heroTruck,
+    category: "emergency-expedited",
   },
   {
     slug: "aggregate-transport",
@@ -80,6 +177,7 @@ export const services: ServiceData[] = [
       "Dedicated project management support",
     ],
     backgroundImage: heroTruck,
+    category: "material-delivery",
   },
   {
     slug: "emergency-expedited",
@@ -97,6 +195,7 @@ export const services: ServiceData[] = [
       "No surprise fees — transparent pricing",
     ],
     backgroundImage: heroTruck,
+    category: "emergency-expedited",
   },
   {
     slug: "commercial-hauling",
@@ -114,6 +213,7 @@ export const services: ServiceData[] = [
       "Proven track record with commercial clients",
     ],
     backgroundImage: heroTruck,
+    category: "emergency-expedited",
   },
   {
     slug: "site-prep",
@@ -131,6 +231,7 @@ export const services: ServiceData[] = [
       "Coordination with your construction timeline",
     ],
     backgroundImage: heroTruck,
+    category: "site-services",
   },
   {
     slug: "land-clearing",
@@ -148,5 +249,6 @@ export const services: ServiceData[] = [
       "Preparation for construction or landscaping",
     ],
     backgroundImage: heroTruck,
+    category: "site-services",
   },
 ];

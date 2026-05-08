@@ -8,6 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import ServicesPage from "./pages/ServicesPage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
+import ServiceCategoryPage from "./pages/ServiceCategoryPage";
 import WhyUsPage from "./pages/WhyUsPage";
 import ProcessPage from "./pages/ProcessPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
@@ -29,6 +30,7 @@ export const AppContent = () => (
       <Route path="/" element={<Index />} />
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/services/:slug" element={<ServiceDetailPage />} />
+      <Route path="/categories/:slug" element={<ServiceCategoryPage />} />
       <Route path="/why-us" element={<WhyUsPage />} />
       <Route path="/process" element={<ProcessPage />} />
       <Route path="/reviews" element={<TestimonialsPage />} />

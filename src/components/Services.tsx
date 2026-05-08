@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { services } from "@/data/services";
+import { services, serviceCategories } from "@/data/services";
 import { ArrowRight } from "lucide-react";
 
 export const Services = () => {
@@ -14,34 +14,26 @@ export const Services = () => {
             OUR SERVICES
           </h2>
           <p className="mt-4 text-muted-foreground text-lg font-sans">
-            From gravel delivery to emergency expedited hauling — we move what you need, when you need it.
+            From material delivery to emergency expedited services — we provide comprehensive hauling and site solutions for your project needs.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+        <div className="grid md:grid-cols-3 gap-6">
+          {serviceCategories.map((category, index) => (
             <Link
-              key={service.slug}
-              to={`/services/${service.slug}`}
+              key={category.slug}
+              to={`/categories/${category.slug}`}
               className="group relative bg-card border border-border p-6 rounded-xl hover-card-lift block overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Background Image */}
-              {service.backgroundImage && (
+              {category.backgroundImage && (
                 <div className="absolute inset-0">
                   <img
-                    src="/assets/optimized/hero-truck-800.webp"
-                    alt={`${service.title} background - ${service.description}`}
+                    src={category.backgroundImage}
+                    alt={`${category.title} background - ${category.description}`}
                     className="absolute inset-0 opacity-10 bg-cover bg-center bg-no-repeat"
                     loading="lazy"
-                    onError={(e) => {
-                      // Try JPG fallback if WebP fails
-                      e.currentTarget.src = "/assets/optimized/hero-truck-800.jpg";
-                      // If that fails, try original
-                      e.currentTarget.onerror = () => {
-                        e.currentTarget.src = "/src/assets/hero-truck.jpg";
-                      };
-                    }}
                   />
                 </div>
               )}
@@ -54,33 +46,58 @@ export const Services = () => {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
                 <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="w-7 h-7 text-primary" />
+                  <div className="text-2xl">
+                    {category.slug === 'material-delivery' && '🚚'}
+                    {category.slug === 'site-services' && '🏗️'}
+                    {category.slug === 'emergency-expedited' && '⚡'}
+                  </div>
                 </div>
 
                 <h3 className="text-2xl font-heading font-bold text-foreground mb-3 tracking-wide">
-                  {service.title}
+                  {category.title}
                 </h3>
                 <p className="text-muted-foreground text-base leading-relaxed mb-4 font-sans">
-                  {service.description}
+                  {category.description}
                 </p>
 
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-base text-foreground/80 font-sans">
-                      <span className="w-1.5 h-1.5 bg-primary" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                {category.subcategories && (
+                  <ul className="space-y-2 mb-6">
+                    {category.subcategories.slice(0, 3).map((subcategory) => (
+                      <li key={subcategory.title} className="flex items-center gap-2 text-base text-foreground/80 font-sans">
+                        <span className="w-1.5 h-1.5 bg-primary" />
+                        {subcategory.title}
+                      </li>
+                    ))}
+                    {category.subcategories.length > 3 && (
+                      <li className="flex items-center gap-2 text-base text-foreground/80 font-sans">
+                        <span className="w-1.5 h-1.5 bg-primary" />
+                        +{category.subcategories.length - 3} more
+                      </li>
+                    )}
+                  </ul>
+                )}
 
                 <span className="flex items-center gap-2 text-primary font-semibold text-base uppercase tracking-wider font-sans group-hover:gap-3 transition-all">
-                  Learn More <ArrowRight className="w-4 h-4" />
+                  Explore Services <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
 
               <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/30 transition-colors pointer-events-none" />
             </Link>
           ))}
+        </div>
+
+        {/* Additional CTA for individual services */}
+        <div className="text-center mt-12">
+          <p className="text-muted-foreground mb-4">
+            Looking for a specific service? Explore our complete range of hauling and site solutions.
+          </p>
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+          >
+            View All Services <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>

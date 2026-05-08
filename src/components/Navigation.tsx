@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
-import { services } from "@/data/services";
+import { services, serviceCategories } from "@/data/services";
 import { Picture } from "@/components/ui/picture";
 import fsLogo from "@/assets/fs-logo.png";
 
@@ -98,15 +98,19 @@ export const Navigation = () => {
                   >
                     All Services
                   </Link>
-                  {services.map((service) => (
+                  {serviceCategories.map((category) => (
                     <Link
-                      key={service.slug}
-                      to={`/services/${service.slug}`}
+                      key={category.slug}
+                      to={`/categories/${category.slug}`}
                       onClick={() => setServicesOpen(false)}
                       className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border last:border-b-0"
                     >
-                      <service.icon className="w-4 h-4 text-primary shrink-0" />
-                      {service.title}
+                      <div className="w-4 h-4 text-primary shrink-0 flex items-center justify-center">
+                        {category.slug === 'material-delivery' && '🚚'}
+                        {category.slug === 'site-services' && '🏗️'}
+                        {category.slug === 'emergency-expedited' && '⚡'}
+                      </div>
+                      {category.title}
                     </Link>
                   ))}
                 </div>
@@ -196,15 +200,19 @@ export const Navigation = () => {
                 >
                   All Services
                 </Link>
-                {services.map((service) => (
+                {serviceCategories.map((category) => (
                   <Link
-                    key={service.slug}
-                    to={`/services/${service.slug}`}
+                    key={category.slug}
+                    to={`/categories/${category.slug}`}
                     onClick={() => setIsOpen(false)}
                     className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                   >
-                    <service.icon className="w-4 h-4 text-primary" />
-                    {service.title}
+                    <div className="w-4 h-4 text-primary flex items-center justify-center">
+                      {category.slug === 'material-delivery' && '🚚'}
+                      {category.slug === 'site-services' && '🏗️'}
+                      {category.slug === 'emergency-expedited' && '⚡'}
+                    </div>
+                    {category.title}
                   </Link>
                 ))}
               </div>
