@@ -267,7 +267,7 @@ const ServiceCategoryPage = () => {
                 .map((relatedCategory) => (
                   <Link
                     key={relatedCategory.slug}
-                    to={`/categories/${relatedCategory.slug}`}
+                    to={`/services/${relatedCategory.slug}`}
                     className="group bg-card border border-border rounded-xl p-8 hover:shadow-xl transition-all duration-300 hover:border-primary/50"
                   >
                     <div className="flex items-center gap-4">

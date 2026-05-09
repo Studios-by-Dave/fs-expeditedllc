@@ -22,7 +22,7 @@ export const Services = () => {
           {serviceCategories.map((category, index) => (
             <Link
               key={category.slug}
-              to={`/categories/${category.slug}`}
+              to={`/services/${category.slug}`}
               className="group relative bg-card border border-border p-6 rounded-xl hover-card-lift block overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >

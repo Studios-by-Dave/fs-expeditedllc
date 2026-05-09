@@ -101,7 +101,7 @@ export const Navigation = () => {
                   {serviceCategories.map((category) => (
                     <Link
                       key={category.slug}
-                      to={`/categories/${category.slug}`}
+                      to={`/services/${category.slug}`}
                       onClick={() => setServicesOpen(false)}
                       className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border last:border-b-0"
                     >
@@ -203,7 +203,7 @@ export const Navigation = () => {
                 {serviceCategories.map((category) => (
                   <Link
                     key={category.slug}
-                    to={`/categories/${category.slug}`}
+                    to={`/services/${category.slug}`}
                     onClick={() => setIsOpen(false)}
                     className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                   >

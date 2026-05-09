@@ -4,7 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { CTABanner } from "@/components/CTABanner";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { services } from "@/data/services";
+import { services, serviceCategories } from "@/data/services";
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 
 const SITE_URL = "https://www.fs-expeditedllc.com";
