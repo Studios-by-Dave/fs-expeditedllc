@@ -46,11 +46,15 @@ export const Services = () => {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
                 <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <div className="text-2xl">
-                    {category.slug === 'material-delivery' && '🚚'}
-                    {category.slug === 'site-services' && '🏗️'}
-                    {category.slug === 'emergency-expedited' && '⚡'}
-                  </div>
+                  {category.slug === 'material-delivery' && (
+                    <img src="/assets/badge_icons_1/stones_8654439.png" alt="Material Delivery" className="w-10 h-10 object-contain" />
+                  )}
+                  {category.slug === 'site-services' && (
+                    <img src="/assets/badge_icons_1/dumper-truck_12255897.png" alt="Site Services" className="w-10 h-10 object-contain" />
+                  )}
+                  {category.slug === 'emergency-expedited' && (
+                    <img src="/assets/badge_icons_1/badge-emergency-fire-icon-circle-260nw-2195145807.jpg" alt="Emergency Expedited" className="w-10 h-10 object-contain" />
+                  )}
                 </div>
 
                 <h3 className="text-2xl font-heading font-bold text-foreground mb-3 tracking-wide">

@@ -66,11 +66,11 @@ const ServiceCategoryPage = () => {
         {category.backgroundImage && (
           <section className="relative py-12 bg-background">
             <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <img 
+              <div className="max-w-2xl mx-auto">
+                <img
                   src={category.backgroundImage}
                   alt={`${category.title} - F&S Expedited LLC`}
-                  className="w-full h-auto rounded-lg shadow-lg"
+                  className="w-full h-auto max-h-96 object-contain rounded-lg shadow-lg mx-auto"
                 />
               </div>
             </div>
@@ -82,9 +82,15 @@ const ServiceCategoryPage = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-6">
-                {category.slug === 'material-delivery' && '🚚'}
-                {category.slug === 'site-services' && '🏗️'}
-                {category.slug === 'emergency-expedited' && '⚡'}
+                {category.slug === 'material-delivery' && (
+                  <img src="/assets/badge_icons_1/stones_8654439.png" alt="Material Delivery" className="mx-auto w-16 h-16 object-contain" />
+                )}
+                {category.slug === 'site-services' && (
+                  <img src="/assets/badge_icons_1/dumper-truck_12255897.png" alt="Site Services" className="mx-auto w-16 h-16 object-contain" />
+                )}
+                {category.slug === 'emergency-expedited' && (
+                  <img src="/assets/badge_icons_1/badge-emergency-fire-icon-circle-260nw-2195145807.jpg" alt="Emergency Expedited" className="mx-auto w-16 h-16 object-contain" />
+                )}
               </div>
               <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
                 {category.title}
