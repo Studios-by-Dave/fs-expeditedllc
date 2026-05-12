@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
+import { getUtm } from "@/lib/utm";
 
 export const CTABanner = () => {
   return (
@@ -24,13 +26,13 @@ export const CTABanner = () => {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" asChild>
-              <a href="tel:8653649011">
+              <a href="tel:8653649011" onClick={() => trackEvent('phone_click', { label: 'ctabanner_primary', number: '8653649011', ...getUtm() })}>
                 <Phone className="w-5 h-5" />
                 (865) 364-9011
               </a>
             </Button>
             <Button variant="hero" asChild>
-              <a href="tel:7047518141">
+              <a href="tel:7047518141" onClick={() => trackEvent('phone_click', { label: 'ctabanner_secondary', number: '7047518141', ...getUtm() })}>
                 <Phone className="w-5 h-5" />
                 (704) 751-8141
               </a>

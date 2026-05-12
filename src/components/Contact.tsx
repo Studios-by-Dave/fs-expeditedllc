@@ -1,5 +1,7 @@
 import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/lib/analytics";
+import { getUtm } from "@/lib/utm";
 
 export const Contact = () => {
   return (
@@ -19,13 +21,13 @@ export const Contact = () => {
           {/* Phone CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="xl" asChild>
-              <a href="tel:8653649011">
+              <a href="tel:8653649011" onClick={() => trackEvent('phone_click', { label: 'contact_primary', number: '8653649011', ...getUtm() })}>
                 <Phone className="w-5 h-5" />
                 (865) 364-9011
               </a>
             </Button>
             <Button variant="hero" size="xl" asChild>
-              <a href="tel:7047518141">
+              <a href="tel:7047518141" onClick={() => trackEvent('phone_click', { label: 'contact_secondary', number: '7047518141', ...getUtm() })}>
                 <Phone className="w-5 h-5" />
                 (704) 751-8141
               </a>

@@ -1,9 +1,20 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook } from "lucide-react";
 import fsLogo from "@/assets/fs-logo.png";
+import { trackEvent } from "@/lib/analytics";
+import { getUtm } from "@/lib/utm";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const quickLinks = [
+    { href: "/services", label: "Services" },
+    { href: "/why-us", label: "Why Choose Us" },
+    { href: "/process", label: "How We Work" },
+    { href: "/reviews", label: "Reviews" },
+    { href: "/contact", label: "Get a Quote" },
+    { href: "/service-area", label: "Service Area" },
+  ];
 
   return (
     <footer className="bg-card border-t border-border relative" role="contentinfo">
@@ -28,16 +39,13 @@ export const Footer = () => {
               QUICK LINKS
             </h4>
             <ul className="space-y-3">
-              {[
-                { href: "/services", label: "Services" },
-                { href: "/why-us", label: "Why Choose Us" },
-                { href: "/process", label: "How We Work" },
-                { href: "/reviews", label: "Reviews" },
-                { href: "/contact", label: "Get a Quote" },
-                { href: "/service-area", label: "Service Area" },
-              ].map((link) => (
+              {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link to={link.href} className="text-muted-foreground hover:text-primary transition-colors font-sans">
+                  <Link
+                    to={link.href}
+                    className="text-muted-foreground hover:text-primary transition-colors font-sans"
+                    onClick={() => trackEvent('nav_link_click', { label: link.label, path: link.href, ...getUtm() })}
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -71,13 +79,21 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="tel:8653649011" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans">
+                <a
+                  href="tel:8653649011"
+                  onClick={() => trackEvent('phone_click', { label: 'footer_primary', number: '8653649011', ...getUtm() })}
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans"
+                >
                   <Phone className="w-4 h-4" />
                   (865) 364-9011
                 </a>
               </li>
               <li>
-                <a href="tel:7047518141" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans">
+                <a
+                  href="tel:7047518141"
+                  onClick={() => trackEvent('phone_click', { label: 'footer_secondary', number: '7047518141', ...getUtm() })}
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans"
+                >
                   <Phone className="w-4 h-4" />
                   (704) 751-8141
                 </a>
@@ -100,12 +116,12 @@ export const Footer = () => {
           <p className="text-sm text-muted-foreground font-sans">
             © {currentYear} F&S Expedited LLC. All rights reserved.
           </p>
-          
+
           {/* Social Icons */}
           <div className="flex items-center gap-4">
-            <a 
-              href="https://www.facebook.com/share/17MKXS5wLS/" 
-              target="_blank" 
+            <a
+              href="https://www.facebook.com/share/17MKXS5wLS/"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200"
               aria-label="Facebook"
@@ -113,10 +129,8 @@ export const Footer = () => {
               <Facebook className="w-5 h-5" />
             </a>
           </div>
-          
-          <p className="text-sm text-muted-foreground font-sans">
-            Expedited Hauling & Dump Truck Services
-          </p>
+
+          <p className="text-sm text-muted-foreground font-sans">Expedited Hauling & Dump Truck Services</p>
         </div>
       </div>
     </footer>
