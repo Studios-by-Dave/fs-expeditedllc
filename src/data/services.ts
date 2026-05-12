@@ -1,4 +1,4 @@
-import { Truck, Mountain, Trash2, Package, Zap, HardHat, Trees, Construction, type LucideIcon } from "lucide-react";
+import { Truck, Mountain, Trash2, Package, Zap, HardHat, Trees, Construction, Shield, Wrench, Layers, type LucideIcon } from "lucide-react";
 import heroTruck from "@/assets/hero-truck.jpg";
 
 export interface ServiceData {
@@ -58,9 +58,9 @@ export const serviceCategories = [
     services: ["site-prep", "land-clearing", "debris-removal"],
     subcategories: [
       {
-        title: "Aggregate Transport",
-        description: "Large-scale aggregate transport for construction and infrastructure projects across the region",
-        features: ["Limestone Transport", "Recycled Concrete", "Base Materials", "DOT-Compliant Hauling"]
+        title: "Land Clearing",
+        description: "Complete land clearing services including tree removal, brush clearing, and vegetation management",
+        features: ["Tree Removal", "Brush Clearing", "Vegetation Management", "Environmentally Responsible"]
       },
       {
         title: "Site Prep", 
@@ -68,14 +68,29 @@ export const serviceCategories = [
         features: ["Land Grading", "Excavation", "Ground Preparation", "Drainage Planning"]
       },
       {
-        title: "Land Clearing",
-        description: "Complete land clearing services including tree removal, brush clearing, and vegetation management",
-        features: ["Tree Removal", "Brush Clearing", "Vegetation Management", "Environmentally Responsible"]
-      },
-      {
         title: "Debris Removal",
         description: "Construction debris removal and site cleanup services to keep your project safe and on schedule",
         features: ["Construction Waste", "Demolition Debris", "Yard Waste", "Site Cleanup"]
+      },
+      {
+        title: "Aggregate Transport",
+        description: "Large-scale aggregate transport for construction and infrastructure projects across the region",
+        features: ["Limestone Transport", "Recycled Concrete", "Base Materials", "DOT-Compliant Hauling"]
+      },
+      {
+        title: "Retaining Walls",
+        description: "Professional retaining wall construction for erosion control, landscape design, and structural support",
+        features: ["Segmental Walls", "Natural Stone", "Concrete Block", "Drainage Solutions"]
+      },
+      {
+        title: "Underground Utilities",
+        description: "Underground utility installation and trenching services for water, sewer, and electrical systems",
+        features: ["Water Lines", "Sewer Systems", "Electrical Conduits", "Trenching Services"]
+      },
+      {
+        title: "Land Grading",
+        description: "Precision land grading and slope management for proper drainage and site preparation",
+        features: ["Rough Grading", "Fine Grading", "Slope Management", "Drainage Planning"]
       }
     ],
     backgroundImage: "/assets/site-services.png"
@@ -250,5 +265,95 @@ export const services: ServiceData[] = [
     ],
     backgroundImage: heroTruck,
     category: "site-services",
+  },
+  {
+    slug: "retaining-walls",
+    icon: Shield,
+    title: "Retaining Walls",
+    description: "Professional retaining wall construction for erosion control, landscape design, and structural support projects.",
+    features: ["Segmental Walls", "Natural Stone", "Concrete Block", "Drainage Solutions"],
+    longDescription: "At F&S Expedited, we know that retaining walls are more than just decorative—they're essential structures that protect your property from erosion, create usable space on sloped terrain, and add significant value to your landscape. Our team specializes in building durable, attractive retaining walls that stand the test of time while enhancing the functionality and beauty of your property. Whether you need a small garden wall or a large structural retaining system, we bring the same level of expertise and attention to detail to every project. We understand the engineering principles behind proper wall construction, including drainage, soil pressure management, and foundation requirements. When you choose F&S for retaining walls, you're choosing a partner who combines technical expertise with artistic vision to create walls that are both functional and beautiful.",
+    benefits: [
+      "Engineered for structural integrity",
+      "Multiple material options available",
+      "Proper drainage integration",
+      "Erosion control and soil retention",
+      "Enhanced property value and usability",
+      "Warranty on workmanship",
+    ],
+    backgroundImage: heroTruck,
+    category: "site-services",
+  },
+  {
+    slug: "underground-utilities",
+    icon: Wrench,
+    title: "Underground Utilities",
+    description: "Underground utility installation and trenching services for water, sewer, and electrical systems.",
+    features: ["Water Lines", "Sewer Systems", "Electrical Conduits", "Trenching Services"],
+    longDescription: "At F&S Expedited, we understand that underground utilities are the backbone of any development project. Our team provides comprehensive utility installation services, from water and sewer lines to electrical conduits and drainage systems. We work with precision and care to ensure that all underground installations meet local codes and industry standards while minimizing disruption to your property. Our experienced operators handle everything from precise trenching to careful pipe installation, ensuring that your utility systems are installed correctly the first time. We coordinate with utility companies and local authorities to ensure all work is properly permitted and inspected. When you choose F&S for underground utilities, you're choosing a partner who understands the critical importance of getting these foundational systems right.",
+    benefits: [
+      "Licensed and insured utility installation",
+      "Coordination with local utility companies",
+      "Precision trenching and excavation",
+      "Code-compliant installations",
+      "Minimal property disruption",
+      "Complete project documentation",
+    ],
+    backgroundImage: heroTruck,
+    category: "site-services",
+  },
+  {
+    slug: "land-grading",
+    icon: Layers,
+    title: "Land Grading",
+    description: "Precision land grading and slope management for proper drainage and site preparation.",
+    features: ["Rough Grading", "Fine Grading", "Slope Management", "Drainage Planning"],
+    longDescription: "At F&S Expedited, we know that proper land grading is essential for successful construction projects, effective drainage, and long-term site stability. Our grading services range from rough grading for large-scale site preparation to fine grading for precise surface preparation. We use advanced equipment and laser-guided technology to ensure accurate slopes and elevations that meet your exact specifications. Our team understands the complex relationship between grading, drainage, and site stability, and we work to create surfaces that not only look good but function perfectly for years to come. Whether you're preparing for a new building, creating proper drainage away from structures, or landscaping your property, we bring the same level of precision and expertise to every grading project. When you choose F&S for land grading, you're choosing a partner who understands that getting the ground right is the foundation of everything that follows.",
+    benefits: [
+      "Laser-guided precision grading",
+      "Proper drainage slope creation",
+      "Erosion prevention and control",
+      "Site preparation to exact specifications",
+      "Experienced grading operators",
+      "Compliance with drainage requirements",
+    ],
+    backgroundImage: heroTruck,
+    category: "site-services",
+  },
+  {
+    slug: "sand-delivery",
+    icon: Mountain,
+    title: "Sand Delivery",
+    description: "High-quality sand delivery for construction, landscaping, and specialized applications.",
+    features: ["Fill Sand", "Masonry Sand", "Play Sand", "Concrete Sand"],
+    longDescription: "At F&S Expedited, we understand that different projects require different types of sand, and getting the right sand can make the difference between a successful project and one that falls short. That's why we offer a comprehensive range of sand types, from coarse fill sand for construction to fine mason sand for brickwork, and even clean play sand for playgrounds and landscaping. Our team has spent years learning the specific properties and applications of each sand type, ensuring you get exactly what you need for your project. We deliver sand in quantities ranging from small residential loads to large commercial orders, always with the same attention to quality and timely delivery. When you choose F&S for sand delivery, you're choosing a partner who understands that sand isn't just sand—it's a critical material that needs to match your exact requirements.",
+    benefits: [
+      "Multiple sand types available",
+      "Quality-sourced materials",
+      "Bulk delivery capabilities",
+      "Expert material recommendations",
+      "Flexible scheduling",
+      "Competitive pricing",
+    ],
+    backgroundImage: heroTruck,
+    category: "material-delivery",
+  },
+  {
+    slug: "soil-delivery",
+    icon: Mountain,
+    title: "Soil Delivery",
+    description: "Premium topsoil and fill dirt delivery for landscaping, gardening, and construction projects.",
+    features: ["Topsoil", "Fill Dirt", "Garden Soil", "Compost Mix"],
+    longDescription: "At F&S Expedited, we know that quality soil is the foundation of healthy landscapes and successful construction projects. That's why we've developed relationships with trusted suppliers to bring you the finest topsoil, fill dirt, and garden soil blends directly to your site. Whether you're establishing a new lawn, creating garden beds, filling low areas, or preparing for construction, we deliver exactly what you need. Our team understands the difference between screened topsoil for planting and compactable fill dirt for grading, and we make sure you get the right material for your specific application. We offer soil in various quantities and can even create custom blends for specialized applications. When you choose F&S for soil delivery, you're choosing a partner who understands that good soil isn't just dirt—it's the growing medium that determines the success of your project.",
+    benefits: [
+      "Premium quality topsoil available",
+      "Screened and processed materials",
+      "Custom soil blends available",
+      "Bulk delivery for large projects",
+      "Expert soil recommendations",
+      "Timely delivery scheduling",
+    ],
+    backgroundImage: heroTruck,
+    category: "material-delivery",
   },
 ];

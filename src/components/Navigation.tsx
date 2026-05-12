@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { services, serviceCategories } from "@/data/services";
 import { Picture } from "@/components/ui/picture";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackGetQuoteClick, trackPhoneClick } from "@/lib/analytics";
 import { getUtm } from "@/lib/utm";
 import fsLogo from "@/assets/fs-logo.png";
 
@@ -143,7 +143,7 @@ export const Navigation = () => {
                 asChild
                 className="relative overflow-hidden group transition-all duration-300 hover:scale-105"
               >
-                <Link to="/contact" className="relative z-10" onClick={() => trackEvent('cta_click', { label: 'get_free_quote', ...getUtm() })}>
+                <Link to="/contact" className="relative z-10" onClick={() => trackGetQuoteClick('Get Free Quote', 'navigation_header')}>
                   <span className="relative z-10">Get Free Quote</span>
                   {/* Reflection effect overlay */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -skew-x-12 group-hover:translate-x-full" />
@@ -170,13 +170,13 @@ export const Navigation = () => {
         >
           <div className="container mx-auto px-4 py-2 flex items-center justify-center gap-8">
             <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-lg" asChild>
-              <a href="tel:8653649011" onClick={() => trackEvent('phone_click', { label: 'nav_call_joe', number: '8653649011', ...getUtm() })}>
+              <a href="tel:8653649011" onClick={() => trackPhoneClick('8653649011', 'nav_call_joe')}>
                 <Phone className="w-5 h-5 text-green-500" />
                 Call Joe! (865) 364-9011
               </a>
             </Button>
             <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-lg" asChild>
-              <a href="tel:7047518141" onClick={() => trackEvent('phone_click', { label: 'nav_call_luke', number: '7047518141', ...getUtm() })}>
+              <a href="tel:7047518141" onClick={() => trackPhoneClick('7047518141', 'nav_call_luke')}>
                 <Phone className="w-5 h-5 text-green-500" />
                 Call Luke! (704) 751-8141
               </a>

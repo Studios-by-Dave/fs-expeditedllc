@@ -38,4 +38,49 @@ export function trackEvent(name: string, payload: EventPayload = {}) {
   } catch {}
 }
 
+// Marketing tracking functions
+export function trackContactFormSubmit(formData: Record<string, any>) {
+  trackEvent('contact_form_submit', {
+    form_type: 'contact',
+    page_location: window.location.pathname,
+    timestamp: new Date().toISOString()
+  });
+}
+
+export function trackPhoneClick(phoneNumber: string, location: string) {
+  trackEvent('phone_click', {
+    phone_number: phoneNumber,
+    click_location: location,
+    page_location: window.location.pathname,
+    timestamp: new Date().toISOString()
+  });
+}
+
+export function trackGetQuoteClick(buttonText: string, location: string) {
+  trackEvent('get_quote_click', {
+    button_text: buttonText,
+    click_location: location,
+    page_location: window.location.pathname,
+    timestamp: new Date().toISOString()
+  });
+}
+
+export function trackServicePageView(serviceName: string, category: string) {
+  trackEvent('service_page_view', {
+    service_name: serviceName,
+    service_category: category,
+    page_location: window.location.pathname,
+    timestamp: new Date().toISOString()
+  });
+}
+
+export function trackNavigationClick(menuItem: string, level: string) {
+  trackEvent('navigation_click', {
+    menu_item: menuItem,
+    navigation_level: level,
+    page_location: window.location.pathname,
+    timestamp: new Date().toISOString()
+  });
+}
+
 export default trackEvent;

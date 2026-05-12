@@ -136,50 +136,68 @@ const ServiceCategoryPage = () => {
               </div>
 
               <div className={`grid gap-8 max-w-6xl mx-auto ${category.slug === 'site-services' ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
-                {category.subcategories.map((subcategory, index) => (
-                  <div key={index} className="bg-card border border-border rounded-xl p-8 hover:shadow-xl transition-all duration-300 hover:border-primary/50">
-                    <div className="mb-6">
-                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                        {category.slug === 'material-delivery' && (
-                          <>
-                            {subcategory.title === 'Gravel Delivery' && '🪨'}
-                            {subcategory.title === 'Sand Delivery' && '🏖️'}
-                            {subcategory.title === 'Soil Delivery' && '🌱'}
-                          </>
-                        )}
-                        {category.slug === 'site-services' && (
-                          <>
-                            {subcategory.title === 'Aggregate Transport' && '🚚'}
-                            {subcategory.title === 'Site Prep' && '🏗️'}
-                            {subcategory.title === 'Land Clearing' && '🌲'}
-                            {subcategory.title === 'Debris Removal' && '🗑️'}
-                          </>
-                        )}
-                        {category.slug === 'emergency-expedited' && (
-                          <>
-                            {subcategory.title === 'Emergency Expedited' && '⚡'}
-                            {subcategory.title === 'Commercial Hauling' && '🚛'}
-                            {subcategory.title === 'Dump Truck Hauling' && '🚚'}
-                          </>
-                        )}
-                      </div>
-                    </div>
-                    <h3 className="text-2xl font-heading font-semibold text-foreground mb-4 text-center">
-                      {subcategory.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-6 text-center">
-                      {subcategory.description}
-                    </p>
-                    <div className="space-y-2">
-                      {subcategory.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                          <span className="text-sm text-foreground">{feature}</span>
+                {category.subcategories?.map((subcategory, index) => {
+                  // Find the corresponding service data
+                  const serviceData = services.find(s => s.title === subcategory.title);
+                  const serviceSlug = serviceData?.slug || subcategory.title.toLowerCase().replace(/\s+/g, '-');
+                  
+                  return (
+                    <Link 
+                      key={index} 
+                      to={`/services/${category.slug}/${serviceSlug}`}
+                      className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-colors block group"
+                    >
+                      <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                        <div className="text-2xl">
+                          {category.slug === 'material-delivery' && (
+                            <>
+                              {subcategory.title === 'Gravel Delivery' && '🪨'}
+                              {subcategory.title === 'Sand Delivery' && '🏖️'}
+                              {subcategory.title === 'Soil Delivery' && '🌱'}
+                            </>
+                          )}
+                          {category.slug === 'site-services' && (
+                            <>
+                              {subcategory.title === 'Land Clearing' && '🌲'}
+                              {subcategory.title === 'Site Prep' && '🏗️'}
+                              {subcategory.title === 'Debris Removal' && '🗑️'}
+                              {subcategory.title === 'Aggregate Transport' && '🚚'}
+                              {subcategory.title === 'Retaining Walls' && '🛡️'}
+                              {subcategory.title === 'Underground Utilities' && '🔧'}
+                              {subcategory.title === 'Land Grading' && '⛰️'}
+                            </>
+                          )}
+                          {category.slug === 'emergency-expedited' && (
+                            <>
+                              {subcategory.title === 'Emergency Expedited' && '⚡'}
+                              {subcategory.title === 'Commercial Hauling' && '🚛'}
+                              {subcategory.title === 'Dump Truck Hauling' && '🚚'}
+                            </>
+                          )}
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+                      </div>
+                      <h3 className="text-2xl font-heading font-semibold text-foreground mb-4 text-center group-hover:text-primary transition-colors">
+                        {subcategory.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-6 text-center">
+                        {subcategory.description}
+                      </p>
+                      <div className="space-y-2">
+                        {subcategory.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center gap-2">
+                            <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                            <span className="text-sm text-foreground">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="mt-6 text-center">
+                        <span className="text-primary font-semibold text-sm group-hover:underline">
+                          Learn More →
+                        </span>
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
 
               <div className="mt-12 text-center">

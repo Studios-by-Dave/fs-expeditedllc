@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import ServicesPage from "./pages/ServicesPage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
 import ServiceCategoryPage from "./pages/ServiceCategoryPage";
+import SubServicePage from "./pages/SubServicePage";
 import ServiceRouter from "./pages/ServiceRouter";
 import WhyUsPage from "./pages/WhyUsPage";
 import ProcessPage from "./pages/ProcessPage";
@@ -31,6 +32,7 @@ export const AppContent = () => (
       <Route path="/" element={<Index />} />
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/services/:slug" element={<ServiceRouter />} />
+      <Route path="/services/:category/:service" element={<SubServicePage />} />
       <Route path="/why-us" element={<WhyUsPage />} />
       <Route path="/process" element={<ProcessPage />} />
       <Route path="/reviews" element={<TestimonialsPage />} />
@@ -40,6 +42,14 @@ export const AppContent = () => (
       <Route path="/service-area" element={<ServiceAreaPage />} />
       <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+      {/* Redirects for old URLs */}
+      <Route path="/services/gravel-sand-delivery" element={<Navigate to="/services/material-delivery/gravel-delivery" replace />} />
+      <Route path="/services/aggregate-transport" element={<Navigate to="/services/material-delivery/aggregate-transport" replace />} />
+      <Route path="/services/debris-removal" element={<Navigate to="/services/site-services/debris-removal" replace />} />
+      <Route path="/services/site-prep" element={<Navigate to="/services/site-services/site-prep" replace />} />
+      <Route path="/services/land-clearing" element={<Navigate to="/services/site-services/land-clearing" replace />} />
+      <Route path="/services/commercial-hauling" element={<Navigate to="/services/emergency-expedited/commercial-hauling" replace />} />
+      <Route path="/services/dump-truck-hauling" element={<Navigate to="/services/emergency-expedited/dump-truck-hauling" replace />} />
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
     </Routes>
