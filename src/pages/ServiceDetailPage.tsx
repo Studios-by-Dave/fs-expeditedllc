@@ -67,7 +67,7 @@ const ServiceDetailPage = () => {
         schema={combinedSchema}
       />
       <Navigation />
-      <main className="pt-20">
+      <main className="pt-32">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="container px-4 pt-6">
           <ol className="flex items-center gap-2 text-sm text-muted-foreground font-sans">

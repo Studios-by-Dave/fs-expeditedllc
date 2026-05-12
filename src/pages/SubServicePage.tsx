@@ -50,9 +50,9 @@ const SubServicePage = () => {
       />
       <Navigation />
       
-      <main>
+      <main className="pt-32">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-b from-primary/10 to-background">
+        <section className="relative pt-40 pb-20 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Link 

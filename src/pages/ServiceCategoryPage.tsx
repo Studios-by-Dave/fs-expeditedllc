@@ -61,7 +61,7 @@ const ServiceCategoryPage = () => {
 
       <Navigation />
 
-      <main className="min-h-screen pt-24">
+      <main className="min-h-screen pt-32">
         {/* Hero Image Section */}
         {category.backgroundImage && (
           <section className="relative py-12 bg-background">

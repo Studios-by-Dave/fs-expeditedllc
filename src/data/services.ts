@@ -141,12 +141,12 @@ export const services: ServiceData[] = [
     category: "emergency-expedited",
   },
   {
-    slug: "gravel-sand-delivery",
+    slug: "gravel-delivery",
     icon: Mountain,
-    title: "Gravel & Sand Delivery",
-    description: "Quality gravel, sand, and crushed stone delivered directly to your job site. Multiple grades available.",
-    features: ["Crushed Stone", "Fill Sand", "Road Base Material"],
-    longDescription: "At F&S Expedited, we understand that quality materials are the foundation of every successful project. That's why we've spent years building relationships with trusted local suppliers to bring you the finest gravel, sand, and crushed stone directly to your job site. Whether you're laying a driveway, building a foundation, creating proper drainage, or landscaping, we deliver exactly what you need, when you need it. Our team knows the difference between #57 stone and crusher run, between fill sand and mason sand—and we make sure you get the right material for your specific application. We're not just delivery drivers; we're material specialists committed to your project's success.",
+    title: "Gravel Delivery",
+    description: "Premium gravel for driveways, foundations, drainage, and landscaping projects delivered directly to your job site.",
+    features: ["Crushed Stone", "Road Base", "Decorative Gravel", "Fill Gravel"],
+    longDescription: "At F&S Expedited, we understand that quality gravel is the foundation of every successful construction and landscaping project. That's why we've spent years building relationships with trusted local suppliers to bring you the finest gravel directly to your job site. Whether you're laying a driveway, building a foundation, creating proper drainage, or landscaping, we deliver exactly what you need, when you need it. Our team knows the difference between #57 stone and crusher run, between pea gravel and river rock—and we make sure you get the right material for your specific application. We're not just delivery drivers; we're material specialists committed to your project's success.",
     benefits: [
       "Multiple grades and types available",
       "Bulk delivery for large projects",
