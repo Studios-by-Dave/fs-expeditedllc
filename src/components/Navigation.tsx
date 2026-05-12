@@ -129,8 +129,17 @@ export const Navigation = () => {
 
             {/* CTA */}
             <div className="hidden md:flex items-center">
-              <Button variant="default" size="sm" asChild>
-                <Link to="/contact">Get Free Quote</Link>
+              <Button 
+                variant="default" 
+                size="sm" 
+                asChild
+                className="relative overflow-hidden group transition-all duration-300 hover:scale-105"
+              >
+                <Link to="/contact" className="relative z-10">
+                  <span className="relative z-10">Get Free Quote</span>
+                  {/* Reflection effect overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -skew-x-12 group-hover:translate-x-full" />
+                </Link>
               </Button>
             </div>
 

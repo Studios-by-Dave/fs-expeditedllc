@@ -2,12 +2,8 @@
   "name": "F&S Expedited LLC",
   "short_name": "F&S Expedited",
   "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#facc15",
-  "orientation": "portrait-primary",
-  "scope": "/",
+  "display": "browser",
+  "theme_color": "#2563eb",
   "icons": [
     {
       "src": "/favicon-16x16.png",
@@ -23,40 +19,6 @@
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
     }
-  ],
-  "shortcuts": [
-    {
-      "name": "Get Quote",
-      "short_name": "Quote",
-      "description": "Request a free hauling quote",
-      "url": "/contact",
-      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
-    },
-    {
-      "name": "Call Joe",
-      "short_name": "Joe",
-      "description": "Call Joe at (865) 364-9011",
-      "url": "tel:8653649011",
-      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
-    },
-    {
-      "name": "Call Luke",
-      "short_name": "Luke",
-      "description": "Call Luke at (704) 751-8141",
-      "url": "tel:7047518141",
-      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
-    }
-  ],
-  "categories": ["business", "utilities", "transportation"]
+  ]
 }
