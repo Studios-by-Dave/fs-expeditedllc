@@ -10,6 +10,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
 import ServiceCategoryPage from "./pages/ServiceCategoryPage";
 import SubServicePage from "./pages/SubServicePage";
+import DumpTrucksServicesPage from "./pages/DumpTrucksServicesPage";
 import ServiceRouter from "./pages/ServiceRouter";
 import WhyUsPage from "./pages/WhyUsPage";
 import ProcessPage from "./pages/ProcessPage";
@@ -31,6 +32,7 @@ export const AppContent = () => (
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/services" element={<ServicesPage />} />
+      <Route path="/services/dump-trucks-hauling-services" element={<DumpTrucksServicesPage />} />
       <Route path="/services/:slug" element={<ServiceRouter />} />
       <Route path="/services/:category/:service" element={<SubServicePage />} />
       <Route path="/why-us" element={<WhyUsPage />} />

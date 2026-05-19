@@ -68,7 +68,7 @@ def get_service_urls():
 def get_category_urls():
     """Generate URLs for all service category pages."""
     return [f'/services/{slug}' for slug in extract_slugs_from_ts_file('src/data/services.ts', 'slug') if slug in [
-        'material-delivery', 'site-services', 'emergency-expedited'
+        'dump-trucks-hauling-services', 'material-delivery', 'site-services', 'emergency-expedited'
     ]]
 
 def get_subcategory_urls():

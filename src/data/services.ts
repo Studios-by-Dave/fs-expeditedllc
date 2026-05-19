@@ -28,6 +28,14 @@ export interface ServiceCategory {
 
 export const serviceCategories = [
   {
+    slug: "dump-trucks-hauling-services",
+    title: "Dump Trucks - Hauling and Services",
+    description: "Complete dump truck hauling and comprehensive site services",
+    services: [],
+    subcategories: [],
+    backgroundImage: "/assets/hero-truck.jpg"
+  },
+  {
     slug: "material-delivery",
     title: "Material Delivery",
     description: "Quality materials delivered directly to your job site",

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Truck } from "lucide-react";
 import { services, serviceCategories } from "@/data/services";
 import { Picture } from "@/components/ui/picture";
 import { trackEvent, trackGetQuoteClick, trackPhoneClick } from "@/lib/analytics";
@@ -100,27 +100,44 @@ export const Navigation = () => {
                   >
                     All Services
                   </Link>
-                  {serviceCategories.map((category) => (
-                    <Link
-                      key={category.slug}
-                      to={`/services/${category.slug}`}
-                      onClick={() => setServicesOpen(false)}
-                      className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border last:border-b-0"
-                    >
-                      <div className="w-6 h-6 shrink-0 flex items-center justify-center">
-                        {category.slug === 'material-delivery' && (
-                          <img src="/assets/badge_icons_1/stones_8654439.png" alt="Material Delivery" className="w-6 h-6 object-contain" />
-                        )}
+                  {serviceCategories.map((category) => {
+                    if (category.slug === 'dump-trucks-hauling-services') {
+                      return (
+                        <Link
+                          key={category.slug}
+                          to="/services/dump-trucks-hauling-services"
+                          onClick={() => setServicesOpen(false)}
+                          className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
+                        >
+                          <div className="w-6 h-6 shrink-0 flex items-center justify-center">
+                            <img src="/assets/badge_icons_1/dumper-truck_12255897.png" alt="Dump Trucks" className="w-6 h-6 object-contain" />
+                          </div>
+                          <span>{category.title}</span>
+                        </Link>
+                      );
+                    }
+                    return (
+                      <Link
+                        key={category.slug}
+                        to={`/services/${category.slug}`}
+                        onClick={() => setServicesOpen(false)}
+                        className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border last:border-b-0"
+                      >
+                        <div className="w-6 h-6 shrink-0 flex items-center justify-center">
+                          {category.slug === 'material-delivery' && (
+                            <img src="/assets/badge_icons_1/stones_8654439.png" alt="Material Delivery" className="w-6 h-6 object-contain" />
+                          )}
                         {category.slug === 'site-services' && (
                           <img src="/assets/badge_icons_1/dumper-truck_12255897.png" alt="Site Services" className="w-6 h-6 object-contain" />
                         )}
                         {category.slug === 'emergency-expedited' && (
                           <img src="/assets/badge_icons_1/badge-emergency-fire-icon-circle-260nw-2195145807.jpg" alt="Emergency Expedited" className="w-6 h-6 object-contain" />
                         )}
-                      </div>
-                      <span>{category.title}</span>
-                    </Link>
-                  ))}
+                        </div>
+                        <span>{category.title}</span>
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
 
