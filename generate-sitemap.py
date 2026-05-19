@@ -154,7 +154,7 @@ def main():
     print(f"Found {len(urls)} total URLs for sitemap")
     
     # Generate sitemap XML
-    xml = '<?xml version="1.0) encoding="UTF-8"?>\n'
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
     xml += '<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">\n'
     
     for url, lastmod in sorted(urls):
