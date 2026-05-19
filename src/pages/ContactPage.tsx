@@ -1,5 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { SEOHead } from "@/components/SEOHead";
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import { ChevronRight } from "lucide-react";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { breadcrumbSchema } from "@/data/seo-schemas";
@@ -19,6 +21,19 @@ const ContactPage = () => {
         schema={breadcrumbSchema(breadcrumbs)}
       />
       <Navigation />
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb aria-label="breadcrumb" className="container px-4 pt-20">
+        <BreadcrumbList>
+          {breadcrumbs.map((crumb, index) => (
+            <BreadcrumbItem key={index}>
+              <BreadcrumbLink asChild href={crumb.url} className={index === breadcrumbs.length - 1 ? "text-foreground font-semibold" : "text-primary hover:text-primary/70"}>
+                {crumb.name}
+              </BreadcrumbLink>
+              {index < breadcrumbs.length - 1 && <BreadcrumbSeparator><ChevronRight /></BreadcrumbSeparator>}
+            </BreadcrumbItem>
+          ))}
+        </BreadcrumbList>
+      </Breadcrumb>
       <main className="pt-20">
         <Contact />
       </main>

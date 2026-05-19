@@ -62,21 +62,6 @@ const ServiceCategoryPage = () => {
       <Navigation />
 
       <main className="min-h-screen pt-32">
-        {/* Hero Image Section */}
-        {category.backgroundImage && (
-          <section className="relative py-12 bg-background">
-            <div className="container mx-auto px-4">
-              <div className="max-w-2xl mx-auto">
-                <img
-                  src={category.backgroundImage}
-                  alt={`${category.title} - F&S Expedited LLC`}
-                  className="w-full h-auto max-h-96 object-contain rounded-lg shadow-lg mx-auto"
-                />
-              </div>
-            </div>
-          </section>
-        )}
-
         {/* Hero Content Section */}
         <section className="relative py-20 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
           <div className="container mx-auto px-4">
@@ -373,6 +358,21 @@ const ServiceCategoryPage = () => {
             </div>
           </div>
         </section>
+
+        {/* Hero Image Section - Moved to bottom to prioritize services content */}
+        {category.backgroundImage && (
+          <section className="relative py-12 bg-background">
+            <div className="container mx-auto px-4">
+              <div className="max-w-2xl mx-auto">
+                <img
+                  src={category.backgroundImage}
+                  alt={`${category.title} - F&S Expedited LLC`}
+                  className="w-full h-auto max-h-96 object-contain rounded-lg shadow-lg mx-auto"
+                />
+              </div>
+            </div>
+          </section>
+        )}
       </main>
 
       <CTABanner />
