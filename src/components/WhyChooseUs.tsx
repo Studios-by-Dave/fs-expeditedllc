@@ -12,12 +12,12 @@ const reasons = [
 
 export const WhyChooseUs = () => {
   return (
-    <section id="why-us" className="section-padding bg-background relative">
+    <section id="why-us" className="py-12 bg-background relative">
       {/* Diamond plate top border */}
       <div className="absolute top-0 left-0 right-0 h-3 diamond-plate" />
 
       <div className="container px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
             Why F&S
           </span>

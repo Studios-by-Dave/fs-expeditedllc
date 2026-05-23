@@ -75,7 +75,7 @@ const BlogPage = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="section-padding bg-gradient-to-b from-primary/5 to-background">
+        <section className="py-12 bg-gradient-to-b from-primary/5 to-background">
           <div className="container px-4">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground tracking-wider mb-6 blog-glow-text">
@@ -89,34 +89,34 @@ const BlogPage = () => {
         </section>
 
         {/* Blog Posts Grid */}
-        <section className="section-padding">
+        <section className="py-12">
           <div className="container px-4">
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
               {blogPosts.map((post) => {
                 const Icon = post.icon;
                 return (
                   <Card key={post.id} className="border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
                     <CardHeader>
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-2 py-1 rounded">
+                        <span className="text-sm font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1.5 rounded">
                           {post.category}
                         </span>
-                        <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                          <Calendar className="w-3 h-3" />
+                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                          <Calendar className="w-4 h-4" />
                           {post.date}
                         </div>
                       </div>
-                      <CardTitle className="text-xl font-bold text-foreground blog-glow-text">
+                      <CardTitle className="text-2xl font-bold text-foreground blog-glow-text">
                         {post.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                      <p className="text-base text-muted-foreground mb-4 leading-relaxed">
                         {post.excerpt}
                       </p>
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                          <Clock className="w-3 h-3" />
+                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                          <Clock className="w-4 h-4" />
                           {post.readTime}
                         </div>
                         {post.fullContent && post.link ? (

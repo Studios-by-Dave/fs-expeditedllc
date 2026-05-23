@@ -29,9 +29,9 @@ const steps = [
 
 export const Process = () => {
   return (
-    <section id="process" className="section-padding bg-gradient-card">
+    <section id="process" className="py-12 bg-gradient-card">
       <div className="container px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
             How It Works
           </span>
