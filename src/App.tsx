@@ -18,6 +18,10 @@ import TestimonialsPage from "./pages/TestimonialsPage";
 import ContactPage from "./pages/ContactPage";
 import ServiceAreaPage from "./pages/ServiceAreaPage";
 import GalleryPage from "./pages/GalleryPage";
+import BlogPage from "./pages/BlogPage";
+import BlogArticlePage from "./pages/BlogArticlePage";
+import BlogArticlePage2 from "./pages/BlogArticlePage2";
+import BlogArticlePage3 from "./pages/BlogArticlePage3";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
 import NotFound from "./pages/NotFound";
@@ -40,6 +44,10 @@ export const AppContent = () => (
       <Route path="/reviews" element={<TestimonialsPage />} />
       <Route path="/testimonials" element={<Navigate to="/reviews" replace />} />
       <Route path="/gallery" element={<GalleryPage />} />
+      <Route path="/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc" element={<BlogArticlePage />} />
+      <Route path="/blog/why-manufacturers-choose-fs-expedited-trucking-emergency-freight" element={<BlogArticlePage2 />} />
+      <Route path="/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina" element={<BlogArticlePage3 />} />
+      <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/service-area" element={<ServiceAreaPage />} />
       <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

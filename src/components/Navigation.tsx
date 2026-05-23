@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/process", label: "How We Work" },
   { href: "/service-area", label: "Service Area" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -145,7 +146,11 @@ export const Navigation = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
+                  className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-200 ${
+                    link.label === "Blog"
+                      ? "blog-glow-text"
+                      : "text-foreground/80 hover:text-primary"
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -256,7 +261,11 @@ export const Navigation = () => {
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-lg font-heading uppercase tracking-wider text-foreground hover:text-primary transition-colors py-2"
+                className={`text-lg font-heading uppercase tracking-wider transition-colors py-2 ${
+                  link.label === "Blog"
+                    ? "blog-glow-text"
+                    : "text-foreground hover:text-primary"
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

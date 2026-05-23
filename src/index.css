@@ -225,6 +225,17 @@
       left: 100%;
     }
   }
+
+  /* Blog glow text effect - yellow with darker outline */
+  .blog-glow-text {
+    color: hsl(60 100% 50%);
+    text-shadow: 
+      -1px -1px 0 hsl(45 100% 30%),
+      1px -1px 0 hsl(45 100% 30%),
+      -1px 1px 0 hsl(45 100% 30%),
+      1px 1px 0 hsl(45 100% 30%),
+      0 0 10px hsl(60 100% 50% / 0.5);
+  }
 }
 
 @layer utilities {
