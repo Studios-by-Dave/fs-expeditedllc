@@ -34,6 +34,36 @@ const galleryImages = [
     url: "/assets/gallery/FS_6.jpg",
     alt: "F&S Expedited LLC - Project Showcase",
     caption: "Completed projects showcasing our quality hauling services and professional workmanship."
+  },
+  {
+    id: 6,
+    url: "/assets/gallery/fs image1.png",
+    alt: "F&S Expedited LLC - Dump Truck Operation",
+    caption: "Our dump trucks in action, providing reliable material transport and hauling services."
+  },
+  {
+    id: 7,
+    url: "/assets/gallery/fs image2.png",
+    alt: "F&S Expedited LLC - Site Services",
+    caption: "Professional site preparation and land management services for construction projects."
+  },
+  {
+    id: 8,
+    url: "/assets/gallery/fs image3.png",
+    alt: "F&S Expedited LLC - Material Delivery",
+    caption: "Quality material delivery including gravel, sand, and soil for various construction needs."
+  },
+  {
+    id: 9,
+    url: "/assets/gallery/fs image4.png",
+    alt: "F&S Expedited LLC - Emergency Services",
+    caption: "Emergency expedited hauling services available when you need them most."
+  },
+  {
+    id: 10,
+    url: "/assets/gallery/fs image5.png",
+    alt: "F&S Expedited LLC - Fleet Operations",
+    caption: "Our well-maintained fleet ready to handle any hauling challenge with precision and efficiency."
   }
 ];
 

@@ -110,7 +110,7 @@ export const Navigation = () => {
                           className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                         >
                           <div className="w-6 h-6 shrink-0 flex items-center justify-center">
-                            <img src="/assets/badge_icons_1/dumper-truck_12255897.png" alt="Dump Trucks" className="w-6 h-6 object-contain" />
+                            <Truck className="w-5 h-5 text-primary" />
                           </div>
                           <span>{category.title}</span>
                         </Link>

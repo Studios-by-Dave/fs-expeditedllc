@@ -21,10 +21,10 @@ export const WhyChooseUs = () => {
           <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
             Why F&S
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl lg:text-4xl font-heading font-bold text-foreground tracking-wider">
+          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground tracking-wider">
             WHY CHOOSE US
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg font-sans">
+          <p className="mt-4 text-muted-foreground text-xl font-sans">
             Built on hard work, reliability, and a commitment to getting the job done right. 
             <Link 
               to="/services/emergency-expedited" 
@@ -38,8 +38,8 @@ export const WhyChooseUs = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {reasons.map((reason, i) => (
             <div key={reason.title} className="flex gap-4 group">
-              <div className="w-12 h-12 shrink-0 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <reason.icon className="w-6 h-6 text-primary" />
+              <div className="w-12 h-12 shrink-0 bg-green-500/10 flex items-center justify-center group-hover:bg-green-500/20 transition-colors">
+                <reason.icon className="w-6 h-6 text-green-500" />
               </div>
               <div>
                 <h3 className="font-heading text-lg font-bold text-foreground tracking-wide">

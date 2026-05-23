@@ -50,11 +50,11 @@ export const Process = () => {
                 <div className="hidden md:block absolute top-10 left-1/2 w-full h-px bg-border" />
               )}
 
-              <div className="relative z-10 w-20 h-20 mx-auto bg-card border-2 border-border flex items-center justify-center group-hover:border-primary transition-colors duration-300">
-                <item.icon className="w-8 h-8 text-primary" />
+              <div className="relative z-10 w-20 h-20 mx-auto bg-card border-2 border-border flex items-center justify-center group-hover:border-green-500 transition-colors duration-300">
+                <item.icon className="w-8 h-8 text-green-500" />
               </div>
 
-              <span className="inline-block mt-4 text-xs font-bold text-primary tracking-widest font-sans">
+              <span className="inline-block mt-4 text-xs font-bold text-green-500 tracking-widest font-sans">
                 STEP {item.step}
               </span>
 
