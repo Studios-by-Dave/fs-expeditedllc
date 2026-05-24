@@ -148,7 +148,7 @@ export const Navigation = () => {
                   to={link.href}
                   className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-200 ${
                     link.label === "Blog"
-                      ? "blog-glow-text"
+                      ? "blog-nav-glow"
                       : "text-foreground/80 hover:text-primary"
                   }`}
                 >
@@ -191,13 +191,13 @@ export const Navigation = () => {
           }`}
         >
           <div className="container mx-auto px-4 py-2 flex items-center justify-center gap-8">
-            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-lg" asChild>
+            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-xl" asChild>
               <a href="tel:8653649011" onClick={() => trackPhoneClick('8653649011', 'nav_call_joe')}>
                 <Phone className="w-5 h-5 text-green-500" />
                 Call Joe! (865) 364-9011
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-lg" asChild>
+            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-xl" asChild>
               <a href="tel:7047518141" onClick={() => trackPhoneClick('7047518141', 'nav_call_luke')}>
                 <Phone className="w-5 h-5 text-green-500" />
                 Call Luke! (704) 751-8141
@@ -263,7 +263,7 @@ export const Navigation = () => {
                 to={link.href}
                 className={`text-lg font-heading uppercase tracking-wider transition-colors py-2 ${
                   link.label === "Blog"
-                    ? "blog-glow-text"
+                    ? "blog-nav-glow"
                     : "text-foreground hover:text-primary"
                 }`}
                 onClick={() => setIsOpen(false)}

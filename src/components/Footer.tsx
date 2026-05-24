@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import fsLogo from "@/assets/fs-logo.png";
 import { trackEvent } from "@/lib/analytics";
 import { getUtm } from "@/lib/utm";
@@ -120,14 +120,32 @@ export const Footer = () => {
           {/* Social Icons */}
           <div className="flex items-center gap-4">
             <a
-              href="https://www.facebook.com/share/17MKXS5wLS/"
+              href="https://www.facebook.com/chad.everette.161"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200"
               aria-label="Facebook"
             >
-              <Facebook className="w-5 h-5" />
+              <Facebook className="w-6 h-6" />
             </a>
+            <div
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-muted/30 text-muted-foreground/40 cursor-not-allowed"
+              aria-label="Instagram (Coming Soon)"
+            >
+              <Instagram className="w-6 h-6" />
+            </div>
+            <div
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-muted/30 text-muted-foreground/40 cursor-not-allowed"
+              aria-label="Twitter (Coming Soon)"
+            >
+              <Twitter className="w-6 h-6" />
+            </div>
+            <div
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-muted/30 text-muted-foreground/40 cursor-not-allowed"
+              aria-label="LinkedIn (Coming Soon)"
+            >
+              <Linkedin className="w-6 h-6" />
+            </div>
           </div>
 
           <p className="text-sm text-muted-foreground font-sans">Expedited Hauling & Dump Truck Services</p>
