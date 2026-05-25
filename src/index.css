@@ -250,6 +250,18 @@
       0 0 25px hsl(60 100% 50% / 0.5),
       0 0 35px hsl(45 100% 40% / 0.3);
   }
+
+  /* Game navigation link - bluish yellow gradient */
+  .game-nav-glow {
+    font-size: 1.05em;
+    background: linear-gradient(135deg, #3B82F6, #EAB308);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+      0 0 20px rgba(59, 130, 246, 0.6),
+      0 0 40px rgba(234, 179, 8, 0.4);
+  }
 }
 
 @layer utilities {
@@ -288,4 +300,30 @@
 
 .cursor-pointer-animation {
   animation: circle-cursor 3s ease-in-out infinite;
+}
+
+/* Dump Truck Game Animations */
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(400px) rotate(720deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.animate-confetti {
+  animation: confetti 2s ease-out forwards;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.3s ease-in-out;
 }

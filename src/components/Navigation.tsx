@@ -15,6 +15,7 @@ const navLinks = [
   { href: "/service-area", label: "Service Area" },
   { href: "/gallery", label: "Gallery" },
   { href: "/blog", label: "Blog" },
+  { href: "/game", label: "Game" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -149,6 +150,8 @@ export const Navigation = () => {
                   className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-200 ${
                     link.label === "Blog"
                       ? "blog-nav-glow"
+                      : link.label === "Game"
+                      ? "game-nav-glow"
                       : "text-foreground/80 hover:text-primary"
                   }`}
                 >
@@ -264,6 +267,8 @@ export const Navigation = () => {
                 className={`text-lg font-heading uppercase tracking-wider transition-colors py-2 ${
                   link.label === "Blog"
                     ? "blog-nav-glow"
+                    : link.label === "Game"
+                    ? "game-nav-glow"
                     : "text-foreground hover:text-primary"
                 }`}
                 onClick={() => setIsOpen(false)}

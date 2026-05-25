@@ -24,6 +24,7 @@ export interface ServiceCategory {
     features: string[];
   }>;
   backgroundImage?: string;
+  icon?: LucideIcon;
 }
 
 export const serviceCategories = [
@@ -33,7 +34,8 @@ export const serviceCategories = [
     description: "Complete dump truck hauling and comprehensive site services",
     services: [],
     subcategories: [],
-    backgroundImage: "/assets/hero-truck.jpg"
+    backgroundImage: "/assets/hero-truck.jpg",
+    icon: Truck
   },
   {
     slug: "material-delivery",
