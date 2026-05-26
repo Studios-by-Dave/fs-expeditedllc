@@ -216,6 +216,25 @@ export const Navigation = () => {
           }`}
         >
           <div className="container px-4 py-6 flex flex-col gap-4">
+            {/* Mobile Logo */}
+            <div className="flex justify-center pb-4 border-b border-border">
+              <Link to="/" onClick={() => setIsOpen(false)}>
+                <img 
+                  src={fsLogo}
+                  alt="F&S Expedited LLC Logo - Professional Dump Truck Hauling Services"
+                  className="h-12 w-auto"
+                  loading="eager"
+                  onError={(e) => {
+                    // Try optimized WebP first
+                    e.currentTarget.src = "/assets/optimized/fs-logo-400.webp";
+                    // If that fails, try PNG
+                    e.currentTarget.onerror = () => {
+                      e.currentTarget.src = "/assets/optimized/fs-logo-400.png";
+                    };
+                  }}
+                />
+              </Link>
+            </div>
             {/* Mobile Services Collapsible */}
             <button
               onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
