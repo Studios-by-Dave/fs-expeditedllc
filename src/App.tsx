@@ -24,7 +24,6 @@ import BlogArticlePage2 from "./pages/BlogArticlePage2";
 import BlogArticlePage3 from "./pages/BlogArticlePage3";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
-import GamePage from "./pages/GamePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -53,7 +52,6 @@ export const AppContent = () => (
       <Route path="/service-area" element={<ServiceAreaPage />} />
       <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-      <Route path="/game" element={<GamePage />} />
       {/* Redirects for old URLs */}
       <Route path="/services/gravel-sand-delivery" element={<Navigate to="/services/material-delivery/gravel-delivery" replace />} />
       <Route path="/services/aggregate-transport" element={<Navigate to="/services/material-delivery/aggregate-transport" replace />} />

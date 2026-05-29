@@ -109,48 +109,29 @@ def get_changefreq(url):
         return 'monthly'
 
 def main():
-    # Get all URLs
-    urls = set()
+    # Only include main pages for a hauling company - no excessive service variations
+    main_urls = [
+        ('/', '2026-05-29'),
+        ('/services', '2026-05-29'),
+        ('/why-us', '2026-05-29'),
+        ('/process', '2026-05-29'),
+        ('/service-area', '2026-05-29'),
+        ('/gallery', '2026-05-29'),
+        ('/blog', '2026-05-29'),
+        ('/contact', '2026-05-29'),
+        ('/reviews', '2026-05-29'),
+        ('/privacy-policy', '2026-05-29'),
+        ('/terms-of-service', '2026-05-29')
+    ]
     
-    # 1. Add static pages with lastmod from file modification time
-    page_files = []
-    for file_path in pages_dir.glob('*.tsx'):
-        if file_path.name not in ['NotFound.tsx', 'ServiceRouter.tsx']:
-            page_files.append(file_path.name)
-    for file_path in pages_dir.glob('*.ts'):
-        if file_path.name not in ['NotFound.ts', 'ServiceRouter.ts']:
-            page_files.append(file_path.name)
-    for file_path in pages_dir.glob('*.jsx'):
-        if file_path.name not in ['NotFound.jsx', 'ServiceRouter.jsx']:
-            page_files.append(file_path.name)
-    for file_path in pages_dir.glob('*.js'):
-        if file_path.name not in ['NotFound.js', 'ServiceRouter.js']:
-            page_files.append(file_path.name)
+    # Add blog article URLs if they exist
+    blog_urls = [
+        ('/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc', '2026-05-29'),
+        ('/blog/why-manufacturers-choose-fs-expedited-trucking-emergency-freight', '2026-05-29'),
+        ('/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina', '2026-05-29')
+    ]
     
-    for filename in page_files:
-        url = get_static_url(filename)
-        if url:
-            # Get last modified date from file
-            file_path = pages_dir / filename
-            try:
-                lastmod = get_last_modified_date(file_path)
-            except:
-                lastmod = datetime.now().strftime('%Y-%m-%d')
-            urls.add((url, lastmod))
-    
-    # 2. Add service detail pages (use current date for lastmod)
-    service_urls = get_service_urls()
-    for url in service_urls:
-        urls.add((url, datetime.now().strftime('%Y-%m-%d')))
-    
-    # 3. Add category pages
-    category_urls = get_category_urls()
-    urls.update([(url, datetime.now().strftime('%Y-%m-%d')) for url in category_urls])
-    
-    # 4. Add subcategory pages
-    subcat_urls = get_subcategory_urls()
-    urls.update([(url, datetime.now().strftime('%Y-%m-%d')) for url in subcat_urls])
-    
+    urls = set(main_urls + blog_urls)
     print(f"Found {len(urls)} total URLs for sitemap")
     
     # Generate sitemap XML
