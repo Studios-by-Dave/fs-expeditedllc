@@ -61,7 +61,7 @@ const BlogArticlePage3 = () => {
                 How Expedited Dump Truck Services Prevent Costly Project Delays in North Carolina
               </h1>
               
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-3xl text-muted-foreground leading-relaxed">
                 Discover how expedited dump truck services can save your construction project from expensive delays and keep your timeline on track in North Carolina.
               </p>
             </div>
@@ -73,7 +73,7 @@ const BlogArticlePage3 = () => {
           <div className="container px-4">
             <div className="max-w-4xl mx-auto prose prose-lg">
               
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The True Cost of Project Delays in Construction</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">The True Cost of Project Delays in Construction</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 In the construction industry, time is money—literally. Every day a project falls behind schedule can cost thousands of dollars in labor, equipment rentals, and penalty fees. For contractors and project managers in North Carolina, preventing these costly delays isn't just about efficiency—it's about survival in a competitive market.
@@ -83,7 +83,7 @@ const BlogArticlePage3 = () => {
                 One of the most common causes of project delays is material delivery issues. When gravel doesn't arrive on time, when fill dirt is delayed, or when debris removal falls behind schedule, entire work sequences grind to a halt. This is where expedited dump truck services become not just convenient, but essential for project success.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Understanding the Problem: Why Material Delays Happen</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">Understanding the Problem: Why Material Delays Happen</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Material delays occur for various reasons, but the impact is always the same: lost time and increased costs. Common causes include:
@@ -93,7 +93,7 @@ const BlogArticlePage3 = () => {
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3 mb-4">
                     <AlertTriangle className="w-6 h-6 text-red-500 mt-1 shrink-0" />
-                    <h3 className="font-semibold text-foreground text-lg">Common Delay Triggers:</h3>
+                    <h3 className="font-semibold text-foreground text-3xl">Common Delay Triggers:</h3>
                   </div>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
@@ -120,7 +120,7 @@ const BlogArticlePage3 = () => {
                 </CardContent>
               </Card>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Solution: Expedited Dump Truck Services</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">The Solution: Expedited Dump Truck Services</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Expedited dump truck services provide the solution to these material delivery challenges. Unlike standard hauling services that operate on fixed schedules, expedited services prioritize speed and flexibility to meet urgent project needs. Here's how they prevent costly delays:
@@ -173,7 +173,7 @@ const BlogArticlePage3 = () => {
                 </Card>
               </div>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Real-World Impact: Calculating the Savings</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">Real-World Impact: Calculating the Savings</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 To understand the value of expedited dump truck services, consider the actual costs of project delays:
@@ -201,7 +201,7 @@ const BlogArticlePage3 = () => {
                     </div>
                     <div className="flex justify-between items-center pt-2">
                       <span className="text-foreground font-bold">Total Daily Cost</span>
-                      <span className="text-primary font-bold text-lg">$3,800 - $8,300+</span>
+                      <span className="text-primary font-bold text-3xl">$3,800 - $8,300+</span>
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground mt-4 italic">
@@ -210,7 +210,7 @@ const BlogArticlePage3 = () => {
                 </CardContent>
               </Card>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">When to Use Expedited Dump Truck Services</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">When to Use Expedited Dump Truck Services</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Not every material delivery requires expedited service, but knowing when to use it can save significant money. Consider expedited dump truck services when:
@@ -243,7 +243,7 @@ const BlogArticlePage3 = () => {
                 </CardContent>
               </Card>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Choosing the Right Expedited Dump Truck Partner in North Carolina</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">Choosing the Right Expedited Dump Truck Partner in North Carolina</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 The effectiveness of expedited services depends entirely on the reliability of your hauling partner. When selecting an expedited dump truck service in North Carolina, look for:
@@ -276,7 +276,7 @@ const BlogArticlePage3 = () => {
                 </CardContent>
               </Card>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Building Expedited Services into Your Project Plan</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">Building Expedited Services into Your Project Plan</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Smart project managers don't wait for delays to occur before planning for expedited services. By building relationships with reliable dump truck providers before projects begin, you can:
@@ -294,7 +294,7 @@ const BlogArticlePage3 = () => {
                 <strong>Budget for Contingency:</strong> Include expedited service costs in your contingency budget rather than treating them as unexpected expenses.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Conclusion: Invest in Prevention, Not Recovery</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">Conclusion: Invest in Prevention, Not Recovery</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 In construction, the old adage holds true: an ounce of prevention is worth a pound of cure. Expedited dump truck services represent that prevention—investing a relatively small amount to prevent much larger delay costs.

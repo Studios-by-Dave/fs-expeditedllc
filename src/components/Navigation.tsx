@@ -10,7 +10,6 @@ import fsLogo from "@/assets/fs-logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/why-us", label: "Why Us" },
   { href: "/process", label: "How We Work" },
   { href: "/service-area", label: "Service Area" },
   { href: "/gallery", label: "Gallery" },
@@ -22,8 +21,10 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [whyUsOpen, setWhyUsOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const whyUsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -35,6 +36,9 @@ export const Navigation = () => {
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setServicesOpen(false);
+      }
+      if (whyUsRef.current && !whyUsRef.current.contains(e.target as Node)) {
+        setWhyUsOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -139,6 +143,45 @@ export const Navigation = () => {
                       </Link>
                     );
                   })}
+                </div>
+              </div>
+
+              {/* Why Us Dropdown */}
+              <div ref={whyUsRef} className="relative">
+                <button
+                  onClick={() => setWhyUsOpen(!whyUsOpen)}
+                  className="flex items-center gap-1 text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
+                >
+                  Why Us
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      whyUsOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {/* Why Us Dropdown Menu */}
+                <div
+                  className={`absolute top-full left-0 mt-2 w-48 bg-card border border-border shadow-xl transition-all duration-200 z-50 ${
+                    whyUsOpen
+                      ? "opacity-100 translate-y-0 pointer-events-auto"
+                      : "opacity-0 -translate-y-2 pointer-events-none"
+                  }`}
+                >
+                  <Link
+                    to="/why-us"
+                    onClick={() => setWhyUsOpen(false)}
+                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
+                  >
+                    Why Choose Us
+                  </Link>
+                  <Link
+                    to="/why-us/promos"
+                    onClick={() => setWhyUsOpen(false)}
+                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:text-primary hover:bg-primary/5 transition-colors"
+                  >
+                    Promos
+                  </Link>
                 </div>
               </div>
 
@@ -274,6 +317,24 @@ export const Navigation = () => {
                   </Link>
                 ))}
               </div>
+            </div>
+
+            {/* Mobile Why Us Section */}
+            <div className="border-t border-border pt-4">
+              <Link
+                to="/why-us"
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-heading uppercase tracking-wider transition-colors py-2 text-foreground hover:text-primary"
+              >
+                Why Choose Us
+              </Link>
+              <Link
+                to="/why-us/promos"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-2 text-lg font-heading uppercase tracking-wider transition-colors py-2 text-primary hover:text-primary"
+              >
+                Promos
+              </Link>
             </div>
 
             {navLinks.map((link) => (

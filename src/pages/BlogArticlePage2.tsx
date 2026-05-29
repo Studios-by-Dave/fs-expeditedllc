@@ -61,7 +61,7 @@ const BlogArticlePage2 = () => {
                 Why Manufacturers Choose F&S Expedited Trucking for Emergency Freight Solutions
               </h1>
               
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-3xl text-muted-foreground leading-relaxed">
                 Discover why manufacturers across North Carolina trust F&S Expedited Trucking for reliable emergency freight solutions that keep production lines moving and deadlines met.
               </p>
             </div>
@@ -73,7 +73,7 @@ const BlogArticlePage2 = () => {
           <div className="container px-4">
             <div className="max-w-4xl mx-auto prose prose-lg">
               
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Critical Need for Emergency Freight Solutions in Manufacturing</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">The Critical Need for Emergency Freight Solutions in Manufacturing</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 In today's fast-paced manufacturing environment, production delays can cost thousands of dollars per hour. When supply chain disruptions occur, manufacturers need a partner who can respond instantly with reliable emergency freight solutions. This is where F&S Expedited Trucking has established itself as the trusted choice for manufacturers throughout North Carolina and beyond.
@@ -83,7 +83,7 @@ const BlogArticlePage2 = () => {
                 Whether it's a missing raw material shipment, an urgent component delivery, or time-sensitive finished goods transport, manufacturers cannot afford to wait. Every minute of downtime impacts production schedules, customer commitments, and bottom-line profitability. F&S Expedited Trucking understands these pressures and has built their entire operation around rapid response and dependable delivery.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">What Sets F&S Expedited Trucking Apart</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">What Sets F&S Expedited Trucking Apart</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 F&S Expedited Trucking isn't just another trucking company—they're a strategic partner for manufacturers who need certainty in uncertain situations. Here's what makes them the preferred choice for emergency freight solutions:
@@ -136,7 +136,7 @@ const BlogArticlePage2 = () => {
                 </Card>
               </div>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Common Emergency Freight Scenarios We Handle</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">Common Emergency Freight Scenarios We Handle</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Manufacturers face various emergency freight challenges throughout their operations. F&S Expedited Trucking has experience handling them all:
@@ -169,7 +169,7 @@ const BlogArticlePage2 = () => {
                 </CardContent>
               </Card>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The F&S Expedited Trucking Service Area Advantage</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">The F&S Expedited Trucking Service Area Advantage</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Based in Shelby, NC, F&S Expedited Trucking serves manufacturers throughout a 100-mile radius, including Charlotte and surrounding areas. This strategic location allows them to reach major manufacturing hubs quickly, minimizing response times for emergency freight needs.
@@ -179,7 +179,7 @@ const BlogArticlePage2 = () => {
                 Their deep knowledge of local roads, traffic patterns, and industrial areas means they can navigate efficiently to deliver materials where they're needed, when they're needed. Unlike national carriers who may lack local expertise, F&S Expedited Trucking operators understand the unique logistics challenges of the region and have established relationships with local suppliers and industrial facilities.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Building Trust Through Consistent Performance</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">Building Trust Through Consistent Performance</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Trust is earned through consistent performance, and F&S Expedited Trucking has built their reputation on reliability. Manufacturers choose them time and again because:
@@ -212,7 +212,7 @@ const BlogArticlePage2 = () => {
                 </CardContent>
               </Card>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Comprehensive Services Beyond Emergency Freight</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">Comprehensive Services Beyond Emergency Freight</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 While emergency freight solutions are a specialty, F&S Expedited Trucking offers a full range of hauling services that manufacturers rely on for their day-to-day operations:
@@ -244,7 +244,7 @@ const BlogArticlePage2 = () => {
                 </ul>
               </div>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Getting Started with F&S Expedited Trucking</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">Getting Started with F&S Expedited Trucking</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 For manufacturers looking to establish a relationship with a reliable emergency freight partner, F&S Expedited Trucking makes the process simple. Whether you need immediate assistance or want to set up an account for future needs, their team is ready to help.
@@ -254,7 +254,7 @@ const BlogArticlePage2 = () => {
                 The best time to establish an emergency freight partnership is before you need it. By having F&S Expedited Trucking as a pre-vetted partner, manufacturers can respond instantly to supply chain disruptions without wasting valuable time searching for reliable transport.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Conclusion: Your Emergency Freight Solution is One Call Away</h2>
+              <h2 className="text-3xl font-bold text-foreground mt-8 mb-4">Conclusion: Your Emergency Freight Solution is One Call Away</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-4">
                 In manufacturing, every minute counts. When emergency freight needs arise, you need a partner who understands the urgency, has the capability to respond, and has a proven track record of delivering results. F&S Expedited Trucking has earned the trust of manufacturers across North Carolina by consistently providing reliable emergency freight solutions that keep production moving.

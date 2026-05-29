@@ -18,7 +18,7 @@ export const BlogPreview = () => {
           <h2 className="mt-4 text-3xl md:text-4xl lg:text-4xl font-heading font-bold text-foreground tracking-wider">
             F&S EXPEDITED SPOTLIGHT
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg font-sans">
+          <p className="mt-4 text-muted-foreground text-xl font-sans">
             Discover how F&S Expedited LLC became Shelby's trusted hauling partner.
           </p>
         </div>
@@ -54,7 +54,7 @@ export const BlogPreview = () => {
                   F&S Expedited LLC: Professional Dump Truck Hauling Services
                 </h3>
                 
-                <div className="space-y-4 text-muted-foreground mb-6">
+                <div className="space-y-4 text-muted-foreground mb-6 text-lg">
                   <p className="leading-relaxed">
                     In the competitive world of construction and hauling services, F&S Expedited LLC has established itself as a trusted partner for businesses and homeowners throughout Shelby, NC and the surrounding 100-mile radius. Specializing in professional dump truck hauling, gravel delivery, debris removal, and expedited services, they've built their reputation on reliability, safety, and exceptional customer service.
                   </p>
@@ -66,8 +66,8 @@ export const BlogPreview = () => {
 
                 {/* Key Services Highlight */}
                 <div className="bg-card p-4 rounded-lg border border-border mb-6">
-                  <h4 className="font-semibold text-foreground mb-3">Services Highlighted:</h4>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-muted-foreground">
+                  <h4 className="font-semibold text-foreground mb-3 text-lg">Services Highlighted:</h4>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-muted-foreground text-lg">
                     <li>• Dump Truck Hauling & Transport</li>
                     <li>• Gravel & Sand Delivery</li>
                     <li>• Construction Debris Removal</li>
@@ -88,32 +88,32 @@ export const BlogPreview = () => {
                     Read Full Article
                   </Button>
                   
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-muted-foreground text-lg">
                     Opens in a new window with the complete F&S Expedited spotlight story
                   </p>
                 </div>
 
                 {/* Related Services */}
                 <div className="mt-8 p-4 bg-card rounded-lg border border-border">
-                  <h4 className="font-semibold text-foreground mb-3">Interested in These Services?</h4>
+                  <h4 className="font-semibold text-foreground mb-3 text-lg">Interested in These Services?</h4>
                   <div className="flex flex-wrap gap-3">
                     <Link 
                       to="/services/dump-truck-hauling" 
-                      className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-sm rounded-full hover:bg-primary/20 transition-colors"
+                      className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-lg rounded-full hover:bg-primary/20 transition-colors"
                     >
                       Dump Truck Hauling
                       <ArrowRight className="w-3 h-3" />
                     </Link>
                     <Link 
                       to="/services/emergency-expedited" 
-                      className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-sm rounded-full hover:bg-primary/20 transition-colors"
+                      className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-lg rounded-full hover:bg-primary/20 transition-colors"
                     >
                       Emergency Services
                       <ArrowRight className="w-3 h-3" />
                     </Link>
                     <Link 
                       to="/services/gravel-sand-delivery" 
-                      className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-sm rounded-full hover:bg-primary/20 transition-colors"
+                      className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-lg rounded-full hover:bg-primary/20 transition-colors"
                     >
                       Gravel Delivery
                       <ArrowRight className="w-3 h-3" />

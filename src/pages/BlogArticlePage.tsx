@@ -60,7 +60,7 @@ const BlogArticlePage = () => {
                 The Role of Dump Trucks in Expedited Local Hauling Projects Around Shelby & Charlotte NC
               </h1>
               
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 Discover how dump trucks are essential for expedited local hauling projects in Shelby and Charlotte NC, serving construction sites and material delivery needs across the region.
               </p>
             </div>
@@ -70,31 +70,31 @@ const BlogArticlePage = () => {
         {/* Article Content */}
         <article className="section-padding">
           <div className="container px-4">
-            <div className="max-w-4xl mx-auto prose prose-lg">
+            <div className="max-w-4xl mx-auto prose prose-lg text-lg">
               
               <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Why Dump Trucks Are Vital for Local Construction Projects</h2>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 In the bustling construction landscape of Shelby and Charlotte, North Carolina, dump trucks play an indispensable role in keeping projects on schedule and within budget. These heavy-duty vehicles are the backbone of expedited local hauling, moving essential materials from suppliers to job sites with efficiency and precision that no other equipment can match.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 Whether it's a residential driveway installation in Shelby's historic districts or a large-scale commercial development in Charlotte's expanding suburbs, dump trucks provide the critical link between material sources and construction destinations. Their ability to navigate local roads while carrying substantial loads makes them uniquely suited for the region's diverse hauling needs.
               </p>
 
               <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Understanding Expedited Local Hauling</h2>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 Expedited local hauling refers to time-sensitive material transport within a specific geographic area—typically within a 50-100 mile radius. In the Shelby-Charlotte corridor, this service is particularly crucial due to the region's rapid growth and the time-sensitive nature of construction projects.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 Unlike long-haul trucking that crosses state lines, local expedited hauling focuses on quick turnaround times, same-day delivery capabilities, and deep knowledge of local routes, traffic patterns, and construction site access requirements. This specialized service ensures that materials arrive exactly when needed, preventing costly delays and keeping projects moving forward.
               </p>
 
               <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Key Materials Transported by Dump Trucks in the Region</h2>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 Dump trucks in the Shelby-Charlotte area transport a wide variety of construction materials, each requiring specific handling and delivery considerations:
               </p>
 
@@ -103,27 +103,27 @@ const BlogArticlePage = () => {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground"><strong>Gravel and Aggregates:</strong> Essential for road base, drainage systems, and concrete production</span>
+                      <span className="text-foreground text-lg"><strong>Gravel and Aggregates:</strong> Essential for road base, drainage systems, and concrete production</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground"><strong>Sand:</strong> Critical for masonry work, landscaping, and concrete mixing</span>
+                      <span className="text-foreground text-lg"><strong>Sand:</strong> Critical for masonry work, landscaping, and concrete mixing</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground"><strong>Topsoil and Fill Dirt:</strong> Required for grading, landscaping, and site preparation</span>
+                      <span className="text-foreground text-lg"><strong>Topsoil and Fill Dirt:</strong> Required for grading, landscaping, and site preparation</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground"><strong>Mulch and Landscape Materials:</strong> Supporting the region's residential and commercial landscaping projects</span>
+                      <span className="text-foreground text-lg"><strong>Mulch and Landscape Materials:</strong> Supporting the region's residential and commercial landscaping projects</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground"><strong>Construction Debris:</strong> Removing waste materials from demolition and renovation sites</span>
+                      <span className="text-foreground text-lg"><strong>Construction Debris:</strong> Removing waste materials from demolition and renovation sites</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground"><strong>Rock and Stone:</strong> For drainage, retaining walls, and decorative landscaping</span>
+                      <span className="text-foreground text-lg"><strong>Rock and Stone:</strong> For drainage, retaining walls, and decorative landscaping</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -131,7 +131,7 @@ const BlogArticlePage = () => {
 
               <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Strategic Advantage of Local Dump Truck Services</h2>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 Working with a local dump truck hauling service in the Shelby-Charlotte area offers several strategic advantages over national or regional carriers:
               </p>
 
@@ -142,7 +142,7 @@ const BlogArticlePage = () => {
                       <MapPin className="w-5 h-5 text-primary" />
                       <h3 className="font-semibold text-foreground">Local Route Knowledge</h3>
                     </div>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-muted-foreground text-lg">
                       Familiarity with local roads, weight restrictions, and optimal routes to avoid delays
                     </p>
                   </CardContent>
@@ -153,7 +153,7 @@ const BlogArticlePage = () => {
                       <Clock className="w-5 h-5 text-primary" />
                       <h3 className="font-semibold text-foreground">Quick Response Times</h3>
                     </div>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-muted-foreground text-lg">
                       Same-day service availability for urgent material delivery needs
                     </p>
                   </CardContent>
@@ -164,7 +164,7 @@ const BlogArticlePage = () => {
                       <Truck className="w-5 h-5 text-primary" />
                       <h3 className="font-semibold text-foreground">Fleet Flexibility</h3>
                     </div>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-muted-foreground text-lg">
                       Various truck sizes to match project requirements and site access constraints
                     </p>
                   </CardContent>
@@ -175,7 +175,7 @@ const BlogArticlePage = () => {
                       <Phone className="w-5 h-5 text-primary" />
                       <h3 className="font-semibold text-foreground">Direct Communication</h3>
                     </div>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-muted-foreground text-lg">
                       Easy coordination with local dispatchers and drivers for precise timing
                     </p>
                   </CardContent>
@@ -184,25 +184,25 @@ const BlogArticlePage = () => {
 
               <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Navigating Shelby & Charlotte's Unique Hauling Challenges</h2>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 The Shelby-Charlotte region presents unique challenges that local dump truck operators must navigate expertly:
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 <strong>Urban vs. Rural Delivery:</strong> Charlotte's urban core requires careful navigation of traffic, narrow streets, and strict delivery windows, while Shelby's more rural areas may involve unpaved access roads and longer distances between material sources and job sites.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 <strong>Weather Considerations:</strong> North Carolina's variable weather patterns—from summer thunderstorms to winter precipitation—require experienced operators who can adjust delivery schedules and techniques to maintain safety and efficiency.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 <strong>Regulatory Compliance:</strong> Local dump truck services must stay current with North Carolina DOT regulations, local weight restrictions, and environmental requirements, particularly when working near protected areas or waterways.
               </p>
 
               <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Choosing the Right Dump Truck Service for Your Project</h2>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 When selecting a dump truck hauling service for your Shelby or Charlotte project, consider these essential factors:
               </p>
 
@@ -211,23 +211,23 @@ const BlogArticlePage = () => {
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground"><strong>Licensing and Insurance:</strong> Verify proper North Carolina DOT registration and comprehensive insurance coverage</span>
+                      <span className="text-foreground text-lg"><strong>Licensing and Insurance:</strong> Verify proper North Carolina DOT registration and comprehensive insurance coverage</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground"><strong>Service Area Coverage:</strong> Confirm they serve your specific location within the Shelby-Charlotte corridor</span>
+                      <span className="text-foreground text-lg"><strong>Service Area Coverage:</strong> Confirm they serve your specific location within the Shelby-Charlotte corridor</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground"><strong>Fleet Capacity:</strong> Ensure they have appropriate truck sizes for your material volume and site access</span>
+                      <span className="text-foreground text-lg"><strong>Fleet Capacity:</strong> Ensure they have appropriate truck sizes for your material volume and site access</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground"><strong>Emergency Availability:</strong> Ask about same-day or emergency hauling capabilities for urgent needs</span>
+                      <span className="text-foreground text-lg"><strong>Emergency Availability:</strong> Ask about same-day or emergency hauling capabilities for urgent needs</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground"><strong>Local Experience:</strong> Choose operators familiar with local routes, suppliers, and construction site requirements</span>
+                      <span className="text-foreground text-lg"><strong>Local Experience:</strong> Choose operators familiar with local routes, suppliers, and construction site requirements</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -235,21 +235,21 @@ const BlogArticlePage = () => {
 
               <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">The Future of Dump Truck Hauling in the Region</h2>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 As Shelby and Charlotte continue to grow, the demand for efficient dump truck hauling services will only increase. New residential developments, commercial construction projects, and infrastructure improvements all rely on the timely delivery of materials that only professional dump truck services can provide.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 The integration of technology—GPS tracking, digital dispatch systems, and automated scheduling—is making local dump truck services more efficient and responsive than ever. However, the core value remains the same: experienced operators who understand the local landscape and can deliver materials safely, on time, and within budget.
               </p>
 
               <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Conclusion: Building Shelby & Charlotte One Load at a Time</h2>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 Dump trucks are more than just vehicles—they're essential partners in the construction and development of Shelby and Charlotte. From the smallest residential project to the largest commercial development, expedited local hauling services ensure that materials arrive where they're needed, when they're needed.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
                 By choosing a local, experienced dump truck service, project managers and homeowners gain more than just material delivery—they gain a partner who understands the unique challenges and opportunities of building in this vibrant region. As North Carolina continues to grow, the role of dump trucks in expedited local hauling will remain fundamental to the success of construction projects across Shelby, Charlotte, and the surrounding communities.
               </p>
 
@@ -264,7 +264,7 @@ const BlogArticlePage = () => {
               <h2 className="text-3xl font-heading font-bold text-foreground tracking-wider mb-4 blog-glow-text">
                 Need Dump Truck Hauling Services?
               </h2>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-6 text-lg">
                 F&S Expedited LLC provides professional dump truck hauling and expedited services throughout Shelby, Charlotte, and the surrounding 100-mile radius.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

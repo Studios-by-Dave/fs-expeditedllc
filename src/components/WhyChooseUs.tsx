@@ -24,6 +24,7 @@ export const WhyChooseUs = () => {
           <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground tracking-wider">
             WHY CHOOSE US
           </h2>
+          
           <p className="mt-4 text-muted-foreground text-xl font-sans">
             Built on hard work, reliability, and a commitment to getting the job done right. 
             <Link 
@@ -42,15 +43,24 @@ export const WhyChooseUs = () => {
                 <reason.icon className="w-6 h-6 text-green-500" />
               </div>
               <div>
-                <h3 className="font-heading text-lg font-bold text-foreground tracking-wide">
+                <h3 className="font-heading text-2xl font-bold text-foreground tracking-wide">
                   {reason.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mt-1 font-sans">
+                <p className="text-lg text-muted-foreground mt-1 font-sans">
                   {reason.description}
                 </p>
               </div>
             </div>
           ))}
+        </div>
+        
+        {/* Licensed & Insured Badge */}
+        <div className="mt-12 flex justify-center">
+          <img 
+            src="/assets/LiscensedInsured.jpeg"
+            alt="Licensed & Insured Badge"
+            className="h-20 w-auto object-contain"
+          />
         </div>
       </div>
     </section>

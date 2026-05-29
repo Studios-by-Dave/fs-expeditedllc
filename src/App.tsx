@@ -24,6 +24,7 @@ import BlogArticlePage2 from "./pages/BlogArticlePage2";
 import BlogArticlePage3 from "./pages/BlogArticlePage3";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
+import PromoPage from "./pages/PromoPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ export const AppContent = () => (
       <Route path="/services/:slug" element={<ServiceRouter />} />
       <Route path="/services/:category/:service" element={<SubServicePage />} />
       <Route path="/why-us" element={<WhyUsPage />} />
+      <Route path="/why-us/promos" element={<PromoPage />} />
       <Route path="/process" element={<ProcessPage />} />
       <Route path="/reviews" element={<TestimonialsPage />} />
       <Route path="/testimonials" element={<Navigate to="/reviews" replace />} />
