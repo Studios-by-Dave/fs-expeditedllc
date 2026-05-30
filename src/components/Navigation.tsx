@@ -9,7 +9,6 @@ import { getUtm } from "@/lib/utm";
 import fsLogo from "@/assets/fs-logo.png";
 
 const navLinks = [
-  { href: "/", label: "Home" },
   { href: "/process", label: "How We Work" },
   { href: "/service-area", label: "Service Area" },
   { href: "/gallery", label: "Gallery" },
@@ -76,6 +75,14 @@ export const Navigation = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
+              {/* Home Link */}
+              <Link
+                to="/"
+                className="text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
+              >
+                Home
+              </Link>
+              
               {/* Services Dropdown */}
               <div ref={dropdownRef} className="relative">
                 <button

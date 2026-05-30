@@ -157,7 +157,8 @@ def main():
     blog_urls = [
         ('/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc', '2026-05-29'),
         ('/blog/why-manufacturers-choose-fs-expedited-trucking-emergency-freight', '2026-05-29'),
-        ('/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina', '2026-05-29')
+        ('/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina', '2026-05-29'),
+        ('/blog/why-fs-hauling-reliable-dump-truck-services-shelby-nc', '2026-05-29')
     ]
     
     urls = set(main_urls + category_urls + sub_service_urls + blog_urls)

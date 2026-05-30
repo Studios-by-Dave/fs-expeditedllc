@@ -54,15 +54,15 @@ export const Process = () => {
                 <item.icon className="w-8 h-8 text-green-500" />
               </div>
 
-              <span className="inline-block mt-4 text-xs font-bold text-green-500 tracking-widest font-sans">
+              <span className="inline-block mt-4 text-sm font-bold text-green-500 tracking-widest font-sans">
                 STEP {item.step}
               </span>
 
-              <h3 className="mt-2 font-heading text-lg font-bold text-foreground tracking-wide">
+              <h3 className="mt-2 font-heading text-xl font-bold text-foreground tracking-wide">
                 {item.title}
               </h3>
 
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed font-sans">
+              <p className="mt-2 text-base text-muted-foreground leading-relaxed font-sans">
                 {item.description}
               </p>
             </div>
