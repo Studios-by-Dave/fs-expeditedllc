@@ -90,7 +90,7 @@ def get_priority(url):
     """Determine priority based on URL path."""
     if url == '/' or url == '/services':
         return '1.0'
-    elif url in ['/contact', '/why-us', '/process', '/service-area', '/reviews', '/gallery']:
+    elif url in ['/contact', '/why-us', '/why-us/promos', '/process', '/service-area', '/reviews', '/gallery']:
         return '0.9'
     elif '/services/' in url:
         return '0.8'
@@ -109,7 +109,7 @@ def get_changefreq(url):
         return 'monthly'
 
 def main():
-    # Only include main pages for a hauling company - no excessive service variations
+    # Main pages
     main_urls = [
         ('/', '2026-05-29'),
         ('/services', '2026-05-29'),
@@ -125,6 +125,34 @@ def main():
         ('/terms-of-service', '2026-05-29')
     ]
     
+    # Service category pages
+    category_urls = [
+        ('/services/dump-trucks-hauling-services', '2026-05-29'),
+        ('/services/material-delivery', '2026-05-29'),
+        ('/services/site-services', '2026-05-29'),
+        ('/services/emergency-expedited', '2026-05-29')
+    ]
+    
+    # Sub-service pages (category/service structure)
+    sub_service_urls = [
+        # Material delivery sub-services
+        ('/services/material-delivery/gravel-delivery', '2026-05-29'),
+        ('/services/material-delivery/sand-delivery', '2026-05-29'),
+        ('/services/material-delivery/soil-delivery', '2026-05-29'),
+        ('/services/material-delivery/aggregate-transport', '2026-05-29'),
+        # Site services sub-services
+        ('/services/site-services/site-prep', '2026-05-29'),
+        ('/services/site-services/land-clearing', '2026-05-29'),
+        ('/services/site-services/debris-removal', '2026-05-29'),
+        ('/services/site-services/retaining-walls', '2026-05-29'),
+        ('/services/site-services/underground-utilities', '2026-05-29'),
+        ('/services/site-services/land-grading', '2026-05-29'),
+        # Emergency expedited sub-services
+        ('/services/emergency-expedited/emergency-expedited', '2026-05-29'),
+        ('/services/emergency-expedited/commercial-hauling', '2026-05-29'),
+        ('/services/emergency-expedited/dump-truck-hauling', '2026-05-29')
+    ]
+    
     # Add blog article URLs if they exist
     blog_urls = [
         ('/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc', '2026-05-29'),
@@ -132,7 +160,7 @@ def main():
         ('/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina', '2026-05-29')
     ]
     
-    urls = set(main_urls + blog_urls)
+    urls = set(main_urls + category_urls + sub_service_urls + blog_urls)
     print(f"Found {len(urls)} total URLs for sitemap")
     
     # Generate sitemap XML

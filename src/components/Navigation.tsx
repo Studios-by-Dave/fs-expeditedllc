@@ -115,7 +115,7 @@ export const Navigation = () => {
                           className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                         >
                           <div className="w-6 h-6 shrink-0 flex items-center justify-center">
-                            <Truck className="w-5 h-5 text-primary" />
+                            <img src="/assets/badge_icons_1/dumper-truck_12255897.png" alt="Dump Trucks Hauling Services" className="w-6 h-6 object-contain" />
                           </div>
                           <span>{category.title}</span>
                         </Link>
@@ -304,11 +304,12 @@ export const Navigation = () => {
                 {serviceCategories.map((category) => (
                   <Link
                     key={category.slug}
-                    to={`/services/${category.slug}`}
+                    to={category.slug === 'dump-trucks-hauling-services' ? '/services/dump-trucks-hauling-services' : `/services/${category.slug}`}
                     onClick={() => setIsOpen(false)}
                     className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                   >
                     <div className="w-4 h-4 text-primary flex items-center justify-center">
+                      {category.slug === 'dump-trucks-hauling-services' && '🚚'}
                       {category.slug === 'material-delivery' && '🚚'}
                       {category.slug === 'site-services' && '🏗️'}
                       {category.slug === 'emergency-expedited' && '⚡'}
