@@ -7,63 +7,99 @@ import { Card, CardContent } from "@/components/ui/card";
 const galleryImages = [
   {
     id: 1,
-    url: "/assets/gallery/FS_Logo.jpg",
-    alt: "F&S Expedited LLC - Team at Work",
-    caption: "Our professional team delivering exceptional hauling services to clients throughout the region."
-  },
-  {
-    id: 2,
     url: "/assets/gallery/FS_3.jpg",
     alt: "F&S Expedited LLC - Professional Hauling Services",
     caption: "Professional dump truck hauling and expedited services for Shelby, NC and surrounding areas."
   },
   {
-    id: 3,
+    id: 2,
     url: "/assets/gallery/FS_4.jpg",
     alt: "F&S Expedited LLC - Heavy Equipment",
     caption: "Modern fleet and experienced operators ready for any size hauling project."
   },
   {
-    id: 4,
+    id: 3,
     url: "/assets/gallery/FS_5.jpg",
     alt: "F&S Expedited LLC - Job Site",
     caption: "On-site hauling services for construction, debris removal, and material delivery."
   },
   {
-    id: 5,
+    id: 4,
     url: "/assets/gallery/FS_6.jpg",
     alt: "F&S Expedited LLC - Project Showcase",
     caption: "Completed projects showcasing our quality hauling services and professional workmanship."
   },
   {
-    id: 6,
+    id: 5,
     url: "/assets/gallery/fs image1.png",
     alt: "F&S Expedited LLC - Dump Truck Operation",
     caption: "Our dump trucks in action, providing reliable material transport and hauling services."
   },
   {
-    id: 7,
+    id: 6,
     url: "/assets/gallery/fs image2.png",
     alt: "F&S Expedited LLC - Site Services",
     caption: "Professional site preparation and land management services for construction projects."
   },
   {
-    id: 8,
+    id: 7,
     url: "/assets/gallery/fs image3.png",
     alt: "F&S Expedited LLC - Material Delivery",
     caption: "Quality material delivery including gravel, sand, and soil for various construction needs."
   },
   {
-    id: 9,
+    id: 8,
     url: "/assets/gallery/fs image4.png",
     alt: "F&S Expedited LLC - Emergency Services",
     caption: "Emergency expedited hauling services available when you need them most."
   },
   {
-    id: 10,
+    id: 9,
     url: "/assets/gallery/fs image5.png",
     alt: "F&S Expedited LLC - Fleet Operations",
     caption: "Our well-maintained fleet ready to handle any hauling challenge with precision and efficiency."
+  },
+  {
+    id: 10,
+    url: "/assets/gallery/fs-new1.png",
+    alt: "F&S Expedited LLC - Project Completion",
+    caption: "Recently completed project showcasing our professional hauling services and attention to detail."
+  },
+  {
+    id: 11,
+    url: "/assets/gallery/fs-new2.png",
+    alt: "F&S Expedited LLC - Equipment Showcase",
+    caption: "Our modern equipment and fleet in action, delivering reliable hauling solutions."
+  },
+  {
+    id: 12,
+    url: "/assets/gallery/fs-new3.png",
+    alt: "F&S Expedited LLC - Site Operations",
+    caption: "Professional site operations demonstrating our commitment to quality and safety."
+  },
+  {
+    id: 13,
+    url: "/assets/gallery/fs-new4.png",
+    alt: "F&S Expedited LLC - Material Transport",
+    caption: "Efficient material transport services for construction and landscaping projects."
+  },
+  {
+    id: 14,
+    url: "/assets/gallery/fs-new5.png",
+    alt: "F&S Expedited LLC - Team Excellence",
+    caption: "Our experienced team delivering exceptional service on every project."
+  },
+  {
+    id: 15,
+    url: "/assets/gallery/fs-new6.png",
+    alt: "F&S Expedited LLC - Project Success",
+    caption: "Another successful project completed with precision and professional workmanship."
+  },
+  {
+    id: 16,
+    url: "/assets/gallery/fs-new7.png",
+    alt: "F&S Expedited LLC - Quality Service",
+    caption: "Demonstrating our commitment to quality service and customer satisfaction."
   }
 ];
 

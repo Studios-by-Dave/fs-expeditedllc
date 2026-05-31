@@ -13,6 +13,7 @@ import SubServicePage from "./pages/SubServicePage";
 import DumpTrucksServicesPage from "./pages/DumpTrucksServicesPage";
 import ServiceRouter from "./pages/ServiceRouter";
 import WhyUsPage from "./pages/WhyUsPage";
+import AboutPage from "./pages/AboutPage";
 import ProcessPage from "./pages/ProcessPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import ContactPage from "./pages/ContactPage";
@@ -43,6 +44,7 @@ export const AppContent = () => (
       <Route path="/services/:slug" element={<ServiceRouter />} />
       <Route path="/services/:category/:service" element={<SubServicePage />} />
       <Route path="/why-us" element={<WhyUsPage />} />
+      <Route path="/why-us/about" element={<AboutPage />} />
       <Route path="/why-us/promos" element={<PromoPage />} />
       <Route path="/process" element={<ProcessPage />} />
       <Route path="/reviews" element={<TestimonialsPage />} />

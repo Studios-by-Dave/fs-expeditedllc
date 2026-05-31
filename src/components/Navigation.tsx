@@ -183,6 +183,13 @@ export const Navigation = () => {
                     Why Choose Us
                   </Link>
                   <Link
+                    to="/why-us/about"
+                    onClick={() => setWhyUsOpen(false)}
+                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
+                  >
+                    About Us
+                  </Link>
+                  <Link
                     to="/why-us/promos"
                     onClick={() => setWhyUsOpen(false)}
                     className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:text-primary hover:bg-primary/5 transition-colors"
@@ -335,6 +342,13 @@ export const Navigation = () => {
                 className="text-lg font-heading uppercase tracking-wider transition-colors py-2 text-foreground hover:text-primary"
               >
                 Why Choose Us
+              </Link>
+              <Link
+                to="/why-us/about"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-2 text-lg font-heading uppercase tracking-wider transition-colors py-2 text-foreground hover:text-primary"
+              >
+                About Us
               </Link>
               <Link
                 to="/why-us/promos"

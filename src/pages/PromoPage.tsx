@@ -36,8 +36,8 @@ const PromoPage = () => {
   return (
     <div className="min-h-screen bg-[#111010]">
       <SEOHead
-        title="10% Off Your First Haul — F&S Expedited LLC Promo"
-        description="Get 10% off your first dump truck hauling service with promo code 1HAUL. Licensed & insured hauling services in Shelby, NC and surrounding areas."
+        title="10% Off Your First Haul — F&S Expedited LLC Hauling Discount"
+        description="Get 10% off your first dump truck hauling service with promo code 1HAUL. Exclusive hauling discounts for new customers. Licensed & insured hauling services in Shelby, NC and surrounding areas."
         canonical="/why-us/promos"
         schema={breadcrumbSchema(breadcrumbs)}
       />
@@ -153,6 +153,22 @@ const PromoPage = () => {
               Licensed & Insured · Shelby, NC<br />
               Valid on first haul only
             </div>
+          </div>
+        </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-4xl mx-auto mt-12 px-4">
+          <div className="bg-[#1a1a1a] border border-[rgba(255,255,255,0.2)] p-8">
+            <h2 className="font-bebas text-3xl text-white mb-4 tracking-wider">About Our Hauling Discount</h2>
+            <p className="text-[#F5F2EC] leading-relaxed mb-4">
+              Take advantage of our exclusive <span className="text-primary font-semibold">hauling discount</span> for new customers. This 10% off offer applies to your first dump truck hauling service, including gravel delivery, material transport, debris removal, and site services. Our hauling discounts are designed to help you save on your construction and landscaping projects while experiencing our professional, reliable service.
+            </p>
+            <p className="text-[#F5F2EC] leading-relaxed mb-4">
+              F&S Expedited LLC provides quality hauling services within 100 miles of Shelby, NC. Our <span className="text-primary font-semibold">hauling discounts</span> make it even more affordable to get the professional dump truck services you need. Whether you're a homeowner, contractor, or business owner, this hauling discount gives you significant savings on your first haul with us.
+            </p>
+            <p className="text-[#F5F2EC] leading-relaxed">
+              Don't miss out on this limited-time hauling discount opportunity. Call us today to schedule your first haul and mention promo code 1HAUL to receive your 10% discount. Our team is ready to provide the exceptional hauling services you deserve at an even better price.
+            </p>
           </div>
         </div>
       </main>
