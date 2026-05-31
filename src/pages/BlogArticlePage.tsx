@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Footer } from "@/components/Footer";
-import { breadcrumbSchema } from "@/data/seo-schemas";
+import { breadcrumbSchema, articleSchema } from "@/data/seo-schemas";
 import { ChevronRight, Calendar, Clock, Truck, MapPin, Phone, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,13 +14,26 @@ const BlogArticlePage = () => {
     { name: "Article", url: "https://www.fs-expeditedllc.com/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc" }
   ];
 
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      articleSchema(
+        "The Role of Dump Trucks in Expedited Local Hauling Projects Around Shelby & Charlotte NC",
+        "Learn how dump trucks are essential for expedited local hauling projects in Shelby and Charlotte NC. Professional dump truck services for construction sites and material delivery.",
+        "/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc",
+        "2026-05-23"
+      ),
+      breadcrumbSchema(breadcrumbs)
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="The Role of Dump Trucks in Expedited Local Hauling Projects Around Shelby & Charlotte NC"
         description="Learn how dump trucks are essential for expedited local hauling projects in Shelby and Charlotte NC. Professional dump truck services for construction sites and material delivery."
         canonical="/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc"
-        schema={breadcrumbSchema(breadcrumbs)}
+        schema={combinedSchema}
       />
       <Navigation />
       {/* Breadcrumb Navigation */}

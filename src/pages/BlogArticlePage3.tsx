@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Footer } from "@/components/Footer";
-import { breadcrumbSchema } from "@/data/seo-schemas";
+import { breadcrumbSchema, articleSchema } from "@/data/seo-schemas";
 import { ChevronRight, Calendar, Clock, Truck, Phone, CheckCircle, AlertTriangle, TrendingDown, Clock as Timer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,13 +15,26 @@ const BlogArticlePage3 = () => {
     { name: "Article", url: "https://www.fs-expeditedllc.com/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina" }
   ];
 
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      articleSchema(
+        "How Expedited Dump Truck Services Prevent Costly Project Delays in North Carolina",
+        "Learn how expedited dump truck services prevent costly project delays in North Carolina. Fast, reliable material delivery to keep your construction projects on schedule.",
+        "/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina",
+        "2026-05-23"
+      ),
+      breadcrumbSchema(breadcrumbs)
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="How Expedited Dump Truck Services Prevent Costly Project Delays in North Carolina"
         description="Learn how expedited dump truck services prevent costly project delays in North Carolina. Fast, reliable material delivery to keep your construction projects on schedule."
         canonical="/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina"
-        schema={breadcrumbSchema(breadcrumbs)}
+        schema={combinedSchema}
       />
       <Navigation />
       {/* Breadcrumb Navigation */}

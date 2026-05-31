@@ -172,3 +172,31 @@ export const faqSchema = (faqs: Array<{ question: string; answer: string }>) => 
     }
   }))
 });
+
+// Article Schema for Blog Posts
+export const articleSchema = (title: string, description: string, url: string, datePublished: string, author: string = "F&S Expedited LLC") => ({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "image": "https://storage.googleapis.com/gpt-engineer-file-uploads/7yFZRN3a4zOnW6XxdC0mKKnJqbo1/social-images/social-1771915503507-ESExp.webp",
+  "author": {
+    "@type": "Organization",
+    "name": author,
+    "url": "https://www.fs-expeditedllc.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "F&S Expedited LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.fs-expeditedllc.com/apple-touch-icon.png"
+    }
+  },
+  "datePublished": datePublished,
+  "dateModified": datePublished,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://www.fs-expeditedllc.com${url}`
+  }
+});
