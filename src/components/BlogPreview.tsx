@@ -98,7 +98,7 @@ export const BlogPreview = () => {
                   <h4 className="font-semibold text-foreground mb-3 text-xl">Interested in These Services?</h4>
                   <div className="flex flex-wrap gap-3">
                     <Link 
-                      to="/services/dump-truck-hauling" 
+                      to="/services/emergency-expedited/dump-truck-hauling" 
                       className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-xl rounded-full hover:bg-primary/20 transition-colors"
                     >
                       Dump Truck Hauling
@@ -112,7 +112,7 @@ export const BlogPreview = () => {
                       <ArrowRight className="w-3 h-3" />
                     </Link>
                     <Link 
-                      to="/services/gravel-sand-delivery" 
+                      to="/services/material-delivery/gravel-delivery" 
                       className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary text-xl rounded-full hover:bg-primary/20 transition-colors"
                     >
                       Gravel Delivery

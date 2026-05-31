@@ -55,7 +55,12 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
   });
 }
 
-export async function prerender(url: string) {
+export async function prerender(data: string | { url: string }) {
+  // The vite-prerender-plugin invokes this with `{ ssr, url, route }`, but older
+  // callers may pass the URL string directly. Support both so each route renders
+  // its own page instead of falling back to the homepage.
+  const url = typeof data === 'string' ? data : data.url;
+
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -64,7 +69,10 @@ export async function prerender(url: string) {
     },
   });
 
-  const helmetContext = {};
+  interface HelmetDatum {
+    toString(): string;
+  }
+  const helmetContext: { helmet?: { title?: HelmetDatum; link?: HelmetDatum } } = {};
 
   const html = renderToString(
     <HelmetProvider context={helmetContext}>
@@ -82,6 +90,33 @@ export async function prerender(url: string) {
   const { parseLinks } = await import('vite-prerender-plugin/parse');
   const links = parseLinks(html);
 
+  // Extract per-page <title> and canonical <link> from react-helmet-async so the
+  // prerendered static HTML carries unique, correct SEO tags (otherwise every
+  // prerendered page would inherit the generic title/meta from index.html).
+  const helmet = helmetContext.helmet;
+  const headElements = new Set<{ type: string; props: Record<string, string> }>();
+  let title = '';
+
+  if (helmet) {
+    const titleHtml = helmet.title?.toString() ?? '';
+    const titleMatch = titleHtml.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+    if (titleMatch) {
+      title = titleMatch[1]
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#(?:39|x27);/g, "'");
+    }
+
+    const linkHtml = helmet.link?.toString() ?? '';
+    const canonicalMatch = linkHtml.match(/<link[^>]*rel="canonical"[^>]*>/i);
+    const hrefMatch = canonicalMatch?.[0].match(/href="([^"]+)"/i);
+    if (hrefMatch) {
+      headElements.add({ type: 'link', props: { rel: 'canonical', href: hrefMatch[1] } });
+    }
+  }
+
   // Force exit after a short delay to ensure Vercel/CI environments don't hang
   if (typeof process !== 'undefined' && process.env.NODE_ENV === 'production') {
     setTimeout(() => {
@@ -95,6 +130,8 @@ export async function prerender(url: string) {
     links: new Set(links),
     head: {
       lang: 'en',
+      title,
+      elements: headElements,
     }
   };
 }

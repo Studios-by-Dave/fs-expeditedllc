@@ -7,6 +7,41 @@
       "source": "/testimonials",
       "destination": "/reviews",
       "statusCode": 301
+    },
+    {
+      "source": "/services/gravel-sand-delivery",
+      "destination": "/services/material-delivery/gravel-delivery",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/aggregate-transport",
+      "destination": "/services/material-delivery/aggregate-transport",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/debris-removal",
+      "destination": "/services/site-services/debris-removal",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/site-prep",
+      "destination": "/services/site-services/site-prep",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/land-clearing",
+      "destination": "/services/site-services/land-clearing",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/commercial-hauling",
+      "destination": "/services/emergency-expedited/commercial-hauling",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/dump-truck-hauling",
+      "destination": "/services/emergency-expedited/dump-truck-hauling",
+      "statusCode": 301
     }
   ],
   "headers": [

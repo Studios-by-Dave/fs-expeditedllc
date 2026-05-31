@@ -55,8 +55,8 @@ const ServiceCategoryPage = () => {
       <SEOHead
         title={`${category.title} | F&S Expedited LLC`}
         description={category.description}
-        url={`${SITE_URL}/services/${category.slug}`}
-        schemas={[categorySchema, breadcrumbSchema]}
+        canonical={`/services/${category.slug}`}
+        schema={{ "@context": "https://schema.org", "@graph": [categorySchema, breadcrumbSchema] }}
       />
 
       <Navigation />
