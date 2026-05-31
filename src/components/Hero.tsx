@@ -29,7 +29,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 px-4 pt-20">
+      <div className="container relative z-10 px-4 pt-32">
         <div className="max-w-4xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-xl mb-8 opacity-0 animate-fade-up">
@@ -89,18 +89,18 @@ export const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-16 grid grid-cols-3 gap-6 max-w-lg opacity-0 animate-fade-up animation-delay-600">
+          <div className="mt-16 mb-8 grid grid-cols-3 gap-6 max-w-lg opacity-0 animate-fade-up animation-delay-600">
             <div className="text-center">
-              <Truck className="w-8 h-8 text-primary mx-auto mb-2" />
-              <p className="text-sm text-muted-foreground font-sans">Heavy Equipment</p>
+              <Truck className="w-10 h-10 text-primary mx-auto mb-2" />
+              <p className="text-base text-muted-foreground font-sans">Heavy Equipment</p>
             </div>
             <div className="text-center border-x border-border px-4">
-              <Clock className="w-8 h-8 text-primary mx-auto mb-2" />
-              <p className="text-sm text-muted-foreground font-sans">Fast Turnaround</p>
+              <Clock className="w-10 h-10 text-primary mx-auto mb-2" />
+              <p className="text-base text-muted-foreground font-sans">Fast Turnaround</p>
             </div>
             <div className="text-center">
-              <Shield className="w-8 h-8 text-primary mx-auto mb-2" />
-              <p className="text-sm text-muted-foreground font-sans">Fully Insured</p>
+              <Shield className="w-10 h-10 text-primary mx-auto mb-2" />
+              <p className="text-base text-muted-foreground font-sans">Fully Insured</p>
             </div>
           </div>
         </div>

@@ -47,6 +47,17 @@ const BlogPage = () => {
       category: "Project Management",
       fullContent: true,
       link: "/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina"
+    },
+    {
+      id: 4,
+      title: "Why F&S Hauling is Your Go-To Choice for Reliable Dump Truck Services in Shelby, NC",
+      excerpt: "Discover why F&S Hauling stands out as the premier choice for professional dump truck services in Shelby, NC. Fast, reliable, and fully licensed.",
+      date: "May 29, 2026",
+      readTime: "8 min read",
+      icon: Truck,
+      category: "Local Services",
+      fullContent: true,
+      link: "/blog/why-fs-hauling-reliable-dump-truck-services-shelby-nc"
     }
   ];
 
