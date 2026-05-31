@@ -47,8 +47,8 @@ const DumpTrucksServicesPage = () => {
       <SEOHead
         title="Dump Trucks - Hauling and Services | F&S Expedited LLC"
         description="Complete dump truck hauling and comprehensive site services: material delivery, site preparation, debris removal, emergency expedited services near Shelby, NC"
-        url={`${SITE_URL}/services/dump-trucks-hauling-services`}
-        schemas={[categorySchema, breadcrumbSchema]}
+        canonical="/services/dump-trucks-hauling-services"
+        schema={{ "@context": "https://schema.org", "@graph": [categorySchema, breadcrumbSchema] }}
       />
 
       <Navigation />

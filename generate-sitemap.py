@@ -90,7 +90,7 @@ def get_priority(url):
     """Determine priority based on URL path."""
     if url == '/' or url == '/services':
         return '1.0'
-    elif url in ['/contact', '/why-us', '/why-us/promos', '/process', '/service-area', '/reviews', '/gallery']:
+    elif url in ['/contact', '/why-us', '/why-us/about', '/why-us/promos', '/process', '/service-area', '/reviews', '/gallery']:
         return '0.9'
     elif '/services/' in url:
         return '0.8'
@@ -114,6 +114,7 @@ def main():
         ('/', '2026-05-29'),
         ('/services', '2026-05-29'),
         ('/why-us', '2026-05-29'),
+        ('/why-us/about', '2026-05-29'),
         ('/why-us/promos', '2026-05-29'),
         ('/process', '2026-05-29'),
         ('/service-area', '2026-05-29'),
@@ -167,7 +168,7 @@ def main():
     
     # Generate sitemap XML
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    xml += '<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     
     for url, lastmod in sorted(urls):
         priority = get_priority(url)
