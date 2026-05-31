@@ -58,7 +58,7 @@ const PromoPage = () => {
       </Breadcrumb>
       
       <main className="pt-20 flex items-center justify-center min-h-[calc(100vh-80px)] p-4">
-        <div className="bg-[#1a1a1a] max-w-[520px] w-full border border-[rgba(255,255,255,0.2)] relative overflow-hidden animate-fade-up">
+        <div className="bg-[#1a1a1a] max-w-[600px] w-full border border-[rgba(255,255,255,0.2)] relative overflow-hidden animate-fade-up">
           
           {/* Top accent bar */}
           <div className="h-1 bg-gradient-to-r from-primary to-primary/80" />

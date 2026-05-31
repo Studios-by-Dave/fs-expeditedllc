@@ -73,30 +73,24 @@ const galleryImages = [
   },
   {
     id: 12,
-    url: "/assets/gallery/fs-new3.png",
-    alt: "F&S Expedited LLC - Site Operations",
-    caption: "Professional site operations demonstrating our commitment to quality and safety."
-  },
-  {
-    id: 13,
     url: "/assets/gallery/fs-new4.png",
     alt: "F&S Expedited LLC - Material Transport",
     caption: "Efficient material transport services for construction and landscaping projects."
   },
   {
-    id: 14,
+    id: 13,
     url: "/assets/gallery/fs-new5.png",
     alt: "F&S Expedited LLC - Team Excellence",
     caption: "Our experienced team delivering exceptional service on every project."
   },
   {
-    id: 15,
+    id: 14,
     url: "/assets/gallery/fs-new6.png",
     alt: "F&S Expedited LLC - Project Success",
     caption: "Another successful project completed with precision and professional workmanship."
   },
   {
-    id: 16,
+    id: 15,
     url: "/assets/gallery/fs-new7.png",
     alt: "F&S Expedited LLC - Quality Service",
     caption: "Demonstrating our commitment to quality service and customer satisfaction."
@@ -123,8 +117,8 @@ export const Gallery = () => {
           <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
             Project Gallery
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl lg:text-4xl font-heading font-bold text-foreground tracking-wider">
-            OUR WORK
+          <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-heading font-bold text-foreground tracking-wider">
+            Gallery
           </h2>
           <p className="mt-4 text-muted-foreground text-lg font-sans">
             Browse through our completed hauling projects and see the quality of our work.
@@ -135,7 +129,7 @@ export const Gallery = () => {
           <Card className="border border-border overflow-hidden">
             <CardContent className="p-0">
               {/* Thumbnail Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
                 {galleryImages.map((image) => (
                   <div key={image.id} className="relative group cursor-pointer" onClick={() => openImageModal(image.id)}>
                     <div className="aspect-square overflow-hidden rounded-lg border border-border">
