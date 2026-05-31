@@ -58,6 +58,17 @@ const BlogPage = () => {
       category: "Local Services",
       fullContent: true,
       link: "/blog/why-fs-hauling-reliable-dump-truck-services-shelby-nc"
+    },
+    {
+      id: 5,
+      title: "Complete Material Delivery Guide for Construction Projects in Shelby, NC",
+      excerpt: "Your comprehensive guide to material delivery services in Shelby, NC. Learn about gravel, sand, soil delivery and how F&S Expedited keeps your construction projects on schedule.",
+      date: "May 31, 2026",
+      readTime: "10 min read",
+      icon: Truck,
+      category: "Material Delivery",
+      fullContent: true,
+      link: "/blog/material-delivery-guide-shelby-nc-construction-projects"
     }
   ];
 
