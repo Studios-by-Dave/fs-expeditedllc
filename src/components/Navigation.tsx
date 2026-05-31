@@ -57,10 +57,10 @@ export const Navigation = () => {
           <nav className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/">
-              <img 
+              <img
                 src={fsLogo}
                 alt="F&S Expedited LLC Logo - Professional Dump Truck Hauling Services"
-                className="h-16 md:h-20 w-auto"
+                className="h-16 md:h-20 w-auto object-contain"
                 loading="eager"
                 onError={(e) => {
                   // Try optimized WebP first
