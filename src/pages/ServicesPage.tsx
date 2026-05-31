@@ -5,7 +5,7 @@ import { CTABanner } from "@/components/CTABanner";
 import { Footer } from "@/components/Footer";
 import { services, serviceCategories } from "@/data/services";
 import { ArrowRight } from "lucide-react";
-import { breadcrumbSchema } from "@/data/seo-schemas";
+import { breadcrumbSchema, localBusinessSchema } from "@/data/seo-schemas";
 
 const ServicesPage = () => {
   const breadcrumbs = [
@@ -13,13 +13,21 @@ const ServicesPage = () => {
     { name: "Services", url: "https://www.fs-expeditedllc.com/services" }
   ];
 
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      localBusinessSchema,
+      breadcrumbSchema(breadcrumbs)
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Hauling Services — Dump Truck, Gravel, Debris Removal | F&S Expedited LLC"
         description="Complete hauling services: dump truck transport, gravel & sand delivery, debris removal, aggregate transport, emergency expedited & commercial hauling near Shelby, NC. Licensed & insured."
         canonical="/services"
-        schema={breadcrumbSchema(breadcrumbs)}
+        schema={combinedSchema}
       />
       <Navigation />
       <main className="pt-20">

@@ -106,7 +106,10 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-muted-foreground font-sans">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                100-Mile Radius of Shelby, NC
+                <div>
+                  <span className="font-semibold text-foreground">Service Area:</span><br />
+                  100-Mile Radius of Shelby, NC
+                </div>
               </li>
             </ul>
           </div>

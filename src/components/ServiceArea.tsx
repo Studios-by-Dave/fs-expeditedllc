@@ -148,9 +148,15 @@ export const ServiceArea = () => {
                 SHELBY, NC — 100 MILE RADIUS
               </h3>
             </div>
-            <p className="text-muted-foreground font-sans max-w-xl mx-auto">
+            <p className="text-muted-foreground font-sans max-w-xl mx-auto mb-4">
               We service all areas within 100 miles of Shelby, North Carolina (28152), including Charlotte, Gastonia, Hickory, Asheville, Greenville, Spartanburg, and surrounding communities.
             </p>
+            <div className="text-sm text-muted-foreground font-sans max-w-xl mx-auto">
+              <p className="font-semibold text-foreground mb-2">Key Areas Served:</p>
+              <p className="leading-relaxed">
+                Charlotte, Gastonia, Hickory, Asheville, Greenville, Spartanburg, Concord, Kannapolis, Monroe, Statesville, Mooresville, Lincolnton, Kings Mountain, Gaffney, Rock Hill, and all communities within 100 miles of Shelby, NC.
+              </p>
+            </div>
           </div>
         </div>
 

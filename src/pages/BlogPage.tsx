@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Footer } from "@/components/Footer";
-import { breadcrumbSchema } from "@/data/seo-schemas";
+import { breadcrumbSchema, localBusinessSchema } from "@/data/seo-schemas";
 import { ChevronRight, Calendar, Clock, Truck, Wrench, AlertTriangle, Shield } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -61,13 +61,21 @@ const BlogPage = () => {
     }
   ];
 
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      localBusinessSchema,
+      breadcrumbSchema(breadcrumbs)
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Blog — Trucking & Hauling Insights from F&S Expedited LLC"
         description="Expert insights and tips on dump truck hauling, material delivery, site preparation, and emergency expedited services in Shelby, NC."
         canonical="/blog"
-        schema={breadcrumbSchema(breadcrumbs)}
+        schema={combinedSchema}
       />
       <Navigation />
       {/* Breadcrumb Navigation */}
