@@ -73,11 +73,51 @@ const AboutPage = () => {
                   F&S Expedited LLC was founded with a simple mission: to provide reliable, efficient, and professional hauling services that contractors and property owners can depend on. Based in Shelby, North Carolina, we've grown from a small operation to a trusted hauling partner serving a 100-mile radius.
                 </p>
                 <p>
+                  Owned and operated by Joe Alrich and Luke Tutterow, F&S Expedited LLC is built on a foundation of hands-on experience and deep local knowledge. Joe and Luke bring years of expertise in the construction and hauling industry, with a shared commitment to quality service and customer satisfaction. Their dedication to hard work and reliability is reflected in every project we undertake.
+                </p>
+                <p>
                   Our team brings years of experience in the construction and hauling industry. We understand that every project has unique challenges and tight timelines. That's why we've built our business around fast response times, competitive pricing, and a commitment to getting the job done right the first time.
                 </p>
                 <p>
                   Whether it's a residential driveway project, a commercial construction site, or emergency material delivery, F&S Expedited LLC has the equipment, expertise, and dedication to handle your hauling needs with precision and care.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Meet the Owners Section */}
+        <section className="section-padding bg-gradient-card">
+          <div className="container px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-bold text-foreground mb-8 tracking-wider text-center">Meet the Owners</h2>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Joe Alrich */}
+                <div className="bg-card rounded-lg border border-border overflow-hidden">
+                  <div className="p-2">
+                    <img src="/assets/fs-new7.png" alt="Joe Alrich with dump truck" className="w-full h-96 object-cover rounded" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-foreground mb-2">Joe Alrich</h3>
+                    <p className="text-sm text-primary font-medium mb-2">Owner</p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Bringing years of industry expertise and operational leadership. Joe's dedication to customer satisfaction and efficient operations drives F&S Expedited LLC's success.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Luke Tutterow */}
+                <div className="bg-card p-6 rounded-lg border border-border">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Luke Tutterow</h3>
+                  <p className="text-sm text-primary font-medium mb-2">Co-owner</p>
+                  <p className="text-muted-foreground leading-relaxed mb-2">
+                    Co-owner with extensive experience in construction and hauling. Luke's hands-on approach and commitment to quality service ensure every project meets the highest standards.
+                  </p>
+                  <p className="text-sm text-primary italic">
+                    Photo coming soon
+                  </p>
+                </div>
               </div>
             </div>
           </div>
