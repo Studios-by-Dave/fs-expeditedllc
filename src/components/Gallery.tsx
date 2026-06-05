@@ -94,6 +94,12 @@ const galleryImages = [
     url: "/assets/gallery/fs-new7.png",
     alt: "F&S Expedited LLC - Quality Service",
     caption: "Demonstrating our commitment to quality service and customer satisfaction."
+  },
+  {
+    id: 16,
+    url: "/assets/gallery/joeandluke1.png",
+    alt: "F&S Expedited LLC - Owners Joe Alrich and Luke Tutterow",
+    caption: "Meet our owners Joe Alrich and Luke Tutterow, dedicated to providing exceptional hauling services."
   }
 ];
 
@@ -129,7 +135,7 @@ export const Gallery = () => {
           <Card className="border border-border overflow-hidden">
             <CardContent className="p-0">
               {/* Thumbnail Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
                 {galleryImages.map((image) => (
                   <div key={image.id} className="relative group cursor-pointer" onClick={() => openImageModal(image.id)}>
                     <div className="aspect-square overflow-hidden rounded-lg border border-border">

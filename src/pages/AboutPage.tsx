@@ -92,30 +92,26 @@ const AboutPage = () => {
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl font-bold text-foreground mb-8 tracking-wider text-center">Meet the Owners</h2>
               
+              <div className="mb-8">
+                <img src="/assets/joeandluke1.png" alt="Joe Alrich and Luke Tutterow" className="w-full h-auto rounded-lg border border-border" />
+              </div>
+
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Joe Alrich */}
-                <div className="bg-card rounded-lg border border-border overflow-hidden">
-                  <div className="p-2">
-                    <img src="/assets/fs-new7.png" alt="Joe Alrich with dump truck" className="w-full h-96 object-cover rounded" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Joe Alrich</h3>
-                    <p className="text-sm text-primary font-medium mb-2">Owner</p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Bringing years of industry expertise and operational leadership. Joe's dedication to customer satisfaction and efficient operations drives F&S Expedited LLC's success.
-                    </p>
-                  </div>
+                <div className="bg-card p-6 rounded-lg border border-border">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Joe Alrich</h3>
+                  <p className="text-sm text-primary font-medium mb-2">Owner</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Bringing years of industry expertise and operational leadership. Joe's dedication to customer satisfaction and efficient operations drives F&S Expedited LLC's success.
+                  </p>
                 </div>
 
                 {/* Luke Tutterow */}
                 <div className="bg-card p-6 rounded-lg border border-border">
                   <h3 className="text-xl font-semibold text-foreground mb-2">Luke Tutterow</h3>
                   <p className="text-sm text-primary font-medium mb-2">Co-owner</p>
-                  <p className="text-muted-foreground leading-relaxed mb-2">
+                  <p className="text-muted-foreground leading-relaxed">
                     Co-owner with extensive experience in construction and hauling. Luke's hands-on approach and commitment to quality service ensure every project meets the highest standards.
-                  </p>
-                  <p className="text-sm text-primary italic">
-                    Photo coming soon
                   </p>
                 </div>
               </div>
