@@ -1,22 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const SenjaEmbedSimple = () => {
-  useEffect(() => {
-    // Create the Senja embed exactly as provided
-    const container = document.getElementById('senja-embed-container');
-    if (!container) return;
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-    // Clear any existing content
-    container.innerHTML = '';
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
 
     // Create the iframe resizer script
     const resizerScript = document.createElement('script');
     resizerScript.type = 'text/javascript';
     resizerScript.src = 'https://widget.senja.io/js/iframeResizer.min.js';
     resizerScript.onload = () => {
-      // Initialize iframe resizer
-      if (typeof (window as any).iFrameResize === "function") {
-        (window as any).iFrameResize({ log: false, checkOrigin: false }, "#senja-collector-iframe");
+      if (typeof (window as unknown as { iFrameResize?: (opts: object, sel: string) => void }).iFrameResize === "function") {
+        (window as unknown as { iFrameResize: (opts: object, sel: string) => void }).iFrameResize(
+          { log: false, checkOrigin: false },
+          "#senja-collector-iframe"
+        );
       }
     };
 
@@ -25,39 +26,33 @@ export const SenjaEmbedSimple = () => {
     iframe.id = 'senja-collector-iframe';
     iframe.src = 'https://senja.io/p/fs-expedited-llc/r/N78S6v?mode=embed&nostyle=true';
     iframe.allow = 'camera;microphone';
-    iframe.title = 'Senja form';
-    iframe.frameBorder = '0';
-    iframe.scrolling = 'auto';
+    iframe.title = 'Senja customer review form for F&S Expedited LLC';
+    iframe.setAttribute('loading', 'lazy');
     iframe.width = '100%';
     iframe.height = '700';
     iframe.style.width = '100%';
     iframe.style.height = '700px';
     iframe.style.border = 'none';
     iframe.style.borderRadius = '8px';
+    iframe.onload = () => setIsLoaded(true);
 
-    // Create the iframe resizer initialization script
-    const initScript = document.createElement('script');
-    initScript.type = 'text/javascript';
-    initScript.textContent = 'iFrameResize({log: false, checkOrigin: false}, "#senja-collector-iframe");';
-
-    // Add elements to container
     container.appendChild(resizerScript);
     container.appendChild(iframe);
-    container.appendChild(initScript);
 
     return () => {
-      // Cleanup
-      if (container) {
-        container.innerHTML = '';
+      while (container.firstChild) {
+        container.removeChild(container.firstChild);
       }
     };
   }, []);
 
   return (
-    <div id="senja-embed-container" className="w-full">
-      <div className="w-full h-16 flex items-center justify-center border border-border rounded-lg bg-card">
-        <p className="text-muted-foreground">Loading reviews...</p>
-      </div>
+    <div ref={containerRef} className="w-full">
+      {!isLoaded && (
+        <div className="w-full h-16 flex items-center justify-center border border-border rounded-lg bg-card">
+          <p className="text-muted-foreground">Loading reviews...</p>
+        </div>
+      )}
     </div>
   );
 };
