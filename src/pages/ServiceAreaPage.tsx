@@ -24,8 +24,8 @@ const ServiceAreaPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Service Area — 100-Mile Radius of Shelby NC"
-        description="F&S Expedited serves all areas within 100 miles of Shelby, NC (28152) including Charlotte, Gastonia, Hickory, Asheville, Greenville & Spartanburg."
+        title="Service Area — Expedited Hauling Services in Charlotte, Gastonia, Hickory & Within 1-Hour of Shelby NC"
+        description="F&S Expedited provides expedited hauling services to 50+ cities within 1-hour of Shelby, NC including Charlotte, Gastonia, Hickory, Spartanburg, Greenville, Rock Hill, Concord, and all surrounding areas."
         canonical="/service-area"
         schema={combinedSchema}
       />

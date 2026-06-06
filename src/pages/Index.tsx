@@ -30,8 +30,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="F&S Expedited LLC | Dump Truck & Hauling Services Shelby NC"
-        description="F&S Expedited LLC — Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured. Call (865) 364-9011 for fast, reliable hauling services."
+        title="Expedited Hauling Services | F&S Expedited LLC | Charlotte, Gastonia, Hickory, Shelby NC"
+        description="F&S Expedited LLC provides expedited dump truck hauling, gravel delivery, and debris removal services within 1-hour of Shelby, NC. Serving Charlotte, Gastonia, Hickory, Spartanburg, and 50+ cities. Licensed & insured. Call (865) 364-9011."
         canonical="/"
         schema={combinedSchema}
       />

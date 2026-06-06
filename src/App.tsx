@@ -53,7 +53,7 @@ export const AppContent = () => (
       <Route path="/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc" element={<BlogArticlePage />} />
       <Route path="/blog/why-manufacturers-choose-fs-expedited-trucking-emergency-freight" element={<BlogArticlePage2 />} />
       <Route path="/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina" element={<BlogArticlePage3 />} />
-      <Route path="/blog/why-fs-hauling-reliable-dump-truck-services-shelby-nc" element={<BlogArticlePage4 />} />
+      <Route path="/blog/why-fs-expedited-reliable-dump-truck-services-shelby-nc" element={<BlogArticlePage4 />} />
       <Route path="/blog/material-delivery-guide-shelby-nc-construction-projects" element={<BlogArticlePage5 />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />

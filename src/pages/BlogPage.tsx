@@ -50,14 +50,14 @@ const BlogPage = () => {
     },
     {
       id: 4,
-      title: "Why F&S Hauling is Your Go-To Choice for Reliable Dump Truck Services in Shelby, NC",
-      excerpt: "Discover why F&S Hauling stands out as the premier choice for professional dump truck services in Shelby, NC. Fast, reliable, and fully licensed.",
+      title: "Why F&S Expedited is Your Go-To Choice for Reliable Dump Truck Services in Shelby, NC",
+      excerpt: "Discover why F&S Expedited stands out as the premier choice for professional dump truck services in Shelby, NC. Fast, reliable, and fully licensed.",
       date: "May 29, 2026",
       readTime: "8 min read",
       icon: Truck,
       category: "Local Services",
       fullContent: true,
-      link: "/blog/why-fs-hauling-reliable-dump-truck-services-shelby-nc"
+      link: "/blog/why-fs-expedited-reliable-dump-truck-services-shelby-nc"
     },
     {
       id: 5,

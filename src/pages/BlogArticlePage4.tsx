@@ -11,16 +11,16 @@ const BlogArticlePage4 = () => {
   const breadcrumbs = [
     { name: "Home", url: "https://www.fs-expeditedllc.com/" },
     { name: "Blog", url: "https://www.fs-expeditedllc.com/blog" },
-    { name: "Article", url: "https://www.fs-expeditedllc.com/blog/why-fs-hauling-reliable-dump-truck-services-shelby-nc" }
+    { name: "Article", url: "https://www.fs-expeditedllc.com/blog/why-fs-expedited-reliable-dump-truck-services-shelby-nc" }
   ];
 
   const combinedSchema = {
     "@context": "https://schema.org",
     "@graph": [
       articleSchema(
-        "Why F&S Hauling is Your Go-To Choice for Reliable Dump Truck Services in Shelby, NC",
-        "F&S Hauling provides professional dump truck services in Shelby, NC. Fast, reliable material delivery, site services, and emergency hauling for construction and landscaping projects.",
-        "/blog/why-fs-hauling-reliable-dump-truck-services-shelby-nc",
+        "Why F&S Expedited is Your Go-To Choice for Reliable Dump Truck Services in Shelby, NC",
+        "F&S Expedited provides professional dump truck services in Shelby, NC. Fast, reliable material delivery, site services, and emergency hauling for construction and landscaping projects.",
+        "/blog/why-fs-expedited-reliable-dump-truck-services-shelby-nc",
         "2026-05-29"
       ),
       breadcrumbSchema(breadcrumbs)
@@ -30,9 +30,9 @@ const BlogArticlePage4 = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why F&S Hauling is Your Go-To Choice for Reliable Dump Truck Services in Shelby, NC"
-        description="F&S Hauling provides professional dump truck services in Shelby, NC. Fast, reliable material delivery, site services, and emergency hauling for construction and landscaping projects."
-        canonical="/blog/why-fs-hauling-reliable-dump-truck-services-shelby-nc"
+        title="Why F&S Expedited is Your Go-To Choice for Reliable Dump Truck Services in Shelby, NC"
+        description="F&S Expedited provides professional dump truck services in Shelby, NC. Fast, reliable material delivery, site services, and emergency hauling for construction and landscaping projects."
+        canonical="/blog/why-fs-expedited-reliable-dump-truck-services-shelby-nc"
         schema={combinedSchema}
       />
       <Navigation />
@@ -66,21 +66,21 @@ const BlogArticlePage4 = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <Truck className="w-4 h-4" />
-                  <span>F&S Hauling Services</span>
+                  <span>F&S Expedited Services</span>
                 </div>
               </div>
               
               <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground tracking-wider mb-6">
-                Why F&S Hauling is Your Go-To Choice for Reliable Dump Truck Services in Shelby, NC
+                Why F&S Expedited is Your Go-To Choice for Reliable Dump Truck Services in Shelby, NC
               </h1>
               
               <p className="text-xl text-muted-foreground font-sans mb-8 leading-relaxed">
-                In the fast-paced world of construction, landscaping, and site development across North Carolina, finding a dependable hauling partner can make or break your project timeline. That's where F&S Hauling stands out. As the hauling division of F&S Expedited LLC, we specialize in professional dump truck services that combine speed, reliability, and local expertise.
+                In the fast-paced world of construction, landscaping, and site development across North Carolina, finding a dependable hauling partner can make or break your project timeline. That's where F&S Expedited stands out. We specialize in professional dump truck services that combine speed, reliability, and local expertise.
               </p>
               
               <div className="bg-primary/10 p-6 rounded-lg border border-primary/20 mb-8">
                 <p className="text-lg font-semibold text-foreground mb-2">
-                  Whether you're a contractor managing a large commercial build or a homeowner tackling a driveway renovation, F&S Hauling provides the heavy-duty support you need — right here in Shelby, NC.
+                  Whether you're a contractor managing a large commercial build or a homeowner tackling a driveway renovation, F&S Expedited provides the heavy-duty support you need — right here in Shelby, NC.
                 </p>
               </div>
             </div>
@@ -94,13 +94,13 @@ const BlogArticlePage4 = () => {
               
               {/* What Makes F&S Hauling Different */}
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-4">What Makes F&S Hauling Different?</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">What Makes F&S Expedited Different?</h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   At F&S Expedited LLC, we don't just move materials — we deliver solutions. Our modern fleet of dump trucks and experienced team handle everything from routine deliveries to emergency jobs with precision and care.
                 </p>
                 
                 <div className="bg-card p-6 rounded-lg border border-border">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">Key services offered by F&S Hauling include:</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-4">Key services offered by F&S Expedited include:</h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
@@ -147,7 +147,7 @@ const BlogArticlePage4 = () => {
 
               {/* The F&S Hauling Process */}
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-4">The F&S Hauling Process: Simple, Transparent, and Fast</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">The F&S Expedited Process: Simple, Transparent, and Fast</h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   We keep things straightforward so you can focus on your project:
                 </p>
@@ -204,14 +204,14 @@ const BlogArticlePage4 = () => {
                 
                 <div className="bg-primary/5 p-6 rounded-lg border border-primary/20 mt-6">
                   <p className="text-lg text-foreground">
-                    This efficient process is why local contractors and property owners consistently choose F&S Hauling for their material transport and site work.
+                    This efficient process is why local contractors and property owners consistently choose F&S Expedited for their material transport and site work.
                   </p>
                 </div>
               </div>
 
               {/* Common Projects */}
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-4">Common Projects We Support with F&S Hauling</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">Common Projects We Support with F&S Expedited</h2>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-center gap-3">
                     <Truck className="w-5 h-5 text-primary" />
@@ -242,7 +242,7 @@ const BlogArticlePage4 = () => {
 
               {/* Why Local Customers Trust F&S Hauling */}
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-4">Why Local Customers Trust F&S Hauling</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">Why Local Customers Trust F&S Expedited</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   <Card>
                     <CardContent className="p-6">
@@ -287,14 +287,14 @@ const BlogArticlePage4 = () => {
                 
                 <div className="bg-card p-6 rounded-lg border border-border mt-6">
                   <p className="text-lg text-foreground">
-                    F&S Hauling is built on a foundation of hard work, reliability, and customer focus — values that have helped us become a trusted name in dump truck services.
+                    F&S Expedited is built on a foundation of hard work, reliability, and customer focus — values that have helped us become a trusted name in dump truck services.
                   </p>
                 </div>
               </div>
 
               {/* CTA Section */}
               <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-8 rounded-lg border border-primary/20">
-                <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Get Started with F&S Hauling?</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Get Started with F&S Expedited?</h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   Don't let hauling slow down your next project. Contact F&S Expedited LLC today for a free, no-obligation quote. Whether you need gravel delivered tomorrow or full-site debris removal, we're here to help.
                 </p>

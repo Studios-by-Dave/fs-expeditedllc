@@ -17,7 +17,7 @@ export const ServiceArea = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Radius map visual */}
           <div className="bg-card border border-border p-6 mb-8">
             <div className="relative w-full flex items-center justify-center py-8">
@@ -140,21 +140,127 @@ export const ServiceArea = () => {
             </div>
           </div>
 
-          {/* Info card */}
-          <div className="bg-card border border-border p-6 text-center">
-            <div className="flex items-center justify-center gap-2 mb-3">
+          {/* Comprehensive city list */}
+          <div className="bg-card border border-border p-6">
+            <div className="flex items-center justify-center gap-2 mb-6">
               <MapPin className="w-5 h-5 text-primary" />
               <h3 className="font-heading text-xl font-bold text-foreground tracking-wider">
-                SHELBY, NC — 100 MILE RADIUS
+                CITIES WE SERVE
               </h3>
             </div>
-            <p className="text-muted-foreground font-sans max-w-xl mx-auto mb-4">
-              We service all areas within 100 miles of Shelby, North Carolina (28152), including Charlotte, Gastonia, Hickory, Asheville, Greenville, Spartanburg, and surrounding communities.
-            </p>
-            <div className="text-sm text-muted-foreground font-sans max-w-xl mx-auto">
-              <p className="font-semibold text-foreground mb-2">Key Areas Served:</p>
-              <p className="leading-relaxed">
-                Charlotte, Gastonia, Hickory, Asheville, Greenville, Spartanburg, Concord, Kannapolis, Monroe, Statesville, Mooresville, Lincolnton, Kings Mountain, Gaffney, Rock Hill, and all communities within 100 miles of Shelby, NC.
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* North Carolina Cities */}
+              <div>
+                <h4 className="font-semibold text-foreground mb-4 text-lg">North Carolina Cities</h4>
+                
+                <div className="space-y-4">
+                  <div>
+                    <p className="font-medium text-primary mb-2">Under 30 Minutes</p>
+                    <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                      <span>• Gastonia</span>
+                      <span>• Lincolnton</span>
+                      <span>• Kings Mountain</span>
+                      <span>• Dallas</span>
+                      <span>• Cherryville</span>
+                      <span>• Bessemer City</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="font-medium text-primary mb-2">30-45 Minutes</p>
+                    <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                      <span>• Charlotte</span>
+                      <span>• Gaffney, SC</span>
+                      <span>• Mooresville</span>
+                      <span>• Concord</span>
+                      <span>• Monroe</span>
+                      <span>• Indian Trail</span>
+                      <span>• Matthews</span>
+                      <span>• Mint Hill</span>
+                      <span>• Cornelius</span>
+                      <span>• Davidson</span>
+                      <span>• Huntersville</span>
+                      <span>• Denver</span>
+                      <span>• Newton</span>
+                      <span>• Maiden</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="font-medium text-primary mb-2">45-60 Minutes</p>
+                    <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                      <span>• Hickory</span>
+                      <span>• Statesville</span>
+                      <span>• Kannapolis</span>
+                      <span>• Salisbury</span>
+                      <span>• Spencer</span>
+                      <span>• Lexington</span>
+                      <span>• Thomasville</span>
+                      <span>• High Point</span>
+                      <span>• Mocksville</span>
+                      <span>• Taylorsville</span>
+                      <span>• Lenoir</span>
+                      <span>• Morganton</span>
+                      <span>• Valdese</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* South Carolina Cities */}
+              <div>
+                <h4 className="font-semibold text-foreground mb-4 text-lg">South Carolina Cities</h4>
+                
+                <div className="space-y-4">
+                  <div>
+                    <p className="font-medium text-primary mb-2">Under 30 Minutes</p>
+                    <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                      <span>• Gaffney</span>
+                      <span>• Blacksburg</span>
+                      <span>• Cowpens</span>
+                      <span>• Chesnee</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="font-medium text-primary mb-2">30-45 Minutes</p>
+                    <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                      <span>• Spartanburg</span>
+                      <span>• Rock Hill</span>
+                      <span>• Fort Mill</span>
+                      <span>• Clover</span>
+                      <span>• York</span>
+                      <span>• Lake Wylie</span>
+                      <span>• Tega Cay</span>
+                      <span>• Boiling Springs</span>
+                      <span>• Inman</span>
+                      <span>• Landrum</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="font-medium text-primary mb-2">45-60 Minutes</p>
+                    <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                      <span>• Greenville</span>
+                      <span>• Greer</span>
+                      <span>• Easley</span>
+                      <span>• Simpsonville</span>
+                      <span>• Mauldin</span>
+                      <span>• Fountain Inn</span>
+                      <span>• Travelers Rest</span>
+                      <span>• Pickens</span>
+                      <span>• Liberty</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 pt-6 border-t border-border">
+              <p className="text-center text-sm text-muted-foreground">
+                <strong>Expedited hauling services available 24/7</strong> for all cities within our 1-hour service radius. 
+                Outside our service area? <Link to="/contact" className="text-primary hover:underline font-semibold">Contact us</Link> — we travel for the right project.
               </p>
             </div>
           </div>

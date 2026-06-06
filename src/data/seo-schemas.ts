@@ -4,7 +4,7 @@ export const organizationSchema = {
   "@type": "Organization",
   "@id": "https://www.fs-expeditedllc.com#organization",
   "name": "F&S Expedited LLC",
-  "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
+  "description": "Expedited dump truck hauling, gravel delivery, debris removal & expedited services within 1-hour of Shelby, NC. Serving Charlotte, Gastonia, Hickory, Spartanburg, Greenville and 50+ cities. Licensed & insured.",
   "url": "https://www.fs-expeditedllc.com",
   "logo": {
     "@type": "ImageObject",
@@ -61,7 +61,7 @@ export const websiteSchema = {
   "@id": "https://www.fs-expeditedllc.com#website",
   "name": "F&S Expedited LLC",
   "alternateName": "F&S Expedited",
-  "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
+  "description": "Expedited dump truck hauling, gravel delivery, debris removal & expedited services within 1-hour of Shelby, NC. Serving Charlotte, Gastonia, Hickory, Spartanburg, Greenville and 50+ cities. Licensed & insured.",
   "url": "https://www.fs-expeditedllc.com",
   "potentialAction": [
     {
@@ -83,7 +83,7 @@ export const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://www.fs-expeditedllc.com#localbusiness",
   "name": "F&S Expedited LLC",
-  "description": "Professional dump truck hauling, gravel delivery, debris removal & expedited services within 100 miles of Shelby, NC. Licensed & insured.",
+  "description": "Expedited dump truck hauling, gravel delivery, debris removal & expedited services within 1-hour of Shelby, NC. Serving Charlotte, Gastonia, Hickory, Spartanburg, Greenville and 50+ cities. Licensed & insured.",
   "url": "https://www.fs-expeditedllc.com",
   "telephone": ["+18653649011", "+17047518141"],
   "email": "Aldrich2577@gmail.com",
