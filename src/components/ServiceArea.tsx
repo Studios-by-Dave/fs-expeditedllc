@@ -257,6 +257,45 @@ export const ServiceArea = () => {
               </div>
             </div>
 
+            {/* Major City Service Areas */}
+            <div className="mt-8 pt-6 border-t border-border">
+              <h4 className="text-center font-semibold text-foreground mb-8 text-lg">Major Service Areas</h4>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <Link to="/service-area/shelby-nc" className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center hover:bg-primary/10 transition-colors hover:shadow-lg hover:border-primary/40 group">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <span className="text-2xl">🏠</span>
+                  </div>
+                  <h5 className="font-semibold text-foreground text-base mb-2 group-hover:text-primary transition-colors">Shelby, NC</h5>
+                  <p className="text-sm text-muted-foreground">Home Base</p>
+                  <p className="text-xs text-primary mt-2 font-medium">Immediate Response</p>
+                </Link>
+                <Link to="/service-area/charlotte-nc" className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center hover:bg-primary/10 transition-colors hover:shadow-lg hover:border-primary/40 group">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <span className="text-2xl">🏢</span>
+                  </div>
+                  <h5 className="font-semibold text-foreground text-base mb-2 group-hover:text-primary transition-colors">Charlotte, NC</h5>
+                  <p className="text-sm text-muted-foreground">45 minutes</p>
+                  <p className="text-xs text-primary mt-2 font-medium">Commercial Focus</p>
+                </Link>
+                <Link to="/service-area/gastonia-nc" className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center hover:bg-primary/10 transition-colors hover:shadow-lg hover:border-primary/40 group">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <span className="text-2xl">🏭</span>
+                  </div>
+                  <h5 className="font-semibold text-foreground text-base mb-2 group-hover:text-primary transition-colors">Gastonia, NC</h5>
+                  <p className="text-sm text-muted-foreground">30 minutes</p>
+                  <p className="text-xs text-primary mt-2 font-medium">Fastest Service</p>
+                </Link>
+                <Link to="/service-area/asheville-nc" className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center hover:bg-primary/10 transition-colors hover:shadow-lg hover:border-primary/40 group">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <span className="text-2xl">⛰️</span>
+                  </div>
+                  <h5 className="font-semibold text-foreground text-base mb-2 group-hover:text-primary transition-colors">Asheville, NC</h5>
+                  <p className="text-sm text-muted-foreground">1h 15min</p>
+                  <p className="text-xs text-primary mt-2 font-medium">Mountain Experts</p>
+                </Link>
+              </div>
+            </div>
+
             <div className="mt-6 pt-6 border-t border-border">
               <p className="text-center text-sm text-muted-foreground">
                 <strong>Expedited hauling services available 24/7</strong> for all cities within our 1-hour service radius. 

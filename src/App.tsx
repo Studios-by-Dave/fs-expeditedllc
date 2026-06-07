@@ -18,6 +18,10 @@ import ProcessPage from "./pages/ProcessPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import ContactPage from "./pages/ContactPage";
 import ServiceAreaPage from "./pages/ServiceAreaPage";
+import ShelbyNCPage from "./pages/service-area/ShelbyNCPage";
+import CharlotteNCPage from "./pages/service-area/CharlotteNCPage";
+import GastoniaNCPage from "./pages/service-area/GastoniaNCPage";
+import AshevilleNCPage from "./pages/service-area/AshevilleNCPage";
 import GalleryPage from "./pages/GalleryPage";
 import BlogPage from "./pages/BlogPage";
 import BlogArticlePage from "./pages/BlogArticlePage";
@@ -58,6 +62,10 @@ export const AppContent = () => (
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/service-area" element={<ServiceAreaPage />} />
+      <Route path="/service-area/shelby-nc" element={<ShelbyNCPage />} />
+      <Route path="/service-area/charlotte-nc" element={<CharlotteNCPage />} />
+      <Route path="/service-area/gastonia-nc" element={<GastoniaNCPage />} />
+      <Route path="/service-area/asheville-nc" element={<AshevilleNCPage />} />
       <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       <Route path="/terms-of-service" element={<TermsOfServicePage />} />
       {/* Redirects for old URLs */}

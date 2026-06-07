@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Footer } from "@/components/Footer";
+import { BlogPreview } from "@/components/BlogPreview";
 import { breadcrumbSchema, localBusinessSchema } from "@/data/seo-schemas";
 import { ChevronRight, Calendar, Clock, Truck, Wrench, AlertTriangle, Shield } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -168,6 +169,9 @@ const BlogPage = () => {
             </div>
           </div>
         </section>
+
+        {/* Featured Article Section */}
+        <BlogPreview />
 
         {/* CTA Section */}
         <section className="section-padding bg-primary/5">

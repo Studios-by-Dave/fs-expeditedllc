@@ -90,18 +90,18 @@ const PromoPage = () => {
           <div className="p-7 p-[2.5rem]">
             
             {/* Promo code block */}
-            <div className="bg-[#1a1a1a] border border-dashed border-primary p-5 p-[1.25rem_1.5rem] flex items-center justify-between gap-4 mb-7">
-              <div>
+            <div className="bg-[#1a1a1a] border border-dashed border-primary p-5 p-[1.25rem_1.5rem] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-7">
+              <div className="text-center sm:text-left">
                 <span className="text-sm font-medium tracking-[0.12em] uppercase text-[#F5F2EC] block mb-1">
                   Promo code
                 </span>
-                <span className="font-bebas text-4xl tracking-[0.05em] text-primary leading-none">
+                <span className="font-bebas text-4xl sm:text-5xl tracking-[0.05em] text-primary leading-none">
                   1HAUL
                 </span>
               </div>
               <button 
                 onClick={copyCode}
-                className={`px-5 py-2.5 font-sans text-base font-medium tracking-[0.04em] cursor-pointer transition-all transform active:scale-95 border-none flex-shrink-0 ${
+                className={`w-full sm:w-auto px-5 py-2.5 font-sans text-base font-medium tracking-[0.04em] cursor-pointer transition-all transform active:scale-95 border-none flex-shrink-0 ${
                   copied 
                     ? 'bg-[#3a7a3a] text-white' 
                     : 'bg-primary text-black hover:bg-primary/80'

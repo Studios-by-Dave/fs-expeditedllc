@@ -115,43 +115,57 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground font-sans">
-            © {currentYear} F&S Expedited LLC. All rights reserved.
-          </p>
+        <div className="mt-12 pt-8 border-t border-border">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+            <p className="text-sm text-muted-foreground font-sans">
+              © {currentYear} F&S Expedited LLC. All rights reserved.
+            </p>
 
-          {/* Social Icons */}
-          <div className="flex items-center gap-4">
-            <a
-              href="https://www.facebook.com/chad.everette.161"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-6 h-6" />
-            </a>
-            <div
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-muted/30 text-muted-foreground/40 cursor-not-allowed"
-              aria-label="Instagram (Coming Soon)"
-            >
-              <Instagram className="w-6 h-6" />
+            {/* Social Icons */}
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.facebook.com/chad.everette.161"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <div
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-muted/30 text-muted-foreground/40 cursor-not-allowed"
+                aria-label="Instagram (Coming Soon)"
+              >
+                <Instagram className="w-6 h-6" />
+              </div>
+              <div
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-muted/30 text-muted-foreground/40 cursor-not-allowed"
+                aria-label="Twitter (Coming Soon)"
+              >
+                <Twitter className="w-6 h-6" />
+              </div>
+              <div
+                className="flex items-center justify-center w-12 h-12 rounded-full bg-muted/30 text-muted-foreground/40 cursor-not-allowed"
+                aria-label="LinkedIn (Coming Soon)"
+              >
+                <Linkedin className="w-6 h-6" />
+              </div>
             </div>
-            <div
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-muted/30 text-muted-foreground/40 cursor-not-allowed"
-              aria-label="Twitter (Coming Soon)"
-            >
-              <Twitter className="w-6 h-6" />
-            </div>
-            <div
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-muted/30 text-muted-foreground/40 cursor-not-allowed"
-              aria-label="LinkedIn (Coming Soon)"
-            >
-              <Linkedin className="w-6 h-6" />
-            </div>
+
+            <p className="text-sm text-muted-foreground font-sans">Expedited Hauling & Dump Truck Services</p>
           </div>
 
-          <p className="text-sm text-muted-foreground font-sans">Expedited Hauling & Dump Truck Services</p>
+          {/* Studios by Dave Attribution */}
+          <div className="text-center md:text-right">
+            <a 
+              href="https://www.studiosbydave.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground hover:text-primary transition-colors font-sans"
+            >
+              Site Developed by Studios by Dave {currentYear}
+            </a>
+          </div>
         </div>
       </div>
     </footer>
