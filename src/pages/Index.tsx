@@ -6,7 +6,6 @@ import { Services } from "@/components/Services";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { ServiceArea } from "@/components/ServiceArea";
 import { Process } from "@/components/Process";
-import { Testimonials } from "@/components/Testimonials";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { localBusinessSchema, organizationSchema, websiteSchema, breadcrumbSchema } from "@/data/seo-schemas";
@@ -53,8 +52,7 @@ const Index = () => {
         <Services />
         <Process />
         <WhyChooseUs />
-        <Testimonials />
-                <Contact />
+                        <Contact />
       </main>
       <Footer />
     </div>

@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/process", label: "How We Work" },
   { href: "/service-area", label: "Service Area" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/reviews", label: "Reviews" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -204,7 +205,9 @@ export const Navigation = () => {
                   key={link.href}
                   to={link.href}
                   className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-200 ${
-                    link.label === "Blog"
+                    link.label === "Reviews"
+                      ? "text-[#00BFFF] hover:text-[#00FFFF]"
+                      : link.label === "Blog"
                       ? "blog-nav-glow"
                       : "text-foreground/80 hover:text-primary"
                   }`}
@@ -364,7 +367,9 @@ export const Navigation = () => {
                 key={link.href}
                 to={link.href}
                 className={`text-lg font-heading uppercase tracking-wider transition-colors py-2 ${
-                  link.label === "Blog"
+                  link.label === "Reviews"
+                    ? "text-[#00BFFF] hover:text-[#00FFFF]"
+                    : link.label === "Blog"
                     ? "blog-nav-glow"
                     : "text-foreground hover:text-primary"
                 }`}
