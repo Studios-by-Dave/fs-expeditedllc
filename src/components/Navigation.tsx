@@ -12,7 +12,6 @@ const navLinks = [
   { href: "/process", label: "How We Work" },
   { href: "/service-area", label: "Service Area" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/reviews", label: "Reviews" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -191,6 +190,13 @@ export const Navigation = () => {
                     About Us
                   </Link>
                   <Link
+                    to="/reviews"
+                    onClick={() => setWhyUsOpen(false)}
+                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-[#00BFFF] hover:text-[#00FFFF] hover:bg-primary/5 transition-colors border-b border-border"
+                  >
+                    Reviews
+                  </Link>
+                  <Link
                     to="/why-us/promos"
                     onClick={() => setWhyUsOpen(false)}
                     className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:text-primary hover:bg-primary/5 transition-colors"
@@ -205,9 +211,7 @@ export const Navigation = () => {
                   key={link.href}
                   to={link.href}
                   className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-200 ${
-                    link.label === "Reviews"
-                      ? "text-[#00BFFF] hover:text-[#00FFFF]"
-                      : link.label === "Blog"
+                    link.label === "Blog"
                       ? "blog-nav-glow"
                       : "text-foreground/80 hover:text-primary"
                   }`}
@@ -354,6 +358,13 @@ export const Navigation = () => {
                 About Us
               </Link>
               <Link
+                to="/reviews"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-2 text-lg font-heading uppercase tracking-wider transition-colors py-2 text-[#00BFFF] hover:text-[#00FFFF]"
+              >
+                Reviews
+              </Link>
+              <Link
                 to="/why-us/promos"
                 onClick={() => setIsOpen(false)}
                 className="flex items-center gap-2 text-lg font-heading uppercase tracking-wider transition-colors py-2 text-primary hover:text-primary"
@@ -367,9 +378,7 @@ export const Navigation = () => {
                 key={link.href}
                 to={link.href}
                 className={`text-lg font-heading uppercase tracking-wider transition-colors py-2 ${
-                  link.label === "Reviews"
-                    ? "text-[#00BFFF] hover:text-[#00FFFF]"
-                    : link.label === "Blog"
+                  link.label === "Blog"
                     ? "blog-nav-glow"
                     : "text-foreground hover:text-primary"
                 }`}
