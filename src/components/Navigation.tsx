@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/process", label: "How We Work" },
   { href: "/service-area", label: "Service Area" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/reviews", label: "Reviews" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -74,7 +75,7 @@ export const Navigation = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-8">
               {/* Home Link */}
               <Link
                 to="/"
@@ -190,13 +191,6 @@ export const Navigation = () => {
                     About Us
                   </Link>
                   <Link
-                    to="/reviews"
-                    onClick={() => setWhyUsOpen(false)}
-                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-[#00BFFF] hover:text-[#00FFFF] hover:bg-primary/5 transition-colors border-b border-border"
-                  >
-                    Reviews
-                  </Link>
-                  <Link
                     to="/why-us/promos"
                     onClick={() => setWhyUsOpen(false)}
                     className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:text-primary hover:bg-primary/5 transition-colors"
@@ -211,7 +205,9 @@ export const Navigation = () => {
                   key={link.href}
                   to={link.href}
                   className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-200 ${
-                    link.label === "Blog"
+                    link.label === "Reviews"
+                      ? "text-[#00BFFF] hover:text-[#00FFFF]"
+                      : link.label === "Blog"
                       ? "blog-nav-glow"
                       : "text-foreground/80 hover:text-primary"
                   }`}
@@ -222,7 +218,7 @@ export const Navigation = () => {
             </div>
 
             {/* CTA */}
-            <div className="hidden md:flex items-center">
+            <div className="hidden lg:flex items-center">
               <Button 
                 variant="default" 
                 size="sm" 
@@ -239,7 +235,7 @@ export const Navigation = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground"
+              className="lg:hidden p-2 text-foreground"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -250,7 +246,7 @@ export const Navigation = () => {
 
         {/* Phone CTA Sub-bar */}
         <div
-          className={`hidden md:block border-t border-border/50 transition-all duration-300 ${
+          className={`hidden lg:block border-t border-border/50 transition-all duration-300 ${
             isScrolled ? "bg-background/90 backdrop-blur-md -translate-y-full" : "bg-background/60 backdrop-blur-sm translate-y-0"
           }`}
         >
@@ -272,7 +268,7 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden absolute top-20 left-0 right-0 bg-background/98 backdrop-blur-lg border-b border-border transition-all duration-300 overflow-hidden ${
+          className={`lg:hidden absolute top-20 left-0 right-0 bg-background/98 backdrop-blur-lg border-b border-border transition-all duration-300 overflow-hidden ${
             isOpen ? "max-h-[80vh] opacity-100 overflow-y-auto" : "max-h-0 opacity-0"
           }`}
         >
@@ -358,13 +354,6 @@ export const Navigation = () => {
                 About Us
               </Link>
               <Link
-                to="/reviews"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 text-lg font-heading uppercase tracking-wider transition-colors py-2 text-[#00BFFF] hover:text-[#00FFFF]"
-              >
-                Reviews
-              </Link>
-              <Link
                 to="/why-us/promos"
                 onClick={() => setIsOpen(false)}
                 className="flex items-center gap-2 text-lg font-heading uppercase tracking-wider transition-colors py-2 text-primary hover:text-primary"
@@ -378,7 +367,9 @@ export const Navigation = () => {
                 key={link.href}
                 to={link.href}
                 className={`text-lg font-heading uppercase tracking-wider transition-colors py-2 ${
-                  link.label === "Blog"
+                  link.label === "Reviews"
+                    ? "text-[#00BFFF] hover:text-[#00FFFF]"
+                    : link.label === "Blog"
                     ? "blog-nav-glow"
                     : "text-foreground hover:text-primary"
                 }`}
