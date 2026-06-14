@@ -98,7 +98,7 @@ export const Navigation = () => {
 
                 {/* Dropdown Menu */}
                 <div
-                  className={`absolute top-full left-0 mt-2 w-64 bg-card border border-border shadow-xl transition-all duration-200 z-50 ${
+                  className={`absolute top-full left-0 mt-2 w-72 bg-card border border-border shadow-xl transition-all duration-200 z-50 ${
                     servicesOpen
                       ? "opacity-100 translate-y-0 pointer-events-auto"
                       : "opacity-0 -translate-y-2 pointer-events-none"
@@ -107,7 +107,7 @@ export const Navigation = () => {
                   <Link
                     to="/services"
                     onClick={() => setServicesOpen(false)}
-                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:bg-primary/10 transition-colors border-b border-border"
+                    className="block px-4 py-3 text-base font-semibold uppercase tracking-wider text-primary hover:bg-primary/10 transition-colors border-b border-border"
                   >
                     All Services
                   </Link>
@@ -118,10 +118,10 @@ export const Navigation = () => {
                           key={category.slug}
                           to="/services/dump-trucks-hauling-services"
                           onClick={() => setServicesOpen(false)}
-                          className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
+                          className="flex items-center gap-3 px-4 py-3 text-base font-semibold text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                         >
-                          <div className="w-6 h-6 shrink-0 flex items-center justify-center">
-                            <img src="/assets/icons/dump-truck.svg" alt="Dump Trucks Hauling Services" className="w-6 h-6 object-contain" />
+                          <div className="w-8 h-8 shrink-0 flex items-center justify-center">
+                            <img src="/assets/icons/dump-truck.svg" alt="Dump Trucks Hauling Services" className="w-8 h-8 object-contain" />
                           </div>
                           <span>{category.title}</span>
                         </Link>
@@ -132,17 +132,17 @@ export const Navigation = () => {
                         key={category.slug}
                         to={`/services/${category.slug}`}
                         onClick={() => setServicesOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border last:border-b-0"
+                        className="flex items-center gap-3 px-4 py-3 text-base font-semibold text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border last:border-b-0"
                       >
-                        <div className="w-6 h-6 shrink-0 flex items-center justify-center">
+                        <div className="w-8 h-8 shrink-0 flex items-center justify-center">
                           {category.slug === 'material-delivery' && (
-                            <img src="/assets/icons/material-delivery.svg" alt="Material Delivery" className="w-6 h-6 object-contain" />
+                            <img src="/assets/icons/material-delivery.svg" alt="Material Delivery" className="w-8 h-8 object-contain" />
                           )}
                         {category.slug === 'site-services' && (
-                          <img src="/assets/icons/site-services.svg" alt="Site Services" className="w-6 h-6 object-contain" />
+                          <img src="/assets/icons/site-services.svg" alt="Site Services" className="w-8 h-8 object-contain" />
                         )}
                         {category.slug === 'emergency-expedited' && (
-                          <img src="/assets/icons/emergency-expedited.svg" alt="Emergency Expedited" className="w-6 h-6 object-contain" />
+                          <img src="/assets/icons/emergency-expedited.svg" alt="Emergency Expedited" className="w-8 h-8 object-contain" />
                         )}
                         </div>
                         <span>{category.title}</span>
