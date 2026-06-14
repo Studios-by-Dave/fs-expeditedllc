@@ -97,9 +97,69 @@ const galleryImages = [
   },
   {
     id: 16,
-    url: "/assets/gallery/joeandluke1.png",
+    url: "/assets/joe-and-luke-owners.jpg",
     alt: "F&S Expedited LLC - Owners Joe Alrich and Luke Tutterow",
     caption: "Meet our owners Joe Alrich and Luke Tutterow, dedicated to providing exceptional hauling services."
+  },
+  {
+    id: 17,
+    url: "/assets/gallery/fleet-sterling-trucks.jpg",
+    alt: "F&S Expedited LLC - Sterling dump truck fleet",
+    caption: "Our Sterling dump trucks ready for reliable hauling and material transport."
+  },
+  {
+    id: 18,
+    url: "/assets/gallery/kenworth-w990-jobsite.jpg",
+    alt: "F&S Expedited LLC - Kenworth W990 jobsite truck",
+    caption: "The Kenworth W990 PaPaw truck staged and ready at the jobsite."
+  },
+  {
+    id: 19,
+    url: "/assets/gallery/papaw-truck-convoy.jpg",
+    alt: "F&S Expedited LLC - dump truck convoy",
+    caption: "F&S trucks lined up and ready to keep projects moving."
+  },
+  {
+    id: 20,
+    url: "/assets/gallery/papaw-truck-closeup.jpg",
+    alt: "F&S Expedited LLC - PaPaw dump truck closeup",
+    caption: "Heavy-duty dump truck equipment prepared for hauling service."
+  },
+  {
+    id: 21,
+    url: "/assets/gallery/gravel-jobsite-excavator.jpg",
+    alt: "F&S Expedited LLC - gravel jobsite with excavator",
+    caption: "Gravel delivery and site preparation support for active jobsites."
+  },
+  {
+    id: 22,
+    url: "/assets/gallery/excavator-loading-dump-truck.jpg",
+    alt: "F&S Expedited LLC - excavator loading dump truck",
+    caption: "Site services in action with heavy equipment loading material."
+  },
+  {
+    id: 23,
+    url: "/assets/gallery/night-material-hauling.jpg",
+    alt: "F&S Expedited LLC - night material hauling",
+    caption: "Night hauling service when projects need material moved after hours."
+  },
+  {
+    id: 24,
+    url: "/assets/gallery/gravel-delivery-rocks-truck.jpg",
+    alt: "F&S Expedited LLC - gravel delivery near rock material",
+    caption: "Gravel and aggregate delivery for construction and site projects."
+  },
+  {
+    id: 25,
+    url: "/assets/gallery/gravel-driveway-delivery.jpg",
+    alt: "F&S Expedited LLC - gravel driveway delivery",
+    caption: "Finished gravel delivery for a driveway and property access area."
+  },
+  {
+    id: 26,
+    url: "/assets/gallery/night-excavator-loading.jpg",
+    alt: "F&S Expedited LLC - night excavator loading material",
+    caption: "Material loading and hauling support for urgent nighttime work."
   }
 ];
 

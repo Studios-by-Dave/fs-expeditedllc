@@ -101,6 +101,60 @@ const ServiceCategoryPage = () => {
           </div>
         </section>
 
+        {category.slug === 'material-delivery' && (
+          <section className="py-12 bg-background">
+            <div className="container mx-auto px-4">
+              <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <img
+                  src="/assets/gallery/gravel-delivery-rocks-truck.jpg"
+                  alt="F&S Expedited LLC gravel delivery around rock and construction material"
+                  className="w-full h-64 object-cover rounded-xl border border-border shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="/assets/gallery/gravel-driveway-delivery.jpg"
+                  alt="Fresh gravel driveway delivery completed by F&S Expedited LLC"
+                  className="w-full h-64 object-cover rounded-xl border border-border shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="/assets/gallery/night-excavator-loading.jpg"
+                  alt="F&S Expedited LLC gravel and material loading at night"
+                  className="w-full h-64 object-cover rounded-xl border border-border shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
+        {category.slug === 'site-services' && (
+          <section className="py-12 bg-background">
+            <div className="container mx-auto px-4">
+              <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <img
+                  src="/assets/gallery/gravel-jobsite-excavator.jpg"
+                  alt="F&S Expedited LLC gravel delivery and site preparation jobsite"
+                  className="w-full h-64 object-cover rounded-xl border border-border shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="/assets/gallery/excavator-loading-dump-truck.jpg"
+                  alt="Excavator loading F&S Expedited LLC dump truck for debris removal"
+                  className="w-full h-64 object-cover rounded-xl border border-border shadow-lg"
+                  loading="lazy"
+                />
+                <img
+                  src="/assets/gallery/night-material-hauling.jpg"
+                  alt="F&S Expedited LLC night material hauling service"
+                  className="w-full h-64 object-cover rounded-xl border border-border shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Subcategories Section - Only for Material Delivery, Site Services, and Emergency Expedited */}
         {(category.slug === 'material-delivery' || category.slug === 'site-services' || category.slug === 'emergency-expedited') && category.subcategories && (
           <section className="py-20 bg-background">

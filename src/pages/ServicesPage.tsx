@@ -117,6 +117,19 @@ const ServicesPage = () => {
             </div>
           </div>
         </section>
+        {/* Fleet Image Banner */}
+        <section className="py-12 bg-background">
+          <div className="container px-4">
+            <div className="max-w-5xl mx-auto">
+              <img
+                src="/assets/gallery/papaw-truck-convoy.jpg"
+                alt="F&S Expedited LLC dump truck fleet on the road"
+                className="w-full h-64 md:h-80 object-cover rounded-xl border border-border shadow-lg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
         <CTABanner />
       </main>
       <Footer />

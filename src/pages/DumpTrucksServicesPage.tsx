@@ -79,8 +79,18 @@ const DumpTrucksServicesPage = () => {
 
       <main className="min-h-screen pt-32">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-          <div className="container mx-auto px-4">
+        <section className="relative py-20 bg-gradient-to-br from-primary/10 via-background to-secondary/10 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img
+              src="/assets/gallery/fleet-sterling-trucks.jpg"
+              alt="F&S Expedited LLC Sterling dump trucks fleet"
+              className="w-full h-full object-cover opacity-15"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/90" />
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-6">
                 <Truck className="mx-auto w-16 h-16 text-primary" />
@@ -104,6 +114,21 @@ const DumpTrucksServicesPage = () => {
                   </button>
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Fleet Showcase Image */}
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <img
+                src="/assets/gallery/kenworth-w990-jobsite.jpg"
+                alt="F&S Expedited LLC Kenworth W990 dump truck at construction jobsite"
+                className="w-full h-auto rounded-xl border border-border shadow-lg"
+                loading="lazy"
+              />
+              <p className="text-center text-sm text-muted-foreground mt-3 font-sans">Our Kenworth W990 "PaPaw" ready for action at the jobsite</p>
             </div>
           </div>
         </section>
