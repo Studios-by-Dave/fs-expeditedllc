@@ -73,12 +73,19 @@ export const AppContent = () => (
       <Route path="/terms-of-service" element={<TermsOfServicePage />} />
       {/* Redirects for old URLs */}
       <Route path="/services/gravel-sand-delivery" element={<Navigate to="/services/material-delivery/gravel-delivery" replace />} />
-      <Route path="/services/aggregate-transport" element={<Navigate to="/services/material-delivery/aggregate-transport" replace />} />
+      <Route path="/services/aggregate-transport" element={<Navigate to="/services/site-services/aggregate-transport" replace />} />
       <Route path="/services/debris-removal" element={<Navigate to="/services/site-services/debris-removal" replace />} />
       <Route path="/services/site-prep" element={<Navigate to="/services/site-services/site-prep" replace />} />
       <Route path="/services/land-clearing" element={<Navigate to="/services/site-services/land-clearing" replace />} />
       <Route path="/services/commercial-hauling" element={<Navigate to="/services/emergency-expedited/commercial-hauling" replace />} />
       <Route path="/services/dump-truck-hauling" element={<Navigate to="/services/emergency-expedited/dump-truck-hauling" replace />} />
+      <Route path="/services/gravel-delivery" element={<Navigate to="/services/material-delivery/gravel-delivery" replace />} />
+      <Route path="/services/sand-delivery" element={<Navigate to="/services/material-delivery/sand-delivery" replace />} />
+      <Route path="/services/soil-delivery" element={<Navigate to="/services/material-delivery/soil-delivery" replace />} />
+      <Route path="/services/retaining-walls" element={<Navigate to="/services/site-services/retaining-walls" replace />} />
+      <Route path="/services/underground-utilities" element={<Navigate to="/services/site-services/underground-utilities" replace />} />
+      <Route path="/services/land-grading" element={<Navigate to="/services/site-services/land-grading" replace />} />
+      <Route path="/services/emergency-expedited-service" element={<Navigate to="/services/emergency-expedited/emergency-expedited" replace />} />
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
     </Routes>

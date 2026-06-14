@@ -164,7 +164,7 @@ const ServiceDetailPage = () => {
                 {otherServices.map((s) => (
                   <Link
                     key={s.slug}
-                    to={`/services/${s.slug}`}
+                    to={`/services/${s.category}/${s.slug}`}
                     className="group flex items-center gap-3 p-4 bg-card border border-border hover:border-primary/30 transition-colors"
                   >
                     <s.icon className="w-6 h-6 text-primary shrink-0" />

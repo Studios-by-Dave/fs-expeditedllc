@@ -47,16 +47,16 @@ export const Services = () => {
 
                 <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                   {category.slug === 'dump-trucks-hauling-services' && (
-                    <img src="/assets/badge_icons_1/dumper-truck_12255897.png" alt="Dump Trucks Hauling Services" className="w-10 h-10 object-contain" />
+                    <img src="/assets/icons/dump-truck.svg" alt="Dump Trucks Hauling Services" className="w-10 h-10 object-contain" />
                   )}
                   {category.slug === 'material-delivery' && (
-                    <img src="/assets/badge_icons_1/stones_8654439.png" alt="Material Delivery" className="w-10 h-10 object-contain" />
+                    <img src="/assets/icons/material-delivery.svg" alt="Material Delivery" className="w-10 h-10 object-contain" />
                   )}
                   {category.slug === 'site-services' && (
-                    <img src="/assets/badge_icons_1/dumper-truck_12255897.png" alt="Site Services" className="w-10 h-10 object-contain" />
+                    <img src="/assets/icons/site-services.svg" alt="Site Services" className="w-10 h-10 object-contain" />
                   )}
                   {category.slug === 'emergency-expedited' && (
-                    <img src="/assets/badge_icons_1/badge-emergency-fire-icon-circle-260nw-2195145807.jpg" alt="Emergency Expedited" className="w-10 h-10 object-contain" />
+                    <img src="/assets/icons/emergency-expedited.svg" alt="Emergency Expedited" className="w-10 h-10 object-contain" />
                   )}
                 </div>
 
