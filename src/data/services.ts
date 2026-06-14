@@ -184,7 +184,7 @@ export const services: ServiceData[] = [
       "Competitive flat-rate and per-load pricing",
     ],
     backgroundImage: heroTruck,
-    category: "emergency-expedited",
+    category: "site-services",
   },
   {
     slug: "aggregate-transport",
@@ -202,7 +202,7 @@ export const services: ServiceData[] = [
       "Dedicated project management support",
     ],
     backgroundImage: heroTruck,
-    category: "material-delivery",
+    category: "site-services",
   },
   {
     slug: "emergency-expedited",

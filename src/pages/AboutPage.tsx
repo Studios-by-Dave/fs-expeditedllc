@@ -1,17 +1,20 @@
+import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Footer } from "@/components/Footer";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { breadcrumbSchema, localBusinessSchema } from "@/data/seo-schemas";
-import { ChevronRight, Truck, Shield, Clock, Users, Award, Target } from "lucide-react";
+import { ChevronRight, ChevronDown, Truck, Shield, Clock, Users, Award, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTABanner } from "@/components/CTABanner";
 
 const AboutPage = () => {
+  const [whyUsOpen, setWhyUsOpen] = useState(false);
+
   const breadcrumbs = [
     { name: "Home", url: "https://www.fs-expeditedllc.com/" },
-    { name: "Why Choose Us", url: "https://www.fs-expeditedllc.com/why-us" },
-    { name: "About Us", url: "https://www.fs-expeditedllc.com/why-us/about" }
+    { name: "About Us", url: "https://www.fs-expeditedllc.com/about" }
   ];
 
   const combinedSchema = {
@@ -27,7 +30,7 @@ const AboutPage = () => {
       <SEOHead
         title="About Us — F&S Expedited LLC Story & Mission"
         description="Learn about F&S Expedited LLC's history, mission, and commitment to providing professional dump truck hauling services in Shelby, NC and surrounding areas."
-        canonical="/why-us/about"
+        canonical="/about"
         schema={combinedSchema}
       />
       <Navigation />
@@ -232,6 +235,28 @@ const AboutPage = () => {
               <Button size="lg" asChild>
                 <a href="/service-area">View Our Service Area</a>
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us - Collapsible Section */}
+        <section className="section-padding">
+          <div className="container px-4">
+            <div className="max-w-5xl mx-auto">
+              <button
+                onClick={() => setWhyUsOpen(!whyUsOpen)}
+                className="w-full flex items-center justify-between bg-card p-6 rounded-lg border border-border hover:border-primary/50 transition-colors cursor-pointer"
+              >
+                <h2 className="text-3xl font-bold text-foreground tracking-wider">Why Choose Us</h2>
+                <ChevronDown
+                  className={`w-6 h-6 text-primary transition-transform duration-300 ${whyUsOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${whyUsOpen ? "max-h-[2000px] opacity-100 mt-0" : "max-h-0 opacity-0"}`}
+              >
+                <WhyChooseUs />
+              </div>
             </div>
           </div>
         </section>

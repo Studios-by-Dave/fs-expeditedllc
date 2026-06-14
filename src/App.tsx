@@ -12,7 +12,7 @@ import ServiceCategoryPage from "./pages/ServiceCategoryPage";
 import SubServicePage from "./pages/SubServicePage";
 import DumpTrucksServicesPage from "./pages/DumpTrucksServicesPage";
 import ServiceRouter from "./pages/ServiceRouter";
-import WhyUsPage from "./pages/WhyUsPage";
+// WhyUsPage removed - content merged into AboutPage as collapsible section
 import AboutPage from "./pages/AboutPage";
 import ProcessPage from "./pages/ProcessPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
@@ -47,9 +47,12 @@ export const AppContent = () => (
       <Route path="/services/dump-trucks-hauling-services" element={<DumpTrucksServicesPage />} />
       <Route path="/services/:slug" element={<ServiceRouter />} />
       <Route path="/services/:category/:service" element={<SubServicePage />} />
-      <Route path="/why-us" element={<WhyUsPage />} />
-      <Route path="/why-us/about" element={<AboutPage />} />
-      <Route path="/why-us/promos" element={<PromoPage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/promos" element={<PromoPage />} />
+      {/* Redirects for old Why Us URLs */}
+      <Route path="/why-us" element={<Navigate to="/about" replace />} />
+      <Route path="/why-us/about" element={<Navigate to="/about" replace />} />
+      <Route path="/why-us/promos" element={<Navigate to="/promos" replace />} />
       <Route path="/process" element={<ProcessPage />} />
       <Route path="/reviews" element={<TestimonialsPage />} />
       <Route path="/testimonials" element={<Navigate to="/reviews" replace />} />
@@ -70,12 +73,19 @@ export const AppContent = () => (
       <Route path="/terms-of-service" element={<TermsOfServicePage />} />
       {/* Redirects for old URLs */}
       <Route path="/services/gravel-sand-delivery" element={<Navigate to="/services/material-delivery/gravel-delivery" replace />} />
-      <Route path="/services/aggregate-transport" element={<Navigate to="/services/material-delivery/aggregate-transport" replace />} />
+      <Route path="/services/aggregate-transport" element={<Navigate to="/services/site-services/aggregate-transport" replace />} />
       <Route path="/services/debris-removal" element={<Navigate to="/services/site-services/debris-removal" replace />} />
       <Route path="/services/site-prep" element={<Navigate to="/services/site-services/site-prep" replace />} />
       <Route path="/services/land-clearing" element={<Navigate to="/services/site-services/land-clearing" replace />} />
       <Route path="/services/commercial-hauling" element={<Navigate to="/services/emergency-expedited/commercial-hauling" replace />} />
       <Route path="/services/dump-truck-hauling" element={<Navigate to="/services/emergency-expedited/dump-truck-hauling" replace />} />
+      <Route path="/services/gravel-delivery" element={<Navigate to="/services/material-delivery/gravel-delivery" replace />} />
+      <Route path="/services/sand-delivery" element={<Navigate to="/services/material-delivery/sand-delivery" replace />} />
+      <Route path="/services/soil-delivery" element={<Navigate to="/services/material-delivery/soil-delivery" replace />} />
+      <Route path="/services/retaining-walls" element={<Navigate to="/services/site-services/retaining-walls" replace />} />
+      <Route path="/services/underground-utilities" element={<Navigate to="/services/site-services/underground-utilities" replace />} />
+      <Route path="/services/land-grading" element={<Navigate to="/services/site-services/land-grading" replace />} />
+      <Route path="/services/emergency-expedited-service" element={<Navigate to="/services/emergency-expedited/emergency-expedited" replace />} />
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
     </Routes>

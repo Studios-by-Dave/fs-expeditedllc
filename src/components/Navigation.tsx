@@ -21,10 +21,10 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [whyUsOpen, setWhyUsOpen] = useState(false);
+
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const whyUsRef = useRef<HTMLDivElement>(null);
+
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -37,9 +37,7 @@ export const Navigation = () => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setServicesOpen(false);
       }
-      if (whyUsRef.current && !whyUsRef.current.contains(e.target as Node)) {
-        setWhyUsOpen(false);
-      }
+
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -100,7 +98,7 @@ export const Navigation = () => {
 
                 {/* Dropdown Menu */}
                 <div
-                  className={`absolute top-full left-0 mt-2 w-64 bg-card border border-border shadow-xl transition-all duration-200 z-50 ${
+                  className={`absolute top-full left-0 mt-2 w-72 bg-card border border-border shadow-xl transition-all duration-200 z-50 ${
                     servicesOpen
                       ? "opacity-100 translate-y-0 pointer-events-auto"
                       : "opacity-0 -translate-y-2 pointer-events-none"
@@ -109,7 +107,7 @@ export const Navigation = () => {
                   <Link
                     to="/services"
                     onClick={() => setServicesOpen(false)}
-                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:bg-primary/10 transition-colors border-b border-border"
+                    className="block px-4 py-3 text-base font-semibold uppercase tracking-wider text-primary hover:bg-primary/10 transition-colors border-b border-border"
                   >
                     All Services
                   </Link>
@@ -120,10 +118,10 @@ export const Navigation = () => {
                           key={category.slug}
                           to="/services/dump-trucks-hauling-services"
                           onClick={() => setServicesOpen(false)}
-                          className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
+                          className="flex items-center gap-3 px-4 py-3 text-base font-semibold text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                         >
-                          <div className="w-6 h-6 shrink-0 flex items-center justify-center">
-                            <img src="/assets/badge_icons_1/dumper-truck_12255897.png" alt="Dump Trucks Hauling Services" className="w-6 h-6 object-contain" />
+                          <div className="w-8 h-8 shrink-0 flex items-center justify-center">
+                            <img src="/assets/icons/dump-truck.svg" alt="Dump Trucks Hauling Services" className="w-8 h-8 object-contain" />
                           </div>
                           <span>{category.title}</span>
                         </Link>
@@ -134,17 +132,17 @@ export const Navigation = () => {
                         key={category.slug}
                         to={`/services/${category.slug}`}
                         onClick={() => setServicesOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border last:border-b-0"
+                        className="flex items-center gap-3 px-4 py-3 text-base font-semibold text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border last:border-b-0"
                       >
-                        <div className="w-6 h-6 shrink-0 flex items-center justify-center">
+                        <div className="w-8 h-8 shrink-0 flex items-center justify-center">
                           {category.slug === 'material-delivery' && (
-                            <img src="/assets/badge_icons_1/stones_8654439.png" alt="Material Delivery" className="w-6 h-6 object-contain" />
+                            <img src="/assets/icons/material-delivery.svg" alt="Material Delivery" className="w-8 h-8 object-contain" />
                           )}
                         {category.slug === 'site-services' && (
-                          <img src="/assets/badge_icons_1/dumper-truck_12255897.png" alt="Site Services" className="w-6 h-6 object-contain" />
+                          <img src="/assets/icons/site-services.svg" alt="Site Services" className="w-8 h-8 object-contain" />
                         )}
                         {category.slug === 'emergency-expedited' && (
-                          <img src="/assets/badge_icons_1/badge-emergency-fire-icon-circle-260nw-2195145807.jpg" alt="Emergency Expedited" className="w-6 h-6 object-contain" />
+                          <img src="/assets/icons/emergency-expedited.svg" alt="Emergency Expedited" className="w-8 h-8 object-contain" />
                         )}
                         </div>
                         <span>{category.title}</span>
@@ -154,51 +152,13 @@ export const Navigation = () => {
                 </div>
               </div>
 
-              {/* Why Us Dropdown */}
-              <div ref={whyUsRef} className="relative">
-                <button
-                  onClick={() => setWhyUsOpen(!whyUsOpen)}
-                  className="flex items-center gap-1 text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
-                >
-                  Why Us
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      whyUsOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-
-                {/* Why Us Dropdown Menu */}
-                <div
-                  className={`absolute top-full left-0 mt-2 w-48 bg-card border border-border shadow-xl transition-all duration-200 z-50 ${
-                    whyUsOpen
-                      ? "opacity-100 translate-y-0 pointer-events-auto"
-                      : "opacity-0 -translate-y-2 pointer-events-none"
-                  }`}
-                >
-                  <Link
-                    to="/why-us"
-                    onClick={() => setWhyUsOpen(false)}
-                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
-                  >
-                    Why Choose Us
-                  </Link>
-                  <Link
-                    to="/why-us/about"
-                    onClick={() => setWhyUsOpen(false)}
-                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
-                  >
-                    About Us
-                  </Link>
-                  <Link
-                    to="/why-us/promos"
-                    onClick={() => setWhyUsOpen(false)}
-                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:text-primary hover:bg-primary/5 transition-colors"
-                  >
-                    Promos
-                  </Link>
-                </div>
-              </div>
+              {/* About Us Link */}
+              <Link
+                to="/about"
+                className="text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
+              >
+                About Us
+              </Link>
 
               {navLinks.map((link) => (
                 <Link
@@ -337,28 +297,14 @@ export const Navigation = () => {
               </div>
             </div>
 
-            {/* Mobile Why Us Section */}
+            {/* Mobile About Us Link */}
             <div className="border-t border-border pt-4">
               <Link
-                to="/why-us"
+                to="/about"
                 onClick={() => setIsOpen(false)}
                 className="text-lg font-heading uppercase tracking-wider transition-colors py-2 text-foreground hover:text-primary"
               >
-                Why Choose Us
-              </Link>
-              <Link
-                to="/why-us/about"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 text-lg font-heading uppercase tracking-wider transition-colors py-2 text-foreground hover:text-primary"
-              >
                 About Us
-              </Link>
-              <Link
-                to="/why-us/promos"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 text-lg font-heading uppercase tracking-wider transition-colors py-2 text-primary hover:text-primary"
-              >
-                Promos
               </Link>
             </div>
 

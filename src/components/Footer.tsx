@@ -9,7 +9,7 @@ export const Footer = () => {
 
   const quickLinks = [
     { href: "/services", label: "Services" },
-    { href: "/why-us", label: "Why Choose Us" },
+    { href: "/about", label: "About Us" },
     { href: "/process", label: "How We Work" },
     { href: "/reviews", label: "Reviews" },
     { href: "/contact", label: "Get a Quote" },

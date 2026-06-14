@@ -68,13 +68,13 @@ const ServiceCategoryPage = () => {
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-6">
                 {category.slug === 'material-delivery' && (
-                  <img src="/assets/badge_icons_1/stones_8654439.png" alt="Material Delivery" className="mx-auto w-16 h-16 object-contain" />
+                  <img src="/assets/icons/material-delivery.svg" alt="Material Delivery" className="mx-auto w-16 h-16 object-contain" />
                 )}
                 {category.slug === 'site-services' && (
-                  <img src="/assets/badge_icons_1/dumper-truck_12255897.png" alt="Site Services" className="mx-auto w-16 h-16 object-contain" />
+                  <img src="/assets/icons/site-services.svg" alt="Site Services" className="mx-auto w-16 h-16 object-contain" />
                 )}
                 {category.slug === 'emergency-expedited' && (
-                  <img src="/assets/badge_icons_1/badge-emergency-fire-icon-circle-260nw-2195145807.jpg" alt="Emergency Expedited" className="mx-auto w-16 h-16 object-contain" />
+                  <img src="/assets/icons/emergency-expedited.svg" alt="Emergency Expedited" className="mx-auto w-16 h-16 object-contain" />
                 )}
               </div>
               <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
@@ -276,7 +276,7 @@ const ServiceCategoryPage = () => {
               {categoryServices.map((service) => (
                 <Link
                   key={service.slug}
-                  to={`/services/${service.slug}`}
+                  to={`/services/${slug}/${service.slug}`}
                   className="group bg-card border border-border rounded-xl p-8 hover:shadow-xl transition-all duration-300 hover:border-primary/50"
                 >
                   <div className="flex items-start gap-4">
