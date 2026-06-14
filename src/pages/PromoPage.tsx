@@ -10,8 +10,8 @@ const PromoPage = () => {
   const [copied, setCopied] = useState(false);
   const breadcrumbs = [
     { name: "Home", url: "https://www.fs-expeditedllc.com/" },
-    { name: "Why Choose Us", url: "https://www.fs-expeditedllc.com/why-us" },
-    { name: "Promos", url: "https://www.fs-expeditedllc.com/why-us/promos" }
+    { name: "About Us", url: "https://www.fs-expeditedllc.com/about" },
+    { name: "Promos", url: "https://www.fs-expeditedllc.com/promos" }
   ];
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const PromoPage = () => {
       <SEOHead
         title="10% Off Your First Haul — F&S Expedited LLC Hauling Discount"
         description="Get 10% off your first dump truck hauling service with promo code 1HAUL. Exclusive hauling discounts for new customers. Licensed & insured hauling services in Shelby, NC and surrounding areas."
-        canonical="/why-us/promos"
+        canonical="/promos"
         schema={breadcrumbSchema(breadcrumbs)}
       />
       <Navigation />

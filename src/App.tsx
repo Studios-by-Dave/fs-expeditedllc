@@ -12,7 +12,7 @@ import ServiceCategoryPage from "./pages/ServiceCategoryPage";
 import SubServicePage from "./pages/SubServicePage";
 import DumpTrucksServicesPage from "./pages/DumpTrucksServicesPage";
 import ServiceRouter from "./pages/ServiceRouter";
-import WhyUsPage from "./pages/WhyUsPage";
+// WhyUsPage removed - content merged into AboutPage as collapsible section
 import AboutPage from "./pages/AboutPage";
 import ProcessPage from "./pages/ProcessPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
@@ -47,9 +47,12 @@ export const AppContent = () => (
       <Route path="/services/dump-trucks-hauling-services" element={<DumpTrucksServicesPage />} />
       <Route path="/services/:slug" element={<ServiceRouter />} />
       <Route path="/services/:category/:service" element={<SubServicePage />} />
-      <Route path="/why-us" element={<WhyUsPage />} />
-      <Route path="/why-us/about" element={<AboutPage />} />
-      <Route path="/why-us/promos" element={<PromoPage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/promos" element={<PromoPage />} />
+      {/* Redirects for old Why Us URLs */}
+      <Route path="/why-us" element={<Navigate to="/about" replace />} />
+      <Route path="/why-us/about" element={<Navigate to="/about" replace />} />
+      <Route path="/why-us/promos" element={<Navigate to="/promos" replace />} />
       <Route path="/process" element={<ProcessPage />} />
       <Route path="/reviews" element={<TestimonialsPage />} />
       <Route path="/testimonials" element={<Navigate to="/reviews" replace />} />
