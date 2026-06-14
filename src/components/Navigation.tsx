@@ -334,7 +334,7 @@ export const Navigation = () => {
             <div className="pt-4 border-t border-border flex justify-between gap-3">
               <div className="flex-1 flex flex-col items-center">
                 <span className="text-[9px] font-bold uppercase tracking-tighter text-primary/80 mb-0.5">Call Joe!</span>
-                <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 w-full rounded-lg" asChild>
+                <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 w-full rounded-lg shimmer-effect" asChild>
                   <a href="tel:8653649011" onClick={() => trackEvent('phone_click', { label: 'mobile_nav_primary', number: '8653649011', ...getUtm() })}>
                     <Phone className="w-4 h-4" />
                     (865) 364-9011
@@ -343,7 +343,7 @@ export const Navigation = () => {
               </div>
               <div className="flex-1 flex flex-col items-center">
                 <span className="text-[9px] font-bold uppercase tracking-tighter text-primary/80 mb-0.5">Call Luke!</span>
-                <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 w-full rounded-lg" asChild>
+                <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 w-full rounded-lg shimmer-effect" asChild>
                   <a href="tel:7047518141" onClick={() => trackEvent('phone_click', { label: 'mobile_nav_secondary', number: '7047518141', ...getUtm() })}>
                     <Phone className="w-4 h-4" />
                     (704) 751-8141
