@@ -57,14 +57,14 @@ const PromoPage = () => {
         </BreadcrumbList>
       </Breadcrumb>
       
-      <main className="pt-20 flex items-center justify-center min-h-[calc(100vh-80px)] p-4">
+      <main className="pt-20 flex flex-col items-center justify-center min-h-[calc(100vh-80px)] px-3 sm:px-4 py-4">
         <div className="bg-[#1a1a1a] max-w-[600px] w-full border border-[rgba(255,255,255,0.2)] relative overflow-hidden animate-fade-up">
           
           {/* Top accent bar */}
           <div className="h-1 bg-gradient-to-r from-primary to-primary/80" />
           
           {/* Header */}
-          <div className="p-8 p-[2.5rem] pb-6 border-b border-[rgba(255,255,255,0.2)] relative">
+          <div className="p-5 sm:p-8 md:p-[2.5rem] pb-6 border-b border-[rgba(255,255,255,0.2)] relative">
             {/* Corner tag */}
             <div className="absolute top-4 right-4 bg-primary text-black font-bebas text-sm tracking-[0.08em] px-2.5 py-1">
               New Customer
@@ -87,10 +87,10 @@ const PromoPage = () => {
           </div>
           
           {/* Body */}
-          <div className="p-7 p-[2.5rem]">
+          <div className="p-5 sm:p-7 md:p-[2.5rem]">
             
             {/* Promo code block */}
-            <div className="bg-[#1a1a1a] border border-dashed border-primary p-5 p-[1.25rem_1.5rem] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-7">
+            <div className="bg-[#1a1a1a] border border-dashed border-primary px-4 py-4 sm:px-6 sm:py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-7">
               <div className="text-center sm:text-left">
                 <span className="text-sm font-medium tracking-[0.12em] uppercase text-[#F5F2EC] block mb-1">
                   Promo code
@@ -112,16 +112,16 @@ const PromoPage = () => {
             </div>
             
             {/* Steps */}
-            <div className="grid grid-cols-3 gap-px bg-[rgba(255,255,255,0.2)] border border-[rgba(255,255,255,0.2)] mb-7">
-              <div className="bg-[#1a1a1a] p-4 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-[rgba(255,255,255,0.2)] border border-[rgba(255,255,255,0.2)] mb-7">
+              <div className="bg-[#1a1a1a] p-3 sm:p-4 text-center">
                 <div className="font-bebas text-3xl text-primary leading-none mb-1">01</div>
                 <p className="text-sm text-[#F5F2EC] leading-relaxed font-normal">Call for a free quote</p>
               </div>
-              <div className="bg-[#1a1a1a] p-4 text-center">
+              <div className="bg-[#1a1a1a] p-3 sm:p-4 text-center">
                 <div className="font-bebas text-3xl text-primary leading-none mb-1">02</div>
                 <p className="text-sm text-[#F5F2EC] leading-relaxed font-normal">Mention code at checkout</p>
               </div>
-              <div className="bg-[#1a1a1a] p-4 text-center">
+              <div className="bg-[#1a1a1a] p-3 sm:p-4 text-center">
                 <div className="font-bebas text-3xl text-primary leading-none mb-1">03</div>
                 <p className="text-sm text-[#F5F2EC] leading-relaxed font-normal">We haul, you save 10%</p>
               </div>
@@ -145,7 +145,7 @@ const PromoPage = () => {
           </div>
           
           {/* Footer */}
-          <div className="p-4 p-[1rem_2.5rem] border-t border-[rgba(255,255,255,0.2)] flex items-center justify-between gap-4 flex-wrap">
+          <div className="px-5 py-3 sm:px-8 md:px-[2.5rem] sm:py-4 border-t border-[rgba(255,255,255,0.2)] flex items-center justify-between gap-4 flex-wrap">
             <div className="font-bebas text-xl tracking-[0.05em] text-white">
               F&S Expedited LLC
             </div>
