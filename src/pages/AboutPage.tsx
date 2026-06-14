@@ -93,7 +93,7 @@ const AboutPage = () => {
               <h2 className="text-3xl font-bold text-foreground mb-8 tracking-wider text-center">Meet the Owners</h2>
               
               <div className="mb-8">
-                <img src="/assets/joeandluke1.png" alt="Joe Alrich and Luke Tutterow" className="w-full h-auto rounded-lg border border-border" />
+                <img src="/assets/joe-and-luke-owners.jpg" alt="Joe Alrich and Luke Tutterow — Owners of F&S Expedited LLC" className="w-full max-w-2xl mx-auto h-auto rounded-lg border border-border shadow-lg" />
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">

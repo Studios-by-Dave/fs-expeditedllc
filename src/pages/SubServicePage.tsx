@@ -16,14 +16,16 @@ const SubServicePage = () => {
   const serviceData = services.find(s => s.slug === service);
   const categoryData = serviceCategories.find(c => c.slug === category);
   
+  // Track page view
+  React.useEffect(() => {
+    if (serviceData && categoryData) {
+      trackServicePageView(serviceData.title, categoryData.title);
+    }
+  }, [serviceData, categoryData]);
+
   if (!serviceData || !categoryData) {
     return <div>Service not found</div>;
   }
-
-  // Track page view
-  React.useEffect(() => {
-    trackServicePageView(serviceData.title, categoryData.title);
-  }, [serviceData.title, categoryData.title]);
 
   const breadcrumbs = [
     { name: "Home", url: "https://www.fs-expeditedllc.com/" },
@@ -39,6 +41,31 @@ const SubServicePage = () => {
       breadcrumbSchema(breadcrumbs)
     ]
   };
+
+  const servicePageImages: Record<string, { src: string; alt: string }> = {
+    "site-prep": {
+      src: "/assets/gallery/gravel-jobsite-excavator.jpg",
+      alt: "F&S Expedited LLC site preparation with gravel and excavation equipment",
+    },
+    "debris-removal": {
+      src: "/assets/gallery/excavator-loading-dump-truck.jpg",
+      alt: "Excavator loading F&S Expedited LLC dump truck during debris removal",
+    },
+    "land-clearing": {
+      src: "/assets/gallery/night-material-hauling.jpg",
+      alt: "F&S Expedited LLC night hauling support for site services",
+    },
+    "gravel-delivery": {
+      src: "/assets/gallery/gravel-delivery-rocks-truck.jpg",
+      alt: "F&S Expedited LLC gravel delivery at a construction site",
+    },
+    "aggregate-transport": {
+      src: "/assets/gallery/gravel-driveway-delivery.jpg",
+      alt: "Fresh gravel driveway delivery completed by F&S Expedited LLC",
+    },
+  };
+
+  const servicePageImage = servicePageImages[serviceData.slug];
 
   return (
     <div className="min-h-screen bg-background">
@@ -88,6 +115,21 @@ const SubServicePage = () => {
             </div>
           </div>
         </section>
+
+        {servicePageImage && (
+          <section className="py-12 bg-background">
+            <div className="container mx-auto px-4">
+              <div className="max-w-5xl mx-auto">
+                <img
+                  src={servicePageImage.src}
+                  alt={servicePageImage.alt}
+                  className="w-full h-64 md:h-96 object-cover rounded-xl border border-border shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Service Details */}
         <section className="py-16 bg-background">

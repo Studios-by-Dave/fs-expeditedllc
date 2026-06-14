@@ -37,6 +37,18 @@ const ProcessPage = () => {
       </Breadcrumb>
       <main className="pt-20">
         <Process />
+        <section className="py-12 bg-background">
+          <div className="container px-4">
+            <div className="max-w-5xl mx-auto">
+              <img
+                src="/assets/gallery/papaw-truck-closeup.jpg"
+                alt="F&S Expedited LLC PaPaw dump truck ready for hauling service"
+                className="w-full h-64 md:h-96 object-cover rounded-xl border border-border shadow-lg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
         <CTABanner />
       </main>
       <Footer />
