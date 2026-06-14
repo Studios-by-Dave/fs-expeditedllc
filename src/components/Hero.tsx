@@ -8,7 +8,7 @@ import flagVideo from "@/assets/flag-waving.mp4";
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Images — dual layer with crossfade */}
       <div className="absolute inset-0">
         <img 
           src="/assets/optimized/hero-truck-1600.webp"
@@ -23,6 +23,12 @@ export const Hero = () => {
               e.currentTarget.src = "/src/assets/hero-truck.jpg";
             };
           }}
+        />
+        <img
+          src="/assets/gallery/night-truck-jobsite.jpg"
+          alt="F&S Expedited LLC dump truck and pickup at night jobsite"
+          className="absolute inset-0 w-full h-full object-cover animate-hero-crossfade"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />

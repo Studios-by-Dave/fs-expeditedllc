@@ -226,6 +226,23 @@
     }
   }
 
+  /* Hero background crossfade animation */
+  .animate-hero-crossfade {
+    animation: hero-crossfade 10s ease-in-out infinite;
+  }
+
+  @keyframes hero-crossfade {
+    0%, 40% {
+      opacity: 0;
+    }
+    50%, 90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
   /* Blog glow text effect - yellow with darker outline */
   .blog-glow-text {
     color: hsl(60 100% 50%);
