@@ -29,6 +29,7 @@ import BlogArticlePage2 from "./pages/BlogArticlePage2";
 import BlogArticlePage3 from "./pages/BlogArticlePage3";
 import BlogArticlePage4 from "./pages/BlogArticlePage4";
 import BlogArticlePage5 from "./pages/BlogArticlePage5";
+import BlogArticlePage6 from "./pages/BlogArticlePage6";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
 import PromoPage from "./pages/PromoPage";
@@ -62,6 +63,7 @@ export const AppContent = () => (
       <Route path="/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina" element={<BlogArticlePage3 />} />
       <Route path="/blog/why-fs-expedited-reliable-dump-truck-services-shelby-nc" element={<BlogArticlePage4 />} />
       <Route path="/blog/material-delivery-guide-shelby-nc-construction-projects" element={<BlogArticlePage5 />} />
+      <Route path="/blog/why-north-carolina-calls-us-when-the-job-cant-wait" element={<BlogArticlePage6 />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/service-area" element={<ServiceAreaPage />} />

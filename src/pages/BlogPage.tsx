@@ -18,6 +18,17 @@ const BlogPage = () => {
   const blogPosts = [
     {
       id: 1,
+      title: "Why North Carolina Calls Us When the Job Can't Wait — F&S Expedited LLC",
+      excerpt: "Discover why North Carolina job sites trust F&S Expedited LLC for same-day dispatch, emergency hauling, and dependable expedited services that keep projects moving.",
+      date: "June 17, 2026",
+      readTime: "8 min read",
+      icon: Truck,
+      category: "North Carolina",
+      fullContent: true,
+      link: "/blog/why-north-carolina-calls-us-when-the-job-cant-wait"
+    },
+    {
+      id: 2,
       title: "The Role of Dump Trucks in Expedited Local Hauling Projects Around Shelby & Charlotte NC",
       excerpt: "Discover how dump trucks are essential for expedited local hauling projects in Shelby and Charlotte NC, serving construction sites and material delivery needs across the region.",
       date: "May 23, 2026",
@@ -28,7 +39,7 @@ const BlogPage = () => {
       link: "/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc"
     },
     {
-      id: 2,
+      id: 3,
       title: "Why Manufacturers Choose F&S Expedited Trucking for Emergency Freight Solutions",
       excerpt: "Discover why manufacturers across North Carolina trust F&S Expedited Trucking for reliable emergency freight solutions that keep production lines moving.",
       date: "May 23, 2026",
@@ -110,7 +121,7 @@ const BlogPage = () => {
           <div className="container px-4">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground tracking-wider mb-6 blog-glow-text">
-                F&S INDUSTRY NEWS
+                F&S Expedited News
               </h1>
               <p className="text-lg text-muted-foreground">
                 Expert insights, tips, and industry news from the F&S Expedited LLC team
@@ -126,44 +137,38 @@ const BlogPage = () => {
               {blogPosts.map((post) => {
                 const Icon = post.icon;
                 return (
-                  <Card key={post.id} className="border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
-                    <CardHeader>
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="text-sm font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1.5 rounded">
-                          {post.category}
-                        </span>
-                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                          <Calendar className="w-4 h-4" />
-                          {post.date}
+                  <Link key={post.id} to={post.link} className="group block">
+                    <Card className="border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg group-hover:-translate-y-0.5">
+                      <CardHeader>
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-sm font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1.5 rounded">
+                            {post.category}
+                          </span>
+                          <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4" />
+                            {post.date}
+                          </div>
                         </div>
-                      </div>
-                      <CardTitle className="text-2xl font-bold text-foreground blog-glow-text">
-                        {post.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-base text-muted-foreground mb-4 leading-relaxed">
-                        {post.excerpt}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                          <Clock className="w-4 h-4" />
-                          {post.readTime}
-                        </div>
-                        {post.fullContent && post.link ? (
-                          <Button variant="ghost" size="sm" className="text-primary hover:text-primary/70" asChild>
-                            <Link to={post.link}>
-                              Read More
-                            </Link>
-                          </Button>
-                        ) : (
-                          <Button variant="ghost" size="sm" className="text-primary hover:text-primary/70">
+                        <CardTitle className="text-2xl font-bold text-foreground blog-glow-text group-hover:text-primary transition-colors duration-300">
+                          {post.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-base text-muted-foreground mb-4 leading-relaxed">
+                          {post.excerpt}
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                            <Clock className="w-4 h-4" />
+                            {post.readTime}
+                          </div>
+                          <span className="text-primary text-sm font-semibold uppercase tracking-wider opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                             Read More
-                          </Button>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
+                          </span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 );
               })}
             </div>
