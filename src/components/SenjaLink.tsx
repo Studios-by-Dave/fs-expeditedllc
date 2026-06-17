@@ -27,27 +27,16 @@ export const SenjaLink = () => {
           
           {/* Senja Review Form iframe */}
           <div className="w-full">
-            <script 
-              type="text/javascript" 
-              src="https://widget.senja.io/js/iframeResizer.min.js"
-              async
-            />
             <iframe 
               id="senja-collector-iframe" 
               src="https://senja.io/p/fs-expedited-llc/r/N78S6v?mode=embed&nostyle=true" 
               allow="camera;microphone" 
-              title="Senja form" 
-              frameBorder="0" 
-              scrolling="auto" 
+              title="Senja customer review form for F&S Expedited LLC" 
               width="100%" 
               height="700"
+              loading="lazy"
               className="rounded-lg border border-border"
-            />
-            <script 
-              type="text/javascript"
-              dangerouslySetInnerHTML={{
-                __html: `iFrameResize({log: false, checkOrigin: false}, "#senja-collector-iframe");`
-              }}
+              style={{ border: 'none' }}
             />
           </div>
           
