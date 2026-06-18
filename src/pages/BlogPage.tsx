@@ -4,7 +4,7 @@ import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbP
 import { Footer } from "@/components/Footer";
 import { BlogPreview } from "@/components/BlogPreview";
 import { breadcrumbSchema, localBusinessSchema } from "@/data/seo-schemas";
-import { ChevronRight, Calendar, Clock, Truck, Wrench, AlertTriangle, Shield } from "lucide-react";
+import { ChevronRight, Calendar, Clock, Truck, Wrench, AlertTriangle, Shield, Phone } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";

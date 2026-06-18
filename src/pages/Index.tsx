@@ -8,6 +8,7 @@ import { ServiceArea } from "@/components/ServiceArea";
 import { Process } from "@/components/Process";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { ChevronRight } from "lucide-react";
 import { localBusinessSchema, organizationSchema, websiteSchema, breadcrumbSchema } from "@/data/seo-schemas";
 
 const Index = () => {
