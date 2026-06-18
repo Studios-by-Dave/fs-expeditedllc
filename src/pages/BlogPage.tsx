@@ -17,7 +17,29 @@ const BlogPage = () => {
 
   const blogPosts = [
     {
-      id: 1,
+      id: 8,
+      title: "Soil Delivery vs. Gravel Delivery: Which Material Does Your Project Need?",
+      excerpt: "Compare soil and gravel delivery for your next project. Learn when to use soil, when to use gravel, and how F&S Expedited can help with both.",
+      date: "June 18, 2026",
+      readTime: "7 min read",
+      icon: Truck,
+      category: "Material Delivery",
+      fullContent: true,
+      link: "/blog/soil-delivery-vs-gravel-delivery-which-material-does-your-project-need"
+    },
+    {
+      id: 7,
+      title: "Why Topsoil Is the Secret to a Healthier, Greener Yard",
+      excerpt: "Learn why quality topsoil is the foundation for a healthy lawn. Discover the benefits of topsoil and how expedited delivery can help your landscaping project.",
+      date: "June 18, 2026",
+      readTime: "6 min read",
+      icon: Truck,
+      category: "Topsoil",
+      fullContent: true,
+      link: "/blog/why-topsoil-secret-healthier-greener-yard"
+    },
+    {
+      id: 6,
       title: "Why North Carolina Calls Us When the Job Can't Wait — F&S Expedited LLC",
       excerpt: "Discover why North Carolina job sites trust F&S Expedited LLC for same-day dispatch, emergency hauling, and dependable expedited services that keep projects moving.",
       date: "June 17, 2026",
@@ -28,7 +50,7 @@ const BlogPage = () => {
       link: "/blog/why-north-carolina-calls-us-when-the-job-cant-wait"
     },
     {
-      id: 2,
+      id: 5,
       title: "The Role of Dump Trucks in Expedited Local Hauling Projects Around Shelby & Charlotte NC",
       excerpt: "Discover how dump trucks are essential for expedited local hauling projects in Shelby and Charlotte NC, serving construction sites and material delivery needs across the region.",
       date: "May 23, 2026",
@@ -39,7 +61,7 @@ const BlogPage = () => {
       link: "/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc"
     },
     {
-      id: 3,
+      id: 4,
       title: "Why Manufacturers Choose F&S Expedited Trucking for Emergency Freight Solutions",
       excerpt: "Discover why manufacturers across North Carolina trust F&S Expedited Trucking for reliable emergency freight solutions that keep production lines moving.",
       date: "May 23, 2026",
@@ -61,7 +83,7 @@ const BlogPage = () => {
       link: "/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina"
     },
     {
-      id: 4,
+      id: 2,
       title: "Why F&S Expedited is Your Go-To Choice for Reliable Dump Truck Services in Shelby, NC",
       excerpt: "Discover why F&S Expedited stands out as the premier choice for professional dump truck services in Shelby, NC. Fast, reliable, and fully licensed.",
       date: "May 29, 2026",
@@ -72,7 +94,7 @@ const BlogPage = () => {
       link: "/blog/why-fs-expedited-reliable-dump-truck-services-shelby-nc"
     },
     {
-      id: 5,
+      id: 1,
       title: "Complete Material Delivery Guide for Construction Projects in Shelby, NC",
       excerpt: "Your comprehensive guide to material delivery services in Shelby, NC. Learn about gravel, sand, soil delivery and how F&S Expedited keeps your construction projects on schedule.",
       date: "May 31, 2026",
@@ -188,9 +210,20 @@ const BlogPage = () => {
               <p className="text-muted-foreground mb-6">
                 Contact F&S Expedited LLC for professional dump truck hauling and expedited services in Shelby, NC and surrounding areas.
               </p>
-              <Button size="lg" asChild>
-                <a href="/contact">Get Free Quote</a>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+                <Button size="lg" asChild>
+                  <a href="/contact">Get Free Quote</a>
+                </Button>
+                <div className="flex flex-col items-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 animate-pulse">Call Joe!</span>
+                  <Button size="lg" variant="outline" asChild>
+                    <a href="tel:8653649011">
+                      <Phone className="w-4 h-4 mr-2 text-green-500" />
+                      (865) 364-9011
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </section>

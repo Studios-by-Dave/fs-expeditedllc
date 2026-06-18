@@ -335,16 +335,19 @@ const BlogArticlePage3 = () => {
               <p className="text-muted-foreground mb-6">
                 Partner with F&S Expedited LLC for reliable expedited dump truck services that keep your North Carolina projects on track.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
                 <Button size="lg" asChild>
                   <a href="/contact">Get Free Quote</a>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <a href="tel:8653649011">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call (865) 364-9011
-                  </a>
-                </Button>
+                <div className="flex flex-col items-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 animate-pulse">Call Joe!</span>
+                  <Button size="lg" variant="outline" asChild>
+                    <a href="tel:8653649011">
+                      <Phone className="w-4 h-4 mr-2 text-green-500" />
+                      (865) 364-9011
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

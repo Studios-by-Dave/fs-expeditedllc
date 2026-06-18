@@ -30,6 +30,8 @@ import BlogArticlePage3 from "./pages/BlogArticlePage3";
 import BlogArticlePage4 from "./pages/BlogArticlePage4";
 import BlogArticlePage5 from "./pages/BlogArticlePage5";
 import BlogArticlePage6 from "./pages/BlogArticlePage6";
+import BlogArticlePage7 from "./pages/BlogArticlePage7";
+import BlogArticlePage8 from "./pages/BlogArticlePage8";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
 import PromoPage from "./pages/PromoPage";
@@ -64,6 +66,8 @@ export const AppContent = () => (
       <Route path="/blog/why-fs-expedited-reliable-dump-truck-services-shelby-nc" element={<BlogArticlePage4 />} />
       <Route path="/blog/material-delivery-guide-shelby-nc-construction-projects" element={<BlogArticlePage5 />} />
       <Route path="/blog/why-north-carolina-calls-us-when-the-job-cant-wait" element={<BlogArticlePage6 />} />
+      <Route path="/blog/why-topsoil-secret-healthier-greener-yard" element={<BlogArticlePage7 />} />
+      <Route path="/blog/soil-delivery-vs-gravel-delivery-which-material-does-your-project-need" element={<BlogArticlePage8 />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/service-area" element={<ServiceAreaPage />} />

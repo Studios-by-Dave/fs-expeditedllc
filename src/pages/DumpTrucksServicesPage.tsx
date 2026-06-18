@@ -101,15 +101,27 @@ const DumpTrucksServicesPage = () => {
               <p className="text-xl text-muted-foreground mb-8">
                 Professional dump truck hauling for construction debris, gravel delivery, fill dirt, and site-to-site material transport. Fast, reliable service within 1-hour of Shelby, NC.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:8653649011">
-                  <button className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-                    <Phone className="inline w-4 h-4 mr-2" />
-                    Call (865) 364-9011
-                  </button>
-                </a>
+              <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+                <div className="flex flex-col items-center">
+                  <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 animate-pulse">Call Joe!</span>
+                  <a href="tel:8653649011">
+                    <button className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                      <Phone className="inline w-4 h-4 mr-2" />
+                      (865) 364-9011
+                    </button>
+                  </a>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 animate-pulse">Call Luke!</span>
+                  <a href="tel:7047518141">
+                    <button className="bg-secondary text-secondary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors">
+                      <Phone className="inline w-4 h-4 mr-2" />
+                      (704) 751-8141
+                    </button>
+                  </a>
+                </div>
                 <Link to="/contact">
-                  <button className="bg-secondary text-secondary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors">
+                  <button className="bg-background border-2 border-primary text-primary px-8 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors mt-6 sm:mt-0">
                     Get Free Quote
                   </button>
                 </Link>
@@ -359,19 +371,25 @@ const DumpTrucksServicesPage = () => {
                 <p className="text-lg text-muted-foreground mb-8">
                   Call Joe or Luke for a free quote on your dump truck hauling needs. Fast, reliable service for construction, landscaping, and site projects.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="tel:8653649011">
-                    <button className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-                      <Phone className="inline w-4 h-4 mr-2" />
-                      Call (865) 364-9011
-                    </button>
-                  </a>
-                  <a href="tel:17047518141">
-                    <button className="bg-secondary text-secondary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors">
-                      <Phone className="inline w-4 h-4 mr-2" />
-                      Call (704) 751-8141
-                    </button>
-                  </a>
+                <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+                  <div className="flex flex-col items-center">
+                    <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 animate-pulse">Call Joe!</span>
+                    <a href="tel:8653649011">
+                      <button className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                        <Phone className="inline w-4 h-4 mr-2" />
+                        (865) 364-9011
+                      </button>
+                    </a>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 animate-pulse">Call Luke!</span>
+                    <a href="tel:7047518141">
+                      <button className="bg-secondary text-secondary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-secondary/90 transition-colors">
+                        <Phone className="inline w-4 h-4 mr-2" />
+                        (704) 751-8141
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

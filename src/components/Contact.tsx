@@ -19,19 +19,25 @@ export const Contact = () => {
           </p>
 
           {/* Phone CTAs */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl" asChild>
-              <a href="tel:8653649011" onClick={() => trackPhoneClick('8653649011', 'contact_primary')} className="text-xl" title="Joe">
-                <Phone className="w-6 h-6 text-green-500" />
-                (865) 364-9011
-              </a>
-            </Button>
-            <Button variant="hero" size="xl" asChild>
-              <a href="tel:7047518141" onClick={() => trackPhoneClick('7047518141', 'contact_secondary')} className="text-xl" title="Luke">
-                <Phone className="w-6 h-6 text-green-500" />
-                (704) 751-8141
-              </a>
-            </Button>
+          <div className="mt-10 flex flex-col sm:flex-row gap-8 justify-center items-center">
+            <div className="flex flex-col items-center">
+              <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 animate-pulse">Call Joe!</span>
+              <Button variant="hero" size="xl" asChild>
+                <a href="tel:8653649011" onClick={() => trackPhoneClick('8653649011', 'contact_primary')} className="text-xl" title="Joe">
+                  <Phone className="w-6 h-6 text-green-500" />
+                  (865) 364-9011
+                </a>
+              </Button>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2 animate-pulse">Call Luke!</span>
+              <Button variant="hero" size="xl" asChild>
+                <a href="tel:7047518141" onClick={() => trackPhoneClick('7047518141', 'contact_secondary')} className="text-xl" title="Luke">
+                  <Phone className="w-6 h-6 text-green-500" />
+                  (704) 751-8141
+                </a>
+              </Button>
+            </div>
           </div>
 
           {/* Info row */}

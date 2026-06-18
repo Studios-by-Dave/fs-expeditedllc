@@ -95,26 +95,31 @@ const AboutPage = () => {
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl font-bold text-foreground mb-8 tracking-wider text-center">Meet the Owners</h2>
               
-              <div className="mb-8">
-                <img src="/assets/joe-and-luke-owners.jpg" alt="Joe Alrich and Luke Tutterow — Owners of F&S Expedited LLC" className="w-full max-w-2xl mx-auto h-auto rounded-lg border border-border shadow-lg" />
+              <div className="mb-8 text-center">
+                <img 
+                  src="/assets/joe-and-luke-owners.jpg" 
+                  alt="Luke Tutterow (Left) and Joe Alrich (Right) — Owners of F&S Expedited LLC" 
+                  className="w-full max-w-2xl mx-auto h-auto rounded-lg border border-border shadow-lg mb-2" 
+                />
+                <p className="text-sm text-muted-foreground italic font-sans italic">Luke Tutterow (Left) & Joe Alrich (Right)</p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
-                {/* Joe Alrich */}
-                <div className="bg-card p-6 rounded-lg border border-border">
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Joe Alrich</h3>
-                  <p className="text-sm text-primary font-medium mb-2">Owner</p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Bringing years of industry expertise and operational leadership. Joe's dedication to customer satisfaction and efficient operations drives F&S Expedited LLC's success.
-                  </p>
-                </div>
-
                 {/* Luke Tutterow */}
                 <div className="bg-card p-6 rounded-lg border border-border">
                   <h3 className="text-xl font-semibold text-foreground mb-2">Luke Tutterow</h3>
                   <p className="text-sm text-primary font-medium mb-2">Co-owner</p>
                   <p className="text-muted-foreground leading-relaxed">
                     Co-owner with extensive experience in construction and hauling. Luke's hands-on approach and commitment to quality service ensure every project meets the highest standards.
+                  </p>
+                </div>
+
+                {/* Joe Alrich */}
+                <div className="bg-card p-6 rounded-lg border border-border">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Joe Alrich</h3>
+                  <p className="text-sm text-primary font-medium mb-2">Owner</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Bringing years of industry expertise and operational leadership. Joe's dedication to customer satisfaction and efficient operations drives F&S Expedited LLC's success.
                   </p>
                 </div>
               </div>
@@ -159,64 +164,81 @@ const AboutPage = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-foreground mb-8 tracking-wider text-center">What Sets Us Apart</h2>
               
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Truck className="w-6 h-6 text-primary" />
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Truck className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">Modern Fleet</h3>
+                      <p className="text-muted-foreground">Well-maintained dump trucks and equipment ready for any job</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Modern Fleet</h3>
-                    <p className="text-muted-foreground">Well-maintained dump trucks and equipment ready for any job</p>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">Fast Response</h3>
+                      <p className="text-muted-foreground">Same-day and next-day delivery options for urgent projects</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Shield className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">Fully Licensed & Insured</h3>
+                      <p className="text-muted-foreground">Complete peace of mind with proper credentials and coverage</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Users className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">Experienced Team</h3>
+                      <p className="text-muted-foreground">Skilled operators who respect your property and timeline</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Award className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">Competitive Rates</h3>
+                      <p className="text-muted-foreground">Fair pricing with no hidden fees or surprises</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Target className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">Customer Focus</h3>
+                      <p className="text-muted-foreground">Your satisfaction is our top priority on every project</p>
+                    </div>
                   </div>
                 </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Fast Response</h3>
-                    <p className="text-muted-foreground">Same-day and next-day delivery options for urgent projects</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Fully Licensed & Insured</h3>
-                    <p className="text-muted-foreground">Complete peace of mind with proper credentials and coverage</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Users className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Experienced Team</h3>
-                    <p className="text-muted-foreground">Skilled operators who respect your property and timeline</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Award className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Competitive Rates</h3>
-                    <p className="text-muted-foreground">Fair pricing with no hidden fees or surprises</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Target className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Customer Focus</h3>
-                    <p className="text-muted-foreground">Your satisfaction is our top priority on every project</p>
+
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                  <div className="relative bg-card border border-border rounded-xl p-4 overflow-hidden">
+                    <img 
+                      src="/assets/fs_dog_1.png" 
+                      alt="F&S Expedited Mascot - Reliable Hauling Dog" 
+                      className="w-full h-auto rounded-lg shadow-sm hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="mt-4 text-center">
+                      <p className="text-sm font-medium text-primary uppercase tracking-[0.2em] mb-1">Our Mascot</p>
+                      <p className="text-xs text-muted-foreground">Ready for the heaviest loads!</p>
+                    </div>
                   </div>
                 </div>
               </div>

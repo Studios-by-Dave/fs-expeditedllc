@@ -211,18 +211,24 @@ export const Navigation = () => {
           }`}
         >
           <div className="container mx-auto px-4 py-2 flex items-center justify-center gap-8">
-            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-xl" asChild>
-              <a href="tel:8653649011" onClick={() => trackPhoneClick('8653649011', 'nav_call_joe')}>
-                <Phone className="w-5 h-5 text-green-500" />
-                Call Joe! (865) 364-9011
-              </a>
-            </Button>
-            <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-xl" asChild>
-              <a href="tel:7047518141" onClick={() => trackPhoneClick('7047518141', 'nav_call_luke')}>
-                <Phone className="w-5 h-5 text-green-500" />
-                Call Luke! (704) 751-8141
-              </a>
-            </Button>
+            <div className="flex flex-col items-center">
+              <span className="text-[10px] font-bold uppercase tracking-tighter text-primary/80 mb-0.5 animate-pulse">Call Joe!</span>
+              <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-xl" asChild>
+                <a href="tel:8653649011" onClick={() => trackPhoneClick('8653649011', 'nav_call_joe')}>
+                  <Phone className="w-5 h-5 text-green-500" />
+                  (865) 364-9011
+                </a>
+              </Button>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-[10px] font-bold uppercase tracking-tighter text-primary/80 mb-0.5 animate-pulse">Call Luke!</span>
+              <Button variant="outline" size="lg" className="bg-background text-primary border-2 border-primary hover:bg-background/80 hover:text-primary text-base px-8 py-5 shimmer-effect rounded-xl" asChild>
+                <a href="tel:7047518141" onClick={() => trackPhoneClick('7047518141', 'nav_call_luke')}>
+                  <Phone className="w-5 h-5 text-green-500" />
+                  (704) 751-8141
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -326,18 +332,24 @@ export const Navigation = () => {
             ))}
 
             <div className="pt-4 border-t border-border flex justify-between gap-3">
-              <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 flex-1 max-w-[48%] rounded-lg" asChild>
-                <a href="tel:8653649011" onClick={() => trackEvent('phone_click', { label: 'mobile_nav_primary', number: '8653649011', ...getUtm() })}>
-                  <Phone className="w-4 h-4" />
-                  (865) 364-9011
-                </a>
-              </Button>
-              <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 flex-1 max-w-[48%] rounded-lg" asChild>
-                <a href="tel:7047518141" onClick={() => trackEvent('phone_click', { label: 'mobile_nav_secondary', number: '7047518141', ...getUtm() })}>
-                  <Phone className="w-4 h-4" />
-                  (704) 751-8141
-                </a>
-              </Button>
+              <div className="flex-1 flex flex-col items-center">
+                <span className="text-[9px] font-bold uppercase tracking-tighter text-primary/80 mb-0.5">Call Joe!</span>
+                <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 w-full rounded-lg" asChild>
+                  <a href="tel:8653649011" onClick={() => trackEvent('phone_click', { label: 'mobile_nav_primary', number: '8653649011', ...getUtm() })}>
+                    <Phone className="w-4 h-4" />
+                    (865) 364-9011
+                  </a>
+                </Button>
+              </div>
+              <div className="flex-1 flex flex-col items-center">
+                <span className="text-[9px] font-bold uppercase tracking-tighter text-primary/80 mb-0.5">Call Luke!</span>
+                <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 w-full rounded-lg" asChild>
+                  <a href="tel:7047518141" onClick={() => trackEvent('phone_click', { label: 'mobile_nav_secondary', number: '7047518141', ...getUtm() })}>
+                    <Phone className="w-4 h-4" />
+                    (704) 751-8141
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

@@ -97,19 +97,25 @@ const ServiceDetailPage = () => {
                 {service.longDescription}
               </p>
 
-              <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" asChild>
-                  <a href="tel:8653649011">
-                    <Phone className="w-5 h-5" />
-                    (865) 364-9011
-                  </a>
-                </Button>
-                <Button variant="hero" asChild>
-                  <a href="tel:7047518141">
-                    <Phone className="w-5 h-5" />
-                    (704) 751-8141
-                  </a>
-                </Button>
+              <div className="mt-10 flex flex-col sm:flex-row gap-8 items-center">
+                <div className="flex flex-col items-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 animate-pulse">Call Joe!</span>
+                  <Button variant="hero" asChild>
+                    <a href="tel:8653649011" onClick={() => trackPhoneClick('8653649011', `service_detail_${service.slug}_primary`)}>
+                      <Phone className="w-5 h-5 text-green-500" />
+                      (865) 364-9011
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 animate-pulse">Call Luke!</span>
+                  <Button variant="hero" asChild>
+                    <a href="tel:7047518141" onClick={() => trackPhoneClick('7047518141', `service_detail_${service.slug}_secondary`)}>
+                      <Phone className="w-5 h-5 text-green-500" />
+                      (704) 751-8141
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

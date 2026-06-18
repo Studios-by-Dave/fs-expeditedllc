@@ -128,19 +128,25 @@ const PromoPage = () => {
             </div>
             
             {/* CTA buttons */}
-            <div className="flex flex-col gap-2.5">
-              <a 
-                href="tel:8653649011" 
-                className="block text-center p-3.5 font-sans text-lg font-medium tracking-[0.01em] no-underline transition-opacity transform active:scale-[0.98] bg-white text-black hover:opacity-85"
-              >
-                📞 Call Joe — (865) 364-9011
-              </a>
-              <a 
-                href="tel:7047518141" 
-                className="block text-center p-3.5 font-sans text-lg font-medium tracking-[0.01em] no-underline transition-all transform active:scale-[0.98] bg-transparent text-white border border-[rgba(255,255,255,0.3)] hover:border-[rgba(255,255,255,0.5)]"
-              >
-                Call Luke — (704) 751-8141
-              </a>
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col items-center">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1">Call Joe!</span>
+                <a 
+                  href="tel:8653649011" 
+                  className="w-full text-center p-3.5 font-sans text-lg font-medium tracking-[0.01em] no-underline transition-opacity transform active:scale-[0.98] bg-white text-black hover:opacity-85"
+                >
+                  (865) 364-9011
+                </a>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1">Call Luke!</span>
+                <a 
+                  href="tel:7047518141" 
+                  className="w-full text-center p-3.5 font-sans text-lg font-medium tracking-[0.01em] no-underline transition-all transform active:scale-[0.98] bg-transparent text-white border border-[rgba(255,255,255,0.3)] hover:border-[rgba(255,255,255,0.5)]"
+                >
+                  (704) 751-8141
+                </a>
+              </div>
             </div>
           </div>
           

@@ -99,18 +99,21 @@ const SubServicePage = () => {
               </p>
 
               {/* Quick CTA */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-8 items-center">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/contact" onClick={() => trackGetQuoteClick('Get Free Quote', 'service_page_hero')}>
                     Get Free Quote
                   </Link>
                 </Button>
-                <Button variant="outline" size="xl" asChild>
-                  <a href="tel:8653649011" onClick={() => trackPhoneClick('8653649011', 'service_page_hero')}>
-                    <Phone className="w-5 h-5" />
-                    Call (865) 364-9011
-                  </a>
-                </Button>
+                <div className="flex flex-col items-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 animate-pulse">Call Joe!</span>
+                  <Button variant="outline" size="xl" asChild>
+                    <a href="tel:8653649011" onClick={() => trackPhoneClick('8653649011', 'service_page_hero')}>
+                      <Phone className="w-5 h-5 text-green-500" />
+                      (865) 364-9011
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -193,18 +196,21 @@ const SubServicePage = () => {
                 Contact us today for a free estimate on your {serviceData.title.toLowerCase()} project.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/contact" onClick={() => trackGetQuoteClick('Get Free Quote', 'service_page_cta')}>
                     Get Free Quote
                   </Link>
                 </Button>
-                <Button variant="outline" size="xl" asChild>
-                  <a href="tel:8653649011" onClick={() => trackPhoneClick('8653649011', 'service_page_cta')}>
-                    <Phone className="w-5 h-5" />
-                    Call (865) 364-9011
-                  </a>
-                </Button>
+                <div className="flex flex-col items-center">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 animate-pulse">Call Joe!</span>
+                  <Button variant="outline" size="xl" asChild>
+                    <a href="tel:8653649011" onClick={() => trackPhoneClick('8653649011', 'service_page_cta')}>
+                      <Phone className="w-5 h-5 text-green-500" />
+                      (865) 364-9011
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

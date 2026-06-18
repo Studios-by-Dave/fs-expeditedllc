@@ -296,14 +296,18 @@ const BlogArticlePage5 = () => {
                   Contact F&S Expedited LLC today for professional material delivery services in Shelby, NC and surrounding areas. Get your construction project moving with reliable gravel, sand, and soil delivery.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                  <Button size="lg" className="flex items-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    Call (865) 364-9011
-                  </Button>
-                  <Button size="lg" variant="outline" className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    Get a Free Quote
+                <div className="flex flex-col sm:flex-row gap-8 mb-6 items-center">
+                  <div className="flex flex-col items-center">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 animate-pulse">Call Joe!</span>
+                    <Button size="lg" className="flex items-center gap-2" asChild>
+                      <a href="tel:8653649011">
+                        <Phone className="w-4 h-4 text-green-500" />
+                        (865) 364-9011
+                      </a>
+                    </Button>
+                  </div>
+                  <Button size="lg" variant="outline" className="flex items-center gap-2" asChild>
+                    <a href="/contact">Get a Free Quote</a>
                   </Button>
                 </div>
                 

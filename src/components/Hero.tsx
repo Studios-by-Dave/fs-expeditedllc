@@ -73,19 +73,25 @@ export const Hero = () => {
           </p>
 
           {/* CTAs */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-5 opacity-0 animate-fade-up animation-delay-450">
-            <Button variant="hero" size="lg" className="text-lg px-10 py-6 [&_svg]:size-5" asChild>
-              <a href="tel:8653649011" onClick={() => trackEvent('phone_click', { label: 'hero_primary', number: '8653649011', ...getUtm() })}>
-                <Phone className="w-5 h-5" />
-                (865) 364-9011
-              </a>
-            </Button>
-            <Button variant="hero" size="lg" className="text-lg px-10 py-6 [&_svg]:size-5" asChild>
-              <a href="tel:7047518141" onClick={() => trackEvent('phone_click', { label: 'hero_secondary', number: '7047518141', ...getUtm() })}>
-                <Phone className="w-5 h-5" />
-                (704) 751-8141
-              </a>
-            </Button>
+          <div className="mt-10 flex flex-col sm:flex-row gap-8 opacity-0 animate-fade-up animation-delay-450 items-center sm:items-start">
+            <div className="flex flex-col items-center">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 animate-pulse">Call Joe!</span>
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6 [&_svg]:size-5 min-w-[200px]" asChild>
+                <a href="tel:8653649011" onClick={() => trackEvent('phone_click', { label: 'hero_primary', number: '8653649011', ...getUtm() })}>
+                  <Phone className="w-5 h-5 text-green-500" />
+                  (865) 364-9011
+                </a>
+              </Button>
+            </div>
+            <div className="flex flex-col items-center">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 animate-pulse">Call Luke!</span>
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6 [&_svg]:size-5 min-w-[200px]" asChild>
+                <a href="tel:7047518141" onClick={() => trackEvent('phone_click', { label: 'hero_secondary', number: '7047518141', ...getUtm() })}>
+                  <Phone className="w-5 h-5 text-green-500" />
+                  (704) 751-8141
+                </a>
+              </Button>
+            </div>
           </div>
 
           {/* Trust Indicators */}

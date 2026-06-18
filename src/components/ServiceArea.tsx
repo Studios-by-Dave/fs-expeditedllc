@@ -51,6 +51,19 @@ export const ServiceArea = () => {
                     <stop offset="66%" stopColor="#F59E0B" />
                     <stop offset="100%" stopColor="#EF4444" />
                   </linearGradient>
+                  
+                  {/* Terrain/Topographic Pattern */}
+                  <pattern id="terrain-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                    {/* Subtle topographic lines */}
+                    <path d="M10,20 Q30,15 50,30 T90,20" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-primary/10" />
+                    <path d="M5,40 Q25,35 45,50 T85,40" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-secondary/10" />
+                    <path d="M15,60 Q35,55 55,70 T95,60" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-primary/5" />
+                    <path d="M0,80 Q20,75 40,90 T80,80" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-secondary/5" />
+                    {/* Tiny dots for texture */}
+                    <circle cx="20" cy="20" r="0.5" fill="currentColor" className="text-primary/20" />
+                    <circle cx="70" cy="50" r="0.5" fill="currentColor" className="text-secondary/20" />
+                  </pattern>
+
                   <pattern id="texture1" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
                     <rect width="40" height="40" fill="#FEF3C7" opacity="0.1"/>
                     <circle cx="10" cy="10" r="2" fill="#3B82F6" opacity="0.1"/>
@@ -59,6 +72,37 @@ export const ServiceArea = () => {
                     <circle cx="35" cy="5" r="1.5" fill="#EF4444" opacity="0.1"/>
                   </pattern>
                 </defs>
+                
+                {/* Background Terrain Layer (Clipped to Radius) */}
+                <g clipPath="url(#radius-clip)">
+                  <circle
+                    cx="200"
+                    cy="190"
+                    r="140"
+                    fill="url(#terrain-pattern)"
+                    opacity="0.4"
+                  />
+                  
+                  {/* Appalachian-style mountain ridges to suggest Western NC terrain */}
+                  {/* Western Ridges */}
+                  <path d="M40,150 Q70,120 100,160 T160,140" fill="none" stroke="currentColor" strokeWidth="1" className="text-primary/15" />
+                  <path d="M50,170 Q80,140 110,180 T170,160" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-secondary/15" />
+                  
+                  {/* Peaks */}
+                  <path d="M80,210 L105,160 L130,210" fill="none" stroke="currentColor" strokeWidth="1.2" className="text-primary/10" />
+                  <path d="M110,200 L135,150 L160,200" fill="none" stroke="currentColor" strokeWidth="1.2" className="text-primary/10" />
+                  <path d="M260,170 L285,120 L310,170" fill="none" stroke="currentColor" strokeWidth="1.2" className="text-primary/10" />
+                  <path d="M280,180 L305,135 L330,180" fill="none" stroke="currentColor" strokeWidth="1.2" className="text-primary/10" />
+                  
+                  {/* Subtle valley lines */}
+                  <path d="M200,190 L240,240 L300,280" fill="none" stroke="currentColor" strokeWidth="0.8" className="text-blue-500/10" />
+                  <path d="M200,190 L160,250 L100,300" fill="none" stroke="currentColor" strokeWidth="0.8" className="text-blue-500/10" />
+                </g>
+
+                <clipPath id="radius-clip">
+                  <circle cx="200" cy="190" r="140" />
+                </clipPath>
+
                 <circle
                   cx="200"
                   cy="190"
