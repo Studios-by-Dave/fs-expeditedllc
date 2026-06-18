@@ -90,20 +90,22 @@ def get_priority(url):
     """Determine priority based on URL path."""
     if url == '/' or url == '/services':
         return '1.0'
-    elif url in ['/contact', '/why-us', '/why-us/promos', '/process', '/service-area', '/reviews', '/gallery']:
+    elif url in ['/contact', '/about', '/promos', '/process', '/service-area', '/reviews', '/gallery']:
         return '0.9'
     elif '/services/' in url:
         return '0.8'
+    elif '/blog/' in url:
+        return '0.7'
     else:
         return '0.5'
 
 def get_changefreq(url):
     """Determine change frequency based on URL path."""
-    if url == '/' or url == '/services':
+    if url == '/' or url == '/services' or url == '/blog':
         return 'daily'
-    elif url in ['/contact', '/why-us', '/process', '/service-area', '/reviews', '/gallery']:
+    elif url in ['/contact', '/about', '/process', '/service-area', '/reviews', '/gallery']:
         return 'monthly'
-    elif '/services/' in url:
+    elif '/services/' in url or '/blog/' in url:
         return 'weekly'
     else:
         return 'monthly'
@@ -111,59 +113,62 @@ def get_changefreq(url):
 def main():
     # Main pages
     main_urls = [
-        ('/', '2026-05-29'),
-        ('/services', '2026-05-29'),
-        ('/why-us', '2026-05-29'),
-        ('/why-us/promos', '2026-05-29'),
-        ('/process', '2026-05-29'),
-        ('/service-area', '2026-05-29'),
-        ('/service-area/shelby-nc', '2026-06-07'),
-        ('/service-area/charlotte-nc', '2026-06-07'),
-        ('/service-area/gastonia-nc', '2026-06-07'),
-        ('/service-area/asheville-nc', '2026-06-07'),
-        ('/gallery', '2026-05-29'),
-        ('/blog', '2026-05-29'),
-        ('/contact', '2026-05-29'),
-        ('/reviews', '2026-05-29'),
-        ('/privacy-policy', '2026-05-29'),
-        ('/terms-of-service', '2026-05-29')
+        ('/', '2026-06-18'),
+        ('/services', '2026-06-18'),
+        ('/about', '2026-06-18'),
+        ('/promos', '2026-06-18'),
+        ('/process', '2026-06-18'),
+        ('/service-area', '2026-06-18'),
+        ('/service-area/shelby-nc', '2026-06-18'),
+        ('/service-area/charlotte-nc', '2026-06-18'),
+        ('/service-area/gastonia-nc', '2026-06-18'),
+        ('/service-area/asheville-nc', '2026-06-18'),
+        ('/gallery', '2026-06-18'),
+        ('/blog', '2026-06-18'),
+        ('/contact', '2026-06-18'),
+        ('/reviews', '2026-06-18'),
+        ('/privacy-policy', '2026-06-18'),
+        ('/terms-of-service', '2026-06-18')
     ]
     
     # Service category pages
     category_urls = [
-        ('/services/dump-trucks-hauling-services', '2026-05-29'),
-        ('/services/material-delivery', '2026-05-29'),
-        ('/services/site-services', '2026-05-29'),
-        ('/services/emergency-expedited', '2026-05-29')
+        ('/services/dump-trucks-hauling-services', '2026-06-18'),
+        ('/services/material-delivery', '2026-06-18'),
+        ('/services/site-services', '2026-06-18'),
+        ('/services/emergency-expedited', '2026-06-18')
     ]
     
     # Sub-service pages (category/service structure)
     sub_service_urls = [
         # Material delivery sub-services
-        ('/services/material-delivery/gravel-delivery', '2026-05-29'),
-        ('/services/material-delivery/sand-delivery', '2026-05-29'),
-        ('/services/material-delivery/soil-delivery', '2026-05-29'),
-        ('/services/material-delivery/aggregate-transport', '2026-05-29'),
+        ('/services/material-delivery/gravel-delivery', '2026-06-18'),
+        ('/services/material-delivery/sand-delivery', '2026-06-18'),
+        ('/services/material-delivery/soil-delivery', '2026-06-18'),
+        ('/services/material-delivery/aggregate-transport', '2026-06-18'),
         # Site services sub-services
-        ('/services/site-services/site-prep', '2026-05-29'),
-        ('/services/site-services/land-clearing', '2026-05-29'),
-        ('/services/site-services/debris-removal', '2026-05-29'),
-        ('/services/site-services/retaining-walls', '2026-05-29'),
-        ('/services/site-services/underground-utilities', '2026-05-29'),
-        ('/services/site-services/land-grading', '2026-05-29'),
+        ('/services/site-services/site-prep', '2026-06-18'),
+        ('/services/site-services/land-clearing', '2026-06-18'),
+        ('/services/site-services/debris-removal', '2026-06-18'),
+        ('/services/site-services/retaining-walls', '2026-06-18'),
+        ('/services/site-services/underground-utilities', '2026-06-18'),
+        ('/services/site-services/land-grading', '2026-06-18'),
         # Emergency expedited sub-services
-        ('/services/emergency-expedited/emergency-expedited', '2026-05-29'),
-        ('/services/emergency-expedited/commercial-hauling', '2026-05-29'),
-        ('/services/emergency-expedited/dump-truck-hauling', '2026-05-29')
+        ('/services/emergency-expedited/emergency-expedited', '2026-06-18'),
+        ('/services/emergency-expedited/commercial-hauling', '2026-06-18'),
+        ('/services/emergency-expedited/dump-truck-hauling', '2026-06-18')
     ]
     
-    # Add blog article URLs if they exist
+    # Add blog article URLs
     blog_urls = [
-        ('/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc', '2026-05-29'),
-        ('/blog/why-manufacturers-choose-fs-expedited-trucking-emergency-freight', '2026-05-29'),
-        ('/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina', '2026-05-29'),
-        ('/blog/why-fs-hauling-reliable-dump-truck-services-shelby-nc', '2026-05-29'),
-        ('/blog/material-delivery-guide-shelby-nc-construction-projects', '2026-05-31')
+        ('/blog/dump-trucks-expedited-local-hauling-shelby-charlotte-nc', '2026-06-18'),
+        ('/blog/why-manufacturers-choose-fs-expedited-trucking-emergency-freight', '2026-06-18'),
+        ('/blog/expedited-dump-truck-services-prevent-costly-project-delays-north-carolina', '2026-06-18'),
+        ('/blog/why-fs-expedited-reliable-dump-truck-services-shelby-nc', '2026-06-18'),
+        ('/blog/material-delivery-guide-shelby-nc-construction-projects', '2026-06-18'),
+        ('/blog/why-north-carolina-calls-us-when-the-job-cant-wait', '2026-06-18'),
+        ('/blog/why-topsoil-secret-healthier-greener-yard', '2026-06-18'),
+        ('/blog/soil-delivery-vs-gravel-delivery-which-material-does-your-project-need', '2026-06-18')
     ]
     
     urls = set(main_urls + category_urls + sub_service_urls + blog_urls)
