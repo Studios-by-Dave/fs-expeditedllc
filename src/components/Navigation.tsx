@@ -10,7 +10,6 @@ import fsLogo from "@/assets/fs-logo.png";
 
 const navLinks = [
   { href: "/process", label: "How We Work" },
-  { href: "/service-area", label: "Service Area" },
   { href: "/gallery", label: "Gallery" },
   { href: "/reviews", label: "Reviews" },
   { href: "/blog", label: "Blog" },
@@ -21,9 +20,12 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [serviceAreasOpen, setServiceAreasOpen] = useState(false);
 
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileServiceAreasOpen, setMobileServiceAreasOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const serviceAreasRef = useRef<HTMLDivElement>(null);
 
 
   useEffect(() => {
@@ -37,7 +39,9 @@ export const Navigation = () => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setServicesOpen(false);
       }
-
+      if (serviceAreasRef.current && !serviceAreasRef.current.contains(e.target as Node)) {
+        setServiceAreasOpen(false);
+      }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -149,6 +153,70 @@ export const Navigation = () => {
                       </Link>
                     );
                   })}
+                </div>
+              </div>
+
+              {/* Service Areas Dropdown */}
+              <div ref={serviceAreasRef} className="relative">
+                <button
+                  onClick={() => setServiceAreasOpen(!serviceAreasOpen)}
+                  className="flex items-center gap-1 text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
+                >
+                  Service Areas
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      serviceAreasOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {/* Service Areas Dropdown Menu */}
+                <div
+                  className={`absolute top-full left-0 mt-2 w-56 bg-card border border-border shadow-xl transition-all duration-200 z-50 ${
+                    serviceAreasOpen
+                      ? "opacity-100 translate-y-0 pointer-events-auto"
+                      : "opacity-0 -translate-y-2 pointer-events-none"
+                  }`}
+                >
+                  <Link
+                    to="/service-area"
+                    onClick={() => setServiceAreasOpen(false)}
+                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:bg-primary/10 transition-colors border-b border-border"
+                  >
+                    All Service Areas
+                  </Link>
+                  <Link
+                    to="/service-area/shelby-nc"
+                    onClick={() => setServiceAreasOpen(false)}
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
+                  >
+                    <span className="text-lg">🏠</span>
+                    <span>Shelby, NC</span>
+                  </Link>
+                  <Link
+                    to="/service-area/forest-city-nc"
+                    onClick={() => setServiceAreasOpen(false)}
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
+                  >
+                    <span className="text-lg">🏘️</span>
+                    <span>Forest City, NC</span>
+                  </Link>
+                  <Link
+                    to="/service-area/gastonia-nc"
+                    onClick={() => setServiceAreasOpen(false)}
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
+                  >
+                    <span className="text-lg">🏭</span>
+                    <span>Gastonia, NC</span>
+                  </Link>
+                  <Link
+                    to="/service-area/asheville-nc"
+                    onClick={() => setServiceAreasOpen(false)}
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors"
+                  >
+                    <span className="text-lg">⛰️</span>
+                    <span>Asheville, NC</span>
+                  </Link>
                 </div>
               </div>
 
@@ -300,6 +368,67 @@ export const Navigation = () => {
                     {category.title}
                   </Link>
                 ))}
+              </div>
+            </div>
+
+            {/* Mobile Service Areas Collapsible */}
+            <button
+              onClick={() => setMobileServiceAreasOpen(!mobileServiceAreasOpen)}
+              className="flex items-center justify-between text-lg font-heading uppercase tracking-wider text-foreground hover:text-primary transition-colors py-2"
+            >
+              Service Areas
+              <ChevronDown
+                className={`w-5 h-5 transition-transform duration-200 ${
+                  mobileServiceAreasOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                mobileServiceAreasOpen ? "max-h-96" : "max-h-0"
+              }`}
+            >
+              <div className="pl-4 flex flex-col gap-2 pb-2">
+                <Link
+                  to="/service-area"
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm font-semibold uppercase tracking-wider text-primary py-1"
+                >
+                  All Service Areas
+                </Link>
+                <Link
+                  to="/service-area/shelby-nc"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
+                >
+                  <span className="text-base">🏠</span>
+                  <span>Shelby, NC</span>
+                </Link>
+                <Link
+                  to="/service-area/forest-city-nc"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
+                >
+                  <span className="text-base">🏘️</span>
+                  <span>Forest City, NC</span>
+                </Link>
+                <Link
+                  to="/service-area/gastonia-nc"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
+                >
+                  <span className="text-base">🏭</span>
+                  <span>Gastonia, NC</span>
+                </Link>
+                <Link
+                  to="/service-area/asheville-nc"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
+                >
+                  <span className="text-base">⛰️</span>
+                  <span>Asheville, NC</span>
+                </Link>
               </div>
             </div>
 

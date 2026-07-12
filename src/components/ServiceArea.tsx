@@ -313,13 +313,13 @@ export const ServiceArea = () => {
                   <p className="text-sm text-muted-foreground">Home Base</p>
                   <p className="text-xs text-primary mt-2 font-medium">Immediate Response</p>
                 </Link>
-                <Link to="/service-area/charlotte-nc" className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center hover:bg-primary/10 transition-colors hover:shadow-lg hover:border-primary/40 group">
+                <Link to="/service-area/forest-city-nc" className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center hover:bg-primary/10 transition-colors hover:shadow-lg hover:border-primary/40 group">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                    <span className="text-2xl">🏢</span>
+                    <span className="text-2xl">�️</span>
                   </div>
-                  <h5 className="font-semibold text-foreground text-base mb-2 group-hover:text-primary transition-colors">Charlotte, NC</h5>
-                  <p className="text-sm text-muted-foreground">45 minutes</p>
-                  <p className="text-xs text-primary mt-2 font-medium">Commercial Focus</p>
+                  <h5 className="font-semibold text-foreground text-base mb-2 group-hover:text-primary transition-colors">Forest City, NC</h5>
+                  <p className="text-sm text-muted-foreground">30 minutes</p>
+                  <p className="text-xs text-primary mt-2 font-medium">Rutherford County</p>
                 </Link>
                 <Link to="/service-area/gastonia-nc" className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center hover:bg-primary/10 transition-colors hover:shadow-lg hover:border-primary/40 group">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">

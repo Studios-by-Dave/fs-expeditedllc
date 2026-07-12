@@ -120,7 +120,7 @@ def main():
         ('/process', '2026-06-18'),
         ('/service-area', '2026-06-18'),
         ('/service-area/shelby-nc', '2026-06-18'),
-        ('/service-area/charlotte-nc', '2026-06-18'),
+        ('/service-area/forest-city-nc', '2026-07-12'),
         ('/service-area/gastonia-nc', '2026-06-18'),
         ('/service-area/asheville-nc', '2026-06-18'),
         ('/gallery', '2026-06-18'),
