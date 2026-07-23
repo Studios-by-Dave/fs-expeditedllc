@@ -149,25 +149,32 @@ const ShelbyNCPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="bg-card border border-border rounded-xl p-6">
-                  <h3 className="text-xl font-heading font-semibold text-foreground mb-4">
-                    Shelby Service Areas
-                  </h3>
-                  <div className="grid grid-cols-2 gap-2 text-sm">
-                    {neighborhoods.map((area, index) => (
-                      <div key={index} className="flex items-center gap-2">
-                        <CheckCircle className="w-3 h-3 text-primary" />
-                        <span className="text-muted-foreground">{area}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-6 pt-6 border-t border-border">
-                    <p className="text-sm text-muted-foreground">
-                      <strong>Response Time:</strong> Under 1 hour to any Shelby location
-                    </p>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      <strong>Service Radius:</strong> Full Cleveland County coverage
-                    </p>
+                <div className="bg-card border border-border rounded-xl overflow-hidden">
+                  <img
+                    src="/assets/Shelby_4.jpg"
+                    alt="Shelby, NC dump truck hauling services"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-heading font-semibold text-foreground mb-4">
+                      Shelby Service Areas
+                    </h3>
+                    <div className="grid grid-cols-2 gap-2 text-sm">
+                      {neighborhoods.map((area, index) => (
+                        <div key={index} className="flex items-center gap-2">
+                          <CheckCircle className="w-3 h-3 text-primary" />
+                          <span className="text-muted-foreground">{area}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-6 pt-6 border-t border-border">
+                      <p className="text-sm text-muted-foreground">
+                        <strong>Response Time:</strong> Under 1 hour to any Shelby location
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        <strong>Service Radius:</strong> Full Cleveland County coverage
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

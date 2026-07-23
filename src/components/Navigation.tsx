@@ -179,13 +179,6 @@ export const Navigation = () => {
                   }`}
                 >
                   <Link
-                    to="/service-area"
-                    onClick={() => setServiceAreasOpen(false)}
-                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:bg-primary/10 transition-colors border-b border-border"
-                  >
-                    All Service Areas
-                  </Link>
-                  <Link
                     to="/service-area/shelby-nc"
                     onClick={() => setServiceAreasOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
@@ -198,7 +191,7 @@ export const Navigation = () => {
                     onClick={() => setServiceAreasOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                   >
-                    <span className="text-lg">🏘️</span>
+                    <span className="text-lg">�️</span>
                     <span>Forest City, NC</span>
                   </Link>
                   <Link
@@ -206,16 +199,23 @@ export const Navigation = () => {
                     onClick={() => setServiceAreasOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                   >
-                    <span className="text-lg">🏭</span>
+                    <span className="text-lg">�</span>
                     <span>Gastonia, NC</span>
                   </Link>
                   <Link
                     to="/service-area/asheville-nc"
                     onClick={() => setServiceAreasOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors"
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                   >
                     <span className="text-lg">⛰️</span>
                     <span>Asheville, NC</span>
+                  </Link>
+                  <Link
+                    to="/service-area"
+                    onClick={() => setServiceAreasOpen(false)}
+                    className="block px-4 py-3 text-sm font-semibold uppercase tracking-wider text-primary hover:bg-primary/10 transition-colors"
+                  >
+                    All Service Areas
                   </Link>
                 </div>
               </div>
@@ -391,13 +391,6 @@ export const Navigation = () => {
             >
               <div className="pl-4 flex flex-col gap-2 pb-2">
                 <Link
-                  to="/service-area"
-                  onClick={() => setIsOpen(false)}
-                  className="text-sm font-semibold uppercase tracking-wider text-primary py-1"
-                >
-                  All Service Areas
-                </Link>
-                <Link
                   to="/service-area/shelby-nc"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
@@ -410,7 +403,7 @@ export const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                 >
-                  <span className="text-base">🏘️</span>
+                  <span className="text-base">�️</span>
                   <span>Forest City, NC</span>
                 </Link>
                 <Link
@@ -418,7 +411,7 @@ export const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                 >
-                  <span className="text-base">🏭</span>
+                  <span className="text-base">�</span>
                   <span>Gastonia, NC</span>
                 </Link>
                 <Link
@@ -428,6 +421,13 @@ export const Navigation = () => {
                 >
                   <span className="text-base">⛰️</span>
                   <span>Asheville, NC</span>
+                </Link>
+                <Link
+                  to="/service-area"
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm font-semibold uppercase tracking-wider text-primary py-1"
+                >
+                  All Service Areas
                 </Link>
               </div>
             </div>

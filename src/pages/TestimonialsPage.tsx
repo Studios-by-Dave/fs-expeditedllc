@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Testimonials } from "@/components/Testimonials";
+import { FeaturedTestimonial } from "@/components/FeaturedTestimonial";
 import { CTABanner } from "@/components/CTABanner";
 import { Footer } from "@/components/Footer";
 import { breadcrumbSchema } from "@/data/seo-schemas";
@@ -37,6 +38,7 @@ const TestimonialsPage = () => {
       </Breadcrumb>
       <main className="pt-20">
         <Testimonials />
+        <FeaturedTestimonial />
         <CTABanner />
       </main>
       <Footer />

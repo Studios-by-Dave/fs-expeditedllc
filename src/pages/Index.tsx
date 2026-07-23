@@ -6,6 +6,7 @@ import { Services } from "@/components/Services";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { ServiceArea } from "@/components/ServiceArea";
 import { Process } from "@/components/Process";
+import { FeaturedTestimonial } from "@/components/FeaturedTestimonial";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { ChevronRight } from "lucide-react";
@@ -53,7 +54,8 @@ const Index = () => {
         <Services />
         <Process />
         <WhyChooseUs />
-                        <Contact />
+        <FeaturedTestimonial />
+        <Contact />
       </main>
       <Footer />
     </div>

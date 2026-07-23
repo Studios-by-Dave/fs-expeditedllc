@@ -151,25 +151,32 @@ const AshevilleNCPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="bg-card border border-border rounded-xl p-6">
-                  <h3 className="text-xl font-heading font-semibold text-foreground mb-4">
-                    Asheville Service Areas
-                  </h3>
-                  <div className="grid grid-cols-2 gap-2 text-sm">
-                    {ashevilleAreas.map((area, index) => (
-                      <div key={index} className="flex items-center gap-2">
-                        <CheckCircle className="w-3 h-3 text-primary" />
-                        <span className="text-muted-foreground">{area}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-6 pt-6 border-t border-border">
-                    <p className="text-sm text-muted-foreground">
-                      <strong>Response Time:</strong> 1 hour 15 minutes to Asheville
-                    </p>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      <strong>Service Focus:</strong> Mountain terrain & weather expertise
-                    </p>
+                <div className="bg-card border border-border rounded-xl overflow-hidden">
+                  <img
+                    src="/assets/Asheville nc_header1.jpg"
+                    alt="Asheville, NC dump truck hauling services"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-xl font-heading font-semibold text-foreground mb-4">
+                      Asheville Service Areas
+                    </h3>
+                    <div className="grid grid-cols-2 gap-2 text-sm">
+                      {ashevilleAreas.map((area, index) => (
+                        <div key={index} className="flex items-center gap-2">
+                          <CheckCircle className="w-3 h-3 text-primary" />
+                          <span className="text-muted-foreground">{area}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-6 pt-6 border-t border-border">
+                      <p className="text-sm text-muted-foreground">
+                        <strong>Response Time:</strong> 1 hour 15 minutes to Asheville
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        <strong>Service Focus:</strong> Mountain terrain & weather expertise
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
