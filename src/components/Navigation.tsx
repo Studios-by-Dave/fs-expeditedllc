@@ -302,8 +302,8 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden absolute top-20 left-0 right-0 bg-background/98 backdrop-blur-lg border-b border-border transition-all duration-300 overflow-hidden ${
-            isOpen ? "max-h-[80vh] opacity-100 overflow-y-auto" : "max-h-0 opacity-0"
+          className={`lg:hidden fixed inset-x-0 bottom-0 top-20 mx-auto w-[calc(100%-1.5rem)] max-w-[32rem] rounded-t-2xl rounded-b-none border border-border/80 bg-[#0b0b0b] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.95)] transition-all duration-300 overflow-hidden ${
+            isOpen ? "opacity-100 overflow-y-auto" : "opacity-0 pointer-events-none"
           }`}
         >
           <div className="container px-4 py-6 flex flex-col gap-4">
@@ -395,7 +395,9 @@ export const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                 >
-                  <span className="text-base">🏠</span>
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em]">S</span>
+                  </span>
                   <span>Shelby, NC</span>
                 </Link>
                 <Link
@@ -403,7 +405,9 @@ export const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                 >
-                  <span className="text-base">�️</span>
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em]">F</span>
+                  </span>
                   <span>Forest City, NC</span>
                 </Link>
                 <Link
@@ -411,7 +415,9 @@ export const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                 >
-                  <span className="text-base">�</span>
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em]">G</span>
+                  </span>
                   <span>Gastonia, NC</span>
                 </Link>
                 <Link
@@ -419,7 +425,9 @@ export const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                 >
-                  <span className="text-base">⛰️</span>
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em]">A</span>
+                  </span>
                   <span>Asheville, NC</span>
                 </Link>
                 <Link
@@ -462,19 +470,19 @@ export const Navigation = () => {
 
             <div className="pt-4 border-t border-border flex justify-between gap-3">
               <div className="flex-1 flex flex-col items-center">
-                <span className="text-[9px] font-bold uppercase tracking-tighter text-primary/80 mb-0.5">Call Joe!</span>
-                <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 w-full rounded-lg" asChild>
+                <span className="text-[9px] font-bold uppercase tracking-tighter text-lime-400 mb-0.5">Call Joe!</span>
+                <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 w-full rounded-full bg-black text-yellow-400 border border-yellow-400/30 hover:bg-zinc-900 hover:text-yellow-300" asChild>
                   <a href="tel:8653649011" onClick={() => trackEvent('phone_click', { label: 'mobile_nav_primary', number: '8653649011', ...getUtm() })}>
-                    <Phone className="w-4 h-4" />
+                    <Phone className="w-4 h-4 text-lime-400" />
                     (865) 364-9011
                   </a>
                 </Button>
               </div>
               <div className="flex-1 flex flex-col items-center">
-                <span className="text-[9px] font-bold uppercase tracking-tighter text-primary/80 mb-0.5">Call Luke!</span>
-                <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 w-full rounded-lg" asChild>
+                <span className="text-[9px] font-bold uppercase tracking-tighter text-lime-400 mb-0.5">Call Luke!</span>
+                <Button variant="hero" className="text-sm px-4 py-3 [&_svg]:size-3 w-full rounded-full bg-black text-yellow-400 border border-yellow-400/30 hover:bg-zinc-900 hover:text-yellow-300" asChild>
                   <a href="tel:7047518141" onClick={() => trackEvent('phone_click', { label: 'mobile_nav_secondary', number: '7047518141', ...getUtm() })}>
-                    <Phone className="w-4 h-4" />
+                    <Phone className="w-4 h-4 text-lime-400" />
                     (704) 751-8141
                   </a>
                 </Button>

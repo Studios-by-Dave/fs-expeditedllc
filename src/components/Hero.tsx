@@ -50,12 +50,12 @@ export const Hero = () => {
               src={flagVideo}
               ref={(el) => { if (el) el.playbackRate = 0.5; }}
             />
-            <h1 className="relative opacity-0 animate-fade-up animation-delay-150">
-              <span className="text-5xl lg:text-8xl font-bold tracking-wider text-foreground leading-none md:text-6xl font-sans">
+            <h1 className="relative opacity-0 animate-fade-up animation-delay-150 leading-[0.85]">
+              <span className="block text-5xl sm:text-6xl lg:text-[5.5rem] xl:text-[6.5rem] font-bold tracking-wider text-foreground leading-[0.8] md:leading-[0.8] font-sans">
                 FAST. RELIABLE.
               </span>
               <br />
-              <span className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider text-primary leading-none">
+              <span className="block font-heading text-6xl sm:text-7xl md:text-[5rem] lg:text-[6.25rem] xl:text-[7.25rem] font-bold tracking-wider text-primary leading-[0.8]">
                 EXPEDITED HAULING.
               </span>
             </h1>
@@ -73,21 +73,31 @@ export const Hero = () => {
           </p>
 
           {/* CTAs */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-8 opacity-0 animate-fade-up animation-delay-450 items-center sm:items-start">
-            <div className="flex flex-col items-center">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 animate-pulse">Call Joe!</span>
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6 [&_svg]:size-5 min-w-[200px]" asChild>
+          <div className="mt-10 flex flex-row flex-wrap justify-center gap-3 sm:gap-8 opacity-0 animate-fade-up animation-delay-450 items-center sm:justify-start sm:items-start">
+            <div className="flex flex-col items-center flex-1 sm:flex-none">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-lime-400 mb-1 animate-pulse">Call Joe!</span>
+              <Button
+                variant="hero"
+                size="lg"
+                className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 rounded-full bg-black text-yellow-400 border border-yellow-400/30 hover:bg-zinc-900 hover:text-yellow-300 [&_svg]:size-5 min-w-[170px] sm:min-w-[220px]"
+                asChild
+              >
                 <a href="tel:8653649011" onClick={() => trackEvent('phone_click', { label: 'hero_primary', number: '8653649011', ...getUtm() })}>
-                  <Phone className="w-5 h-5 text-green-500" />
+                  <Phone className="w-5 h-5 text-lime-400" />
                   (865) 364-9011
                 </a>
               </Button>
             </div>
-            <div className="flex flex-col items-center">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 animate-pulse">Call Luke!</span>
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6 [&_svg]:size-5 min-w-[200px]" asChild>
+            <div className="flex flex-col items-center flex-1 sm:flex-none">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-lime-400 mb-1 animate-pulse">Call Luke!</span>
+              <Button
+                variant="hero"
+                size="lg"
+                className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 rounded-full bg-black text-yellow-400 border border-yellow-400/30 hover:bg-zinc-900 hover:text-yellow-300 [&_svg]:size-5 min-w-[170px] sm:min-w-[220px]"
+                asChild
+              >
                 <a href="tel:7047518141" onClick={() => trackEvent('phone_click', { label: 'hero_secondary', number: '7047518141', ...getUtm() })}>
-                  <Phone className="w-5 h-5 text-green-500" />
+                  <Phone className="w-5 h-5 text-lime-400" />
                   (704) 751-8141
                 </a>
               </Button>

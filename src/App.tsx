@@ -32,6 +32,7 @@ import BlogArticlePage5 from "./pages/BlogArticlePage5";
 import BlogArticlePage6 from "./pages/BlogArticlePage6";
 import BlogArticlePage7 from "./pages/BlogArticlePage7";
 import BlogArticlePage8 from "./pages/BlogArticlePage8";
+import BlogArticlePage9 from "./pages/BlogArticlePage9";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
 import PromoPage from "./pages/PromoPage";
@@ -68,6 +69,7 @@ export const AppContent = () => (
       <Route path="/blog/why-north-carolina-calls-us-when-the-job-cant-wait" element={<BlogArticlePage6 />} />
       <Route path="/blog/why-topsoil-secret-healthier-greener-yard" element={<BlogArticlePage7 />} />
       <Route path="/blog/soil-delivery-vs-gravel-delivery-which-material-does-your-project-need" element={<BlogArticlePage8 />} />
+      <Route path="/blog/best-dump-truck-services-asheville-nc" element={<BlogArticlePage9 />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/service-area" element={<ServiceAreaPage />} />
@@ -103,7 +105,11 @@ const App = () => (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <BrowserRouter>
-          <AppContent />
+          <div className="min-h-screen bg-background p-2 sm:p-3 lg:p-4">
+            <div className="site-frame min-h-screen rounded-[24px] border border-border/70 bg-background/95 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+              <AppContent />
+            </div>
+          </div>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

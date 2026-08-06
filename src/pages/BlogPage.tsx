@@ -103,8 +103,29 @@ const BlogPage = () => {
       category: "Material Delivery",
       fullContent: true,
       link: "/blog/material-delivery-guide-shelby-nc-construction-projects"
+    },
+    {
+      id: 9,
+      title: "Best Dump Truck Services in Asheville, NC: Fast Hauling for Construction, Landscaping & Site Prep",
+      excerpt: "Find out why local contractors and homeowners choose dependable dump truck services in Asheville, NC for gravel delivery, debris removal, and urgent hauling.",
+      date: "August 6, 2026",
+      readTime: "7 min read",
+      icon: Truck,
+      category: "Asheville Hauling",
+      fullContent: true,
+      link: "/blog/best-dump-truck-services-asheville-nc"
     }
   ];
+
+  const getBlogBackgroundImage = (category: string) => {
+    if (category.includes("Topsoil") || category.includes("Material")) {
+      return "/assets/optimized/texture-faux-400.webp";
+    }
+    if (category.includes("Emergency") || category.includes("North Carolina") || category.includes("Local")) {
+      return "/assets/optimized/hero-truck-800.webp";
+    }
+    return "/assets/optimized/hero-painter-800.webp";
+  };
 
   const combinedSchema = {
     "@context": "https://schema.org",
@@ -158,37 +179,50 @@ const BlogPage = () => {
             <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
               {blogPosts.map((post) => {
                 const Icon = post.icon;
+                const backgroundImage = getBlogBackgroundImage(post.category);
                 return (
                   <Link key={post.id} to={post.link} className="group block">
-                    <Card className="border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg group-hover:-translate-y-0.5">
-                      <CardHeader>
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="text-sm font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1.5 rounded">
-                            {post.category}
-                          </span>
-                          <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                            <Calendar className="w-4 h-4" />
-                            {post.date}
+                    <Card className="relative overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg group-hover:-translate-y-0.5 bg-card/90">
+                      <div className="absolute inset-0">
+                        <img
+                          src={backgroundImage}
+                          alt=""
+                          loading="lazy"
+                          className="absolute inset-0 h-full w-full object-cover"
+                          style={{ opacity: 0.12 }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/80 to-background/95" />
+                      </div>
+                      <div className="relative z-10">
+                        <CardHeader>
+                          <div className="flex items-center justify-between mb-3">
+                            <span className="text-sm font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1.5 rounded">
+                              {post.category}
+                            </span>
+                            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                              <Calendar className="w-4 h-4" />
+                              {post.date}
+                            </div>
                           </div>
-                        </div>
-                        <CardTitle className="text-2xl font-bold text-foreground blog-glow-text group-hover:text-primary transition-colors duration-300">
-                          {post.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-base text-muted-foreground mb-4 leading-relaxed">
-                          {post.excerpt}
-                        </p>
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                            <Clock className="w-4 h-4" />
-                            {post.readTime}
+                          <CardTitle className="text-2xl font-bold text-foreground blog-glow-text group-hover:text-primary transition-colors duration-300">
+                            {post.title}
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-base text-muted-foreground mb-4 leading-relaxed">
+                            {post.excerpt}
+                          </p>
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                              <Clock className="w-4 h-4" />
+                              {post.readTime}
+                            </div>
+                            <span className="text-primary text-sm font-semibold uppercase tracking-wider opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                              Read More
+                            </span>
                           </div>
-                          <span className="text-primary text-sm font-semibold uppercase tracking-wider opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                            Read More
-                          </span>
-                        </div>
-                      </CardContent>
+                        </CardContent>
+                      </div>
                     </Card>
                   </Link>
                 );
