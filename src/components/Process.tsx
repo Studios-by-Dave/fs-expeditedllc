@@ -32,13 +32,13 @@ export const Process = () => {
     <section id="process" className="py-12 bg-gradient-card">
       <div className="container px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
+          <span className="text-primary font-bold tracking-widest text-base md:text-lg uppercase font-sans">
             How It Works
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl lg:text-4xl font-heading font-bold text-foreground tracking-wider">
+          <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-heading font-bold text-foreground tracking-wider">
             OUR PROCESS
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg font-sans">
+          <p className="mt-4 text-muted-foreground text-lg md:text-xl font-sans">
             Simple, transparent, and built for speed. Here's how we get the job done.
           </p>
         </div>

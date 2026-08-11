@@ -9,7 +9,6 @@ import { getUtm } from "@/lib/utm";
 import fsLogo from "@/assets/fs-logo.png";
 
 const navLinks = [
-  { href: "/process", label: "How We Work" },
   { href: "/gallery", label: "Gallery" },
   { href: "/reviews", label: "Reviews" },
   { href: "/blog", label: "Blog" },
@@ -21,11 +20,13 @@ export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [serviceAreasOpen, setServiceAreasOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileServiceAreasOpen, setMobileServiceAreasOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const serviceAreasRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
 
   useEffect(() => {
@@ -41,6 +42,9 @@ export const Navigation = () => {
       }
       if (serviceAreasRef.current && !serviceAreasRef.current.contains(e.target as Node)) {
         setServiceAreasOpen(false);
+      }
+      if (aboutRef.current && !aboutRef.current.contains(e.target as Node)) {
+        setAboutOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -124,7 +128,7 @@ export const Navigation = () => {
                           onClick={() => setServicesOpen(false)}
                           className="flex items-center gap-3 px-4 py-3 text-base font-semibold text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                         >
-                          <div className="w-8 h-8 shrink-0 flex items-center justify-center">
+                          <div className="w-8 h-8 shrink-0 flex items-center justify-center filter-primary">
                             <img src="/assets/icons/dump-truck.svg" alt="Dump Trucks Hauling Services" className="w-8 h-8 object-contain" />
                           </div>
                           <span>{category.title}</span>
@@ -138,7 +142,7 @@ export const Navigation = () => {
                         onClick={() => setServicesOpen(false)}
                         className="flex items-center gap-3 px-4 py-3 text-base font-semibold text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border last:border-b-0"
                       >
-                        <div className="w-8 h-8 shrink-0 flex items-center justify-center">
+                        <div className="w-8 h-8 shrink-0 flex items-center justify-center filter-primary">
                           {category.slug === 'material-delivery' && (
                             <img src="/assets/icons/material-delivery.svg" alt="Material Delivery" className="w-8 h-8 object-contain" />
                           )}
@@ -183,7 +187,9 @@ export const Navigation = () => {
                     onClick={() => setServiceAreasOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                   >
-                    <span className="text-lg">🏠</span>
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                      <span className="text-[10px] font-black uppercase tracking-[0.2em]">S</span>
+                    </span>
                     <span>Shelby, NC</span>
                   </Link>
                   <Link
@@ -191,7 +197,9 @@ export const Navigation = () => {
                     onClick={() => setServiceAreasOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                   >
-                    <span className="text-lg">�️</span>
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                      <span className="text-[10px] font-black uppercase tracking-[0.2em]">F</span>
+                    </span>
                     <span>Forest City, NC</span>
                   </Link>
                   <Link
@@ -199,7 +207,9 @@ export const Navigation = () => {
                     onClick={() => setServiceAreasOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                   >
-                    <span className="text-lg">�</span>
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                      <span className="text-[10px] font-black uppercase tracking-[0.2em]">G</span>
+                    </span>
                     <span>Gastonia, NC</span>
                   </Link>
                   <Link
@@ -207,7 +217,9 @@ export const Navigation = () => {
                     onClick={() => setServiceAreasOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                   >
-                    <span className="text-lg">⛰️</span>
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                      <span className="text-[10px] font-black uppercase tracking-[0.2em]">A</span>
+                    </span>
                     <span>Asheville, NC</span>
                   </Link>
                   <Link
@@ -221,12 +233,43 @@ export const Navigation = () => {
               </div>
 
               {/* About Us Link */}
-              <Link
-                to="/about"
-                className="text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
-              >
-                About Us
-              </Link>
+              <div ref={aboutRef} className="relative">
+                <button
+                  onClick={() => setAboutOpen(!aboutOpen)}
+                  className="flex items-center gap-1 text-sm font-semibold uppercase tracking-wider text-foreground/80 hover:text-primary transition-colors duration-200"
+                >
+                  About Us
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      aboutOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {/* About Us Dropdown Menu */}
+                <div
+                  className={`absolute top-full left-0 mt-2 w-56 bg-card border border-border shadow-xl transition-all duration-200 z-50 ${
+                    aboutOpen
+                      ? "opacity-100 translate-y-0 pointer-events-auto"
+                      : "opacity-0 -translate-y-2 pointer-events-none"
+                  }`}
+                >
+                  <Link
+                    to="/about"
+                    onClick={() => setAboutOpen(false)}
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
+                  >
+                    <span>About the Company</span>
+                  </Link>
+                  <Link
+                    to="/process"
+                    onClick={() => setAboutOpen(false)}
+                    className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
+                  >
+                    <span>How We Work</span>
+                  </Link>
+                </div>
+              </div>
 
               {navLinks.map((link) => (
                 <Link
@@ -234,7 +277,7 @@ export const Navigation = () => {
                   to={link.href}
                   className={`text-sm font-semibold uppercase tracking-wider transition-colors duration-200 ${
                     link.label === "Reviews"
-                      ? "text-[#00BFFF] hover:text-[#00FFFF]"
+                      ? "text-blue-500 hover:text-blue-400"
                       : link.label === "Blog"
                       ? "blog-nav-glow"
                       : "text-foreground/80 hover:text-primary"
@@ -359,11 +402,11 @@ export const Navigation = () => {
                     onClick={() => setIsOpen(false)}
                     className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                   >
-                    <div className="w-4 h-4 text-primary flex items-center justify-center">
-                      {category.slug === 'dump-trucks-hauling-services' && '🚚'}
-                      {category.slug === 'material-delivery' && '🚚'}
-                      {category.slug === 'site-services' && '🏗️'}
-                      {category.slug === 'emergency-expedited' && '⚡'}
+                    <div className="w-5 h-5 flex items-center justify-center filter-primary">
+                      {category.slug === 'dump-trucks-hauling-services' && <img src="/assets/icons/dump-truck.svg" alt="" className="w-full h-full" />}
+                      {category.slug === 'material-delivery' && <img src="/assets/icons/material-delivery.svg" alt="" className="w-full h-full" />}
+                      {category.slug === 'site-services' && <img src="/assets/icons/site-services.svg" alt="" className="w-full h-full" />}
+                      {category.slug === 'emergency-expedited' && <img src="/assets/icons/emergency-expedited.svg" alt="" className="w-full h-full" />}
                     </div>
                     {category.title}
                   </Link>
@@ -440,16 +483,40 @@ export const Navigation = () => {
               </div>
             </div>
 
-            {/* Mobile About Us Link */}
-            <div className="border-t border-border pt-4">
-              <Link
-                to="/about"
-                onClick={() => setIsOpen(false)}
-                className="text-lg font-heading uppercase tracking-wider transition-colors py-2 text-foreground hover:text-primary"
-              >
-                About Us
-              </Link>
-            </div>
+            {/* Mobile About Us Collapsible */}
+            <button
+              onClick={() => {
+                // Add a state for this if not yet added, we'll reuse something or just inline it for simplicity if we don't need fully isolated state
+              }}
+              // Using a simple CSS trick or we can add state. Using details/summary for simplicity in mobile if state isn't there
+              className="hidden"
+            >
+              About Us
+            </button>
+            <details className="group [&_summary::-webkit-details-marker]:hidden border-t border-border pt-4">
+              <summary className="flex cursor-pointer items-center justify-between text-lg font-heading uppercase tracking-wider text-foreground hover:text-primary transition-colors py-2">
+                <span>About Us</span>
+                <span className="transition duration-300 group-open:-rotate-180">
+                  <ChevronDown className="w-5 h-5" />
+                </span>
+              </summary>
+              <div className="pl-4 flex flex-col gap-2 pb-2 group-open:animate-in group-open:fade-in group-open:slide-in-from-top-1">
+                <Link
+                  to="/about"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
+                >
+                  About the Company
+                </Link>
+                <Link
+                  to="/process"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
+                >
+                  How We Work
+                </Link>
+              </div>
+            </details>
 
             {navLinks.map((link) => (
               <Link
@@ -457,7 +524,7 @@ export const Navigation = () => {
                 to={link.href}
                 className={`text-lg font-heading uppercase tracking-wider transition-colors py-2 ${
                   link.label === "Reviews"
-                    ? "text-[#00BFFF] hover:text-[#00FFFF]"
+                    ? "text-blue-500 hover:text-blue-400"
                     : link.label === "Blog"
                     ? "blog-nav-glow"
                     : "text-foreground hover:text-primary"

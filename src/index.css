@@ -203,6 +203,10 @@
     position: relative;
     z-index: 1;
   }
+  
+  .filter-primary {
+    filter: invert(88%) sepia(35%) saturate(3015%) hue-rotate(336deg) brightness(101%) contrast(106%);
+  }
 
   /* Diagonal separator */
   .diagonal-separator {

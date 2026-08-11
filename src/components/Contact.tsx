@@ -8,13 +8,13 @@ export const Contact = () => {
     <section id="contact" className="section-padding bg-background">
       <div className="container px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
+          <span className="text-primary font-bold tracking-widest text-base md:text-lg uppercase font-sans">
             Get In Touch
           </span>
-          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground tracking-wider">
+          <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-heading font-bold text-foreground tracking-wider">
             CONTACT US
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg font-sans max-w-xl mx-auto">
+          <p className="mt-4 text-muted-foreground text-lg md:text-xl font-sans max-w-xl mx-auto">
             Ready to get your materials hauled? Give us a call for a free, no-obligation estimate.
           </p>
 

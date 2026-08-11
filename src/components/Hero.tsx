@@ -50,13 +50,13 @@ export const Hero = () => {
               src={flagVideo}
               ref={(el) => { if (el) el.playbackRate = 0.5; }}
             />
-            <h1 className="relative opacity-0 animate-fade-up animation-delay-150 leading-[0.85]">
-              <span className="block text-5xl sm:text-6xl lg:text-[5.5rem] xl:text-[6.5rem] font-bold tracking-wider text-foreground leading-[0.8] md:leading-[0.8] font-sans">
+            <h1 className="relative opacity-0 animate-fade-up animation-delay-150 leading-[0.8]">
+              <span className="block text-4xl sm:text-5xl lg:text-[4.5rem] xl:text-[5.5rem] font-bold tracking-wider text-foreground leading-[0.8] md:leading-[0.8] font-sans">
                 FAST. RELIABLE.
               </span>
               <br />
-              <span className="block font-heading text-6xl sm:text-7xl md:text-[5rem] lg:text-[6.25rem] xl:text-[7.25rem] font-bold tracking-wider text-primary leading-[0.8]">
-                EXPEDITED HAULING.
+              <span className="block font-heading text-5xl sm:text-6xl md:text-[4.5rem] lg:text-[5.5rem] xl:text-[6.5rem] font-bold tracking-wider text-primary leading-[0.8]">
+                EXPEDITED TRUCKING.
               </span>
             </h1>
           </div>
@@ -79,11 +79,11 @@ export const Hero = () => {
               <Button
                 variant="hero"
                 size="lg"
-                className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 rounded-full bg-black text-yellow-400 border border-yellow-400/30 hover:bg-zinc-900 hover:text-yellow-300 [&_svg]:size-5 min-w-[170px] sm:min-w-[220px]"
+                className="text-base sm:text-lg px-4 sm:px-8 py-3 sm:py-5 rounded-md bg-primary text-secondary border border-transparent shadow shadow-primary/25 hover:bg-primary-hover hover:text-secondary font-bold [&_svg]:size-5 min-w-[170px] sm:min-w-[220px]"
                 asChild
               >
                 <a href="tel:8653649011" onClick={() => trackEvent('phone_click', { label: 'hero_primary', number: '8653649011', ...getUtm() })}>
-                  <Phone className="w-5 h-5 text-lime-400" />
+                  <Phone className="w-5 h-5" />
                   (865) 364-9011
                 </a>
               </Button>
@@ -93,11 +93,11 @@ export const Hero = () => {
               <Button
                 variant="hero"
                 size="lg"
-                className="text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 rounded-full bg-black text-yellow-400 border border-yellow-400/30 hover:bg-zinc-900 hover:text-yellow-300 [&_svg]:size-5 min-w-[170px] sm:min-w-[220px]"
+                className="text-base sm:text-lg px-4 sm:px-8 py-3 sm:py-5 rounded-md bg-primary text-secondary border border-transparent shadow shadow-primary/25 hover:bg-primary-hover hover:text-secondary font-bold [&_svg]:size-5 min-w-[170px] sm:min-w-[220px]"
                 asChild
               >
                 <a href="tel:7047518141" onClick={() => trackEvent('phone_click', { label: 'hero_secondary', number: '7047518141', ...getUtm() })}>
-                  <Phone className="w-5 h-5 text-lime-400" />
+                  <Phone className="w-5 h-5" />
                   (704) 751-8141
                 </a>
               </Button>

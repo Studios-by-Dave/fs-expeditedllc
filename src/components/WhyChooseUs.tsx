@@ -18,14 +18,14 @@ export const WhyChooseUs = () => {
 
       <div className="container px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
+          <span className="text-primary font-bold tracking-widest text-base md:text-lg uppercase font-sans">
             Why F&S
           </span>
-          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground tracking-wider">
+          <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-heading font-bold text-foreground tracking-wider">
             WHY CHOOSE US
           </h2>
           
-          <p className="mt-4 text-muted-foreground text-xl font-sans">
+          <p className="mt-4 text-muted-foreground text-lg md:text-xl font-sans">
             Built on hard work, reliability, and a commitment to getting the job done right. 
             <Link 
               to="/services/emergency-expedited" 
