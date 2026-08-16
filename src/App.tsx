@@ -33,6 +33,7 @@ import BlogArticlePage6 from "./pages/BlogArticlePage6";
 import BlogArticlePage7 from "./pages/BlogArticlePage7";
 import BlogArticlePage8 from "./pages/BlogArticlePage8";
 import BlogArticlePage9 from "./pages/BlogArticlePage9";
+import BlogArticlePage10 from "./pages/BlogArticlePage10";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
 import PromoPage from "./pages/PromoPage";
@@ -70,6 +71,7 @@ export const AppContent = () => (
       <Route path="/blog/why-topsoil-secret-healthier-greener-yard" element={<BlogArticlePage7 />} />
       <Route path="/blog/soil-delivery-vs-gravel-delivery-which-material-does-your-project-need" element={<BlogArticlePage8 />} />
       <Route path="/blog/best-dump-truck-services-asheville-nc" element={<BlogArticlePage9 />} />
+      <Route path="/blog/dump-truck-hauling-services-forest-city-nc" element={<BlogArticlePage10 />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/service-area" element={<ServiceAreaPage />} />

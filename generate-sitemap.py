@@ -168,7 +168,9 @@ def main():
         ('/blog/material-delivery-guide-shelby-nc-construction-projects', '2026-06-18'),
         ('/blog/why-north-carolina-calls-us-when-the-job-cant-wait', '2026-06-18'),
         ('/blog/why-topsoil-secret-healthier-greener-yard', '2026-06-18'),
-        ('/blog/soil-delivery-vs-gravel-delivery-which-material-does-your-project-need', '2026-06-18')
+        ('/blog/soil-delivery-vs-gravel-delivery-which-material-does-your-project-need', '2026-06-18'),
+        ('/blog/best-dump-truck-services-asheville-nc', '2026-08-06'),
+        ('/blog/dump-truck-hauling-services-forest-city-nc', '2026-08-16')
     ]
     
     urls = set(main_urls + category_urls + sub_service_urls + blog_urls)

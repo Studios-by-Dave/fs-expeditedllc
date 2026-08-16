@@ -157,6 +157,11 @@ const GastoniaNCPage = () => {
                     alt="Gastonia, NC dump truck hauling services"
                     className="w-full h-64 object-cover"
                   />
+                  <img
+                    src="/assets/service locations/gastonia/gastonia nc_3.jpg"
+                    alt="Gastonia NC dump truck delivering gravel and materials"
+                    className="w-full h-24 object-cover mt-2 rounded-lg"
+                  />
                   <div className="p-6">
                     <h3 className="text-xl font-heading font-semibold text-foreground mb-4">
                       Gastonia Service Areas

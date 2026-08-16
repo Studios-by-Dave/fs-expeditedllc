@@ -105,7 +105,7 @@ const BlogPage = () => {
       link: "/blog/material-delivery-guide-shelby-nc-construction-projects"
     },
     {
-      id: 9,
+       id: 9,
       title: "Best Dump Truck Services in Asheville, NC: Fast Hauling for Construction, Landscaping & Site Prep",
       excerpt: "Find out why local contractors and homeowners choose dependable dump truck services in Asheville, NC for gravel delivery, debris removal, and urgent hauling.",
       date: "August 6, 2026",
@@ -114,6 +114,17 @@ const BlogPage = () => {
       category: "Asheville Hauling",
       fullContent: true,
       link: "/blog/best-dump-truck-services-asheville-nc"
+    },
+    {
+      id: 10,
+      title: "Dump Truck Hauling Services in Forest City, NC: Reliable Material Delivery & Hauling",
+      excerpt: "F&S Expedited delivers gravel, dirt, topsoil, and sand, plus debris removal across Forest City and Rutherford County with fast same-day service.",
+      date: "August 16, 2026",
+      readTime: "6 min read",
+      icon: Truck,
+      category: "Forest City Hauling",
+      fullContent: true,
+      link: "/blog/dump-truck-hauling-services-forest-city-nc"
     }
   ];
 

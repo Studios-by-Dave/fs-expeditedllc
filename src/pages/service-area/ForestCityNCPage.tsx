@@ -152,11 +152,23 @@ const ForestCityNCPage = () => {
                   </div>
                 </div>
                 <div className="bg-card border border-border rounded-xl overflow-hidden">
-                  <img
-                    src="/assets/forest city nc_1.jpeg"
-                    alt="Forest City, NC dump truck hauling services"
-                    className="w-full h-64 object-cover"
-                  />
+                   <img
+                     src="/assets/forest city nc_1.jpeg"
+                     alt="Forest City, NC dump truck hauling services"
+                     className="w-full h-64 object-cover"
+                   />
+                   <div className="grid grid-cols-2 gap-2 mt-2 h-24">
+                     <img
+                       src="/assets/service locations/forest city/forest city nc_9.jpeg"
+                       alt="Construction debris haul away in Forest City NC"
+                       className="w-full h-full object-cover rounded-lg"
+                     />
+                     <img
+                       src="/assets/service locations/forest city/forest city nc_10.jpg"
+                       alt="Site preparation grading in Forest City NC"
+                       className="w-full h-full object-cover rounded-lg"
+                     />
+                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-heading font-semibold text-foreground mb-4">
                       Forest City Service Areas

@@ -187,8 +187,8 @@ export const Navigation = () => {
                     onClick={() => setServiceAreasOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                   >
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
-                      <span className="text-[10px] font-black uppercase tracking-[0.2em]">S</span>
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                      <span className="text-[11px] font-black uppercase tracking-[0.2em]">S</span>
                     </span>
                     <span>Shelby, NC</span>
                   </Link>
@@ -197,8 +197,8 @@ export const Navigation = () => {
                     onClick={() => setServiceAreasOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                   >
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
-                      <span className="text-[10px] font-black uppercase tracking-[0.2em]">F</span>
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                      <span className="text-[11px] font-black uppercase tracking-[0.2em]">F</span>
                     </span>
                     <span>Forest City, NC</span>
                   </Link>
@@ -207,8 +207,8 @@ export const Navigation = () => {
                     onClick={() => setServiceAreasOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                   >
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
-                      <span className="text-[10px] font-black uppercase tracking-[0.2em]">G</span>
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                      <span className="text-[11px] font-black uppercase tracking-[0.2em]">G</span>
                     </span>
                     <span>Gastonia, NC</span>
                   </Link>
@@ -217,8 +217,8 @@ export const Navigation = () => {
                     onClick={() => setServiceAreasOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors border-b border-border"
                   >
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
-                      <span className="text-[10px] font-black uppercase tracking-[0.2em]">A</span>
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                      <span className="text-[11px] font-black uppercase tracking-[0.2em]">A</span>
                     </span>
                     <span>Asheville, NC</span>
                   </Link>
@@ -438,8 +438,8 @@ export const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
-                    <span className="text-[10px] font-black uppercase tracking-[0.2em]">S</span>
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                    <span className="text-[11px] font-black uppercase tracking-[0.2em]">S</span>
                   </span>
                   <span>Shelby, NC</span>
                 </Link>
@@ -448,8 +448,8 @@ export const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
-                    <span className="text-[10px] font-black uppercase tracking-[0.2em]">F</span>
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                    <span className="text-[11px] font-black uppercase tracking-[0.2em]">F</span>
                   </span>
                   <span>Forest City, NC</span>
                 </Link>
@@ -458,8 +458,8 @@ export const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
-                    <span className="text-[10px] font-black uppercase tracking-[0.2em]">G</span>
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                    <span className="text-[11px] font-black uppercase tracking-[0.2em]">G</span>
                   </span>
                   <span>Gastonia, NC</span>
                 </Link>
@@ -468,8 +468,8 @@ export const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-1"
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
-                    <span className="text-[10px] font-black uppercase tracking-[0.2em]">A</span>
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary">
+                    <span className="text-[11px] font-black uppercase tracking-[0.2em]">A</span>
                   </span>
                   <span>Asheville, NC</span>
                 </Link>

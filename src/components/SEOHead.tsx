@@ -6,6 +6,7 @@ interface SEOHeadProps {
   canonical?: string;
   type?: string;
   schema?: object;
+  schemas?: object[];
   noindex?: boolean;
   alternateLanguage?: string;
   ogImage?: string;
@@ -20,12 +21,14 @@ export const SEOHead = ({
   canonical, 
   type = "website", 
   schema, 
+  schemas, 
   noindex = false,
   alternateLanguage = "en",
   ogImage = OG_IMAGE
 }: SEOHeadProps) => {
   const fullTitle = title.includes("F&S Expedited") ? title : `${title} | F&S Expedited LLC`;
   const url = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
+  const schemaList = schemas?.length ? schemas : schema ? [schema] : [];
 
   return (
     <Helmet>
@@ -83,9 +86,9 @@ export const SEOHead = ({
       <meta name="telephone" content="+1-704-751-8141" />
 
       {/* Structured Data */}
-      {schema && (
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
-      )}
+      {schemaList.map((schemaItem, index) => (
+        <script key={index} type="application/ld+json">{JSON.stringify(schemaItem)}</script>
+      ))}
 
       {/* Favicon */}
       <link rel="icon" href="/favicon.ico" type="image/x-icon" />

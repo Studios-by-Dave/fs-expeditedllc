@@ -53,13 +53,52 @@ const ShelbyNCPage = () => {
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you provide dump truck hauling in Shelby, NC and Cleveland County?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. F&S Expedited LLC is based right here in Shelby, so we provide dump truck hauling, gravel and material delivery, and construction debris removal across Shelby and all of Cleveland County — often with same-day response."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What can you haul for my Shelby construction or landscaping project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We haul dirt, fill dirt, topsoil, gravel, sand, stone, and construction debris, and we provide site prep, land grading, and material delivery for contractors, landscapers, and homeowners throughout the Shelby area."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast can F&S Expedited respond to a hauling job in Shelby?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because we're headquartered in Shelby, we can typically respond to any Shelby or Cleveland County job site in under an hour, and we offer 24/7 emergency hauling for urgent projects."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is F&S Expedited licensed and insured in North Carolina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, F&S Expedited LLC is fully licensed and insured in North Carolina, and we're the local expedited hauling choice trusted by businesses across Shelby and surrounding counties."
+        }
+      }
+    ]
+  };
+
   const localServices = [
-    { name: "Same-Day Dump Truck Hauling", desc: "Immediate response for Shelby and Cleveland County projects", icon: "🚚" },
-    { name: "Gravel & Stone Delivery", desc: "Local suppliers, fast delivery to any Shelby location", icon: "🪨" },
-    { name: "Construction Debris Removal", desc: "Quick cleanup for Shelby construction sites", icon: "🗑️" },
-    { name: "Site Preparation", desc: "Land grading and prep for Shelby development projects", icon: "🏗️" },
-    { name: "Fill Dirt & Topsoil", desc: "Quality soil delivery for Shelby landscaping projects", icon: "🌱" },
-    { name: "Emergency Hauling", desc: "24/7 emergency service for Shelby urgent needs", icon: "⚡" },
+    { name: "Dump Truck Hauling", desc: "Same-day dump truck and dump truck delivery service for Shelby and Cleveland County projects", icon: "🚚" },
+    { name: "Gravel & Stone Delivery", desc: "Local suppliers, fast gravel delivery to any Shelby location — road base, stone, and aggregate", icon: "🪨" },
+    { name: "Construction Debris Removal", desc: "Quick cleanup and haul-away for Shelby construction sites and demolition projects", icon: "🗑️" },
+    { name: "Dirt & Material Delivery", desc: "Fill dirt, topsoil, sand, and material delivery for Shelby landscaping and grading", icon: "⛰️" },
+    { name: "Site Preparation", desc: "Land grading and site prep for Shelby development, drainage, and building projects", icon: "🏗️" },
+    { name: "Emergency Hauling", desc: "24/7 emergency trucking and hauling for urgent Shelby site issues", icon: "⚡" },
   ];
 
   const shelbyAdvantages = [
@@ -78,9 +117,9 @@ const ShelbyNCPage = () => {
     <>
       <SEOHead
         title="Dump Truck Hauling Services Shelby NC | F&S Expedited LLC | Local Experts"
-        description="Premier dump truck hauling services in Shelby, NC. Same-day response, local experts, fastest service in Cleveland County. Call for immediate quote!"
-        url={`${SITE_URL}/service-area/shelby-nc`}
-        schemas={[citySchema, breadcrumbSchema]}
+        description="Dump truck hauling services in Shelby NC from F&S Expedited LLC. Same-day gravel delivery, debris removal & site prep across Cleveland County. Call for a fast free quote!"
+        canonical="/service-area/shelby-nc"
+        schemas={[citySchema, breadcrumbSchema, faqSchema]}
       />
 
       <Navigation />
@@ -97,8 +136,7 @@ const ShelbyNCPage = () => {
                 Dump Truck Hauling Services in Shelby, NC
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Your local dump truck hauling experts - home-based in Shelby for fastest response times. 
-                Same-day service for construction, landscaping, and site projects throughout Cleveland County.
+                Looking for a dump truck service in Shelby, NC? F&S <strong>Expedited</strong> LLC is the local, licensed-and-insured hauling company based right here in Cleveland County — not "F&S Hauling," but the faster, local choice. Same-day gravel delivery, debris removal, and site prep throughout Shelby, NC.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:8653649011">
@@ -127,12 +165,10 @@ const ShelbyNCPage = () => {
                     Home Base Location
                   </span>
                   <h2 className="mt-4 text-3xl font-heading font-bold text-foreground mb-6">
-                    Serving Shelby & Cleveland County
+                    Shelby Dump Truck & Hauling Service, Cleveland County
                   </h2>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    As Shelby's premier dump truck hauling service, we're proud to call this community home. 
-                    Our local presence means zero travel time to reach your job site, immediate dispatch capability, 
-                    and unmatched knowledge of Cleveland County's roads, regulations, and construction requirements.
+                    F&S Expedited is Shelby, NC's local dump truck hauling service. Because we're headquartered right in Shelby, there's zero travel time to your job site, immediate dispatch for gravel delivery, and unmatched knowledge of Cleveland County's roads, regulations, and construction requirements.
                   </p>
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
@@ -155,6 +191,18 @@ const ShelbyNCPage = () => {
                     alt="Shelby, NC dump truck hauling services"
                     className="w-full h-64 object-cover"
                   />
+                  <div className="grid grid-cols-2 gap-2 mt-2 h-24">
+                    <img
+                      src="/assets/service locations/shelby/shelby-cafe_2.jpg"
+                      alt="Dump truck hauling a load on a Shelby NC job site"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                    <img
+                      src="/assets/service locations/shelby/shelby_nc_drone_1.webp"
+                      alt="Aerial view of F&S Expedited hauling equipment in Shelby NC"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
                   <div className="p-6">
                     <h3 className="text-xl font-heading font-semibold text-foreground mb-4">
                       Shelby Service Areas
@@ -193,7 +241,7 @@ const ShelbyNCPage = () => {
                 SERVICES IN SHELBY, NC
               </h2>
               <p className="mt-4 text-muted-foreground text-lg font-sans">
-                Specialized dump truck and hauling services tailored for Shelby's construction and development needs.
+                Dump truck hauling and material delivery tailored to Shelby's construction, landscaping, and development needs — from gravel and fill dirt to construction debris removal.
               </p>
             </div>
 
@@ -301,6 +349,63 @@ const ShelbyNCPage = () => {
                   <p className="text-muted-foreground text-sm">
                     Shelby-based operators who know the area intimately
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Shelby Content / Prose Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
+                Local Hauling Partners
+              </span>
+              <h2 className="mt-4 text-3xl md:text-4xl font-heading font-bold text-foreground tracking-wider mb-6">
+                Shelby's Dump Truck & Material Delivery Company
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                From supplying gravel and road base to Charlotte is a different drive than delivering to your Shelby job site — and that's exactly why being local matters. F&S Expedited keeps its dump trucks and crews right in Shelby, NC, so your gravel, fill dirt, sand, stone, and construction debris move fast, without out-of-town travel time or surcharges.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Contractors, landscapers, farmers, and homeowners throughout Cleveland County rely on our dump truck delivery and expedited hauling to keep projects on schedule. Whether it's material delivery for a new driveway, fill dirt for a foundation, or same-day debris removal from a demolition, our local team handles it with the speed and reliability that only a home-based company can offer.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Searching for "dump truck service near me" or "material delivery service" in Shelby? You've found the right local team. Call F&S Expedited today for a fast, free quote.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Shelby FAQ Section */}
+        <section className="py-20 bg-gradient-card">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <span className="text-primary font-semibold tracking-widest text-sm uppercase font-sans">
+                  FAQs
+                </span>
+                <h2 className="mt-4 text-3xl md:text-4xl font-heading font-bold text-foreground tracking-wider">
+                  FREQUENTLY ASKED QUESTIONS — SHELBY, NC
+                </h2>
+              </div>
+              <div className="space-y-4">
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="text-lg font-heading font-semibold text-foreground mb-2">Do you provide dump truck hauling in Shelby, NC and Cleveland County?</h3>
+                  <p className="text-muted-foreground">Yes. F&S Expedited LLC is based right here in Shelby, so we provide dump truck hauling, gravel and material delivery, and construction debris removal across Shelby and all of Cleveland County — often with same-day response.</p>
+                </div>
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="text-lg font-heading font-semibold text-foreground mb-2">What can you haul for my Shelby construction or landscaping project?</h3>
+                  <p className="text-muted-foreground">We haul dirt, fill dirt, topsoil, gravel, sand, stone, and construction debris, and we provide site prep, land grading, and material delivery for contractors, landscapers, and homeowners throughout the Shelby area.</p>
+                </div>
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="text-lg font-heading font-semibold text-foreground mb-2">How fast can F&S Expedited respond to a hauling job in Shelby?</h3>
+                  <p className="text-muted-foreground">Because we're headquartered in Shelby, we can typically respond to any Shelby or Cleveland County job site in under an hour, and we offer 24/7 emergency hauling for urgent projects.</p>
+                </div>
+                <div className="bg-card border border-border rounded-xl p-6">
+                  <h3 className="text-lg font-heading font-semibold text-foreground mb-2">Is F&S Expedited licensed and insured in North Carolina?</h3>
+                  <p className="text-muted-foreground">Yes, F&S Expedited LLC is fully licensed and insured in North Carolina, and we're the local expedited hauling choice trusted by businesses across Shelby and surrounding counties.</p>
                 </div>
               </div>
             </div>

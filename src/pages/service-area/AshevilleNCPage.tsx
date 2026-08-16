@@ -157,6 +157,18 @@ const AshevilleNCPage = () => {
                     alt="Asheville, NC dump truck hauling services"
                     className="w-full h-64 object-cover"
                   />
+                  <div className="grid grid-cols-2 gap-2 mt-2 h-24">
+                    <img
+                      src="/assets/service locations/asheville/Asheville nc_2.jpeg"
+                      alt="Dump truck hauling in the Asheville NC mountains"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                    <img
+                      src="/assets/service locations/asheville/asheville nc_6.jpeg"
+                      alt="Gravel delivery truck in Asheville NC"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
                   <div className="p-6">
                     <h3 className="text-xl font-heading font-semibold text-foreground mb-4">
                       Asheville Service Areas
